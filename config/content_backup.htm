@@ -1,0 +1,72 @@
+<h1>簡介</h1>
+<p>產品協同設計課程第三組</p>
+<h1>組員</h1>
+<p>40623105 </p>
+<p>40623109</p>
+<p>40623112</p>
+<p>40623118</p>
+<p>40623125</p>
+<p>40623127</p>
+<p>40623128</p>
+<p>40623135</p>
+<p>40623141</p>
+<p>40623156</p>
+<p></p><h1>課程內容整理</h1>
+<h2>隨身系統</h2>
+<p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
+<h3>創建資料夾</h3>
+<p><span>創建一個放置可攜檔案的資料夾</span></p>
+<p>並在裡面<span>創建一個data資料夾用來連結y槽</span></p>
+<h3>SciTE</h3>
+<p>安裝SciTE至data資料夾中</p>
+<p><span>使用windos的</span><span> </span><span>full download版本</span></p>
+<p>SciTE Download:<a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a></p>
+<p>打開SciTE後</p>
+<p>開啟設定檔案</p>
+<p><img alt="" height="925" src="/images/Sc1_HLqRO2uJD4.png" width="849"/></p>
+<p>利用ctrl+f找到code.page並改為下圖所示</p>
+<p><img alt="" height="823" src="/images/Sc1_54NV2TXXw1.png" width="820"/></p>
+<h3>安裝 python 進可攜系統</h3>
+<p>安裝時選取自訂義安裝</p>
+<p><img alt="" height="379" src="/images/python-3.7.2-amd64_sT8hqE8YyH.png" width="664"/></p>
+<p>勾選所需要的項目</p>
+<p><img alt="" height="379" src="/images/python-3.7.2-amd64_B6PgQAYBSf.png" width="664"/></p>
+<p><img alt="" height="379" src="/images/python-3.7.2-amd64_rcmpATgr0h.png" width="664"/></p>
+<p>設定安裝位置</p>
+<p><img alt="" height="379" src="/images/python-3.7.2-amd64_dK32V0uTG7.png" width="664"/></p>
+<p>利用<a href="https://mh-nexus.de/en/hxd/">HxD</a>二位元編輯器設定C:\p37\Scripts\pip.exe</p>
+<p>使用ctrl+f功能尋找c<span>:\p37並改為y:\p37</span></p>
+<p><span>如紅字處</span></p>
+<p><span><img alt="" height="721" src="/images/HxD64_r0XgABHZja.png" width="855"/></span></p>
+<p><span></span></p>
+<p>更改完成後就可以把整個p37資料夾移至data資料夾</p><h3>start.bat</h3>
+<p>利用安裝的SciTE製作start.bat檔案</p>
+<p><img alt="" height="823" src="/images/Sc1_dNriWtOuUE.png" width="820"/></p>
+<h3>stop.bat</h3>
+<p><span>利用安裝的SciTE製作stop.bat檔案</span></p>
+<p><img alt="" height="298" src="/images/Sc1_Rdatkc1err.png" width="474"/></p>
+<h3>Kdiff3</h3>
+<p>在製作過程中想要快速了解兩個檔案之間的差異可以使用Kdiff3來快速比對出不一樣的地方。</p>
+<p><span>Kdiff3: </span><a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://kdiff3.sourceforge.net/" rel="nofollow" spellcheck="false" target="_blank">http://kdiff3.sourceforge.net/</a></p>
+<h2>ungit</h2>
+<p>使用圖形化介面讓使用者更加了解目前所在的分支與倉儲狀況</p>
+<h3>如何安裝</h3>
+<p>參考連結<a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html">http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html</a></p>
+<p>至上方連結處下載<span> </span><a href="https://drive.google.com/file/d/1G3cEZsw6d7NjqLLgu9jljVNBd6wF-ZrG/view?usp=sharing">nodejs_with_ungit.7z</a></p>
+<p>下載完成後解壓縮到隨身系統資料夾的data中</p>
+<p>並在start.bat中加入</p>
+<p><span>set USERPROFILE=%Disk%:\home</span></p>
+<p><span>set path8=%Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;</span></p>
+<p><span>%path8%;</span></p>
+<p><span>如下圖</span></p>
+<p><img alt="" height="348" src="/images/Sc1_2019-03-09_12-29-59.png" width="613"/></p>
+<p><span><img alt="" height="859" src="/images/Sc1_2019-03-09_12-25-15.png" width="1250"/></span></p>
+<p><span></span>之後在中空白的SciTE中輸入</p>
+<p>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %%U"</p>
+<p>存檔至Data中並命名為kungit.bat</p><h3>問題-無法取得使用者資料-已解決</h3>
+<p>當使用ungit提交推送時，出現如下圖的錯誤內容</p>
+<p><img alt="" height="953" src="/images/chrome_2019-03-05_16-55-23.png" width="1303"/></p>
+<p>解決方法:</p>
+<p>至啟動隨身系統的star.bat中加入</p>
+<p><span>set USERPROFILE=%Disk%:\home</span></p>
+<p>使ungit能找到<span>y:\home中的使用者目錄</span></p>
