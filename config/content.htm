@@ -66,8 +66,28 @@
 <p><span></span>之後在中空白的SciTE中輸入</p>
 <p>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %%U"</p>
 <p>存檔至Data中並命名為kungit.bat</p>
-<h1>問題與討論</h1>
-<h2>ungit</h2>
+<h2>ssh金鑰</h2>
+<p>參考連結:<a href="https://2019wcm.blogspot.com/2019/03/github-github-pages.html">https://2019wcm.blogspot.com/2019/03/github-github-pages.html</a></p>
+<h3>關閉跳出式登入窗</h3>
+<p>首先<span>使用</span><br/><br/><br/><span>git config --edit --system</span></p>
+<p>叫出vi<span>編輯器,編輯git的設定檔案</span></p>
+<p><span>使用按鍵H,J,K,L控制上下左右</span></p>
+<p><span>案a進入編輯模式</span></p>
+<p>編輯模式最底下會顯示</p>
+<p>-- INSERT --</p>
+<p>就可以按BACKSPACE刪除最後一行如下圖</p>
+<p><span><img alt="" height="541" src="/images/cmd_w9A29uQBqD.png" width="960"/></span></p>
+<p>刪除後按ESC鍵離開編輯模式</p>
+<p>再輸入冒號後，再輸入wq存檔並關閉。</p>
+<p>如果要直接離開則輸入exit</p>
+<h3>製作金鑰</h3>
+<p>在<span>可攜系統的命令列視窗輸入sh或者是sh_yen</span></p>
+<p><span>執行 Git 的 shell</span></p>
+<p><span>並輸入</span></p>
+<p><span>ssh-keygen -t rsa -b 4096 -C "This is my key"</span></p>
+<p><span>將會建立Private 與 Public 金鑰至y:\home\.ssh\id_rsa與id_rsa.pub</span></p>
+<p><span>將 id_rsa.pub 的內容複製轉貼至Github 帳號的settings(右上角頭像的)</span></p>
+<p><span>在SSH and GPG keys的SSH Public Key新建並貼上複製內容</span></p><h1>問題與討論</h1><h2>ungit</h2>
 <h3>問題-無法取得使用者資料-已解決</h3>
 <p>當使用ungit提交推送時，出現如下圖的錯誤內容</p>
 <p><img alt="" height="953" src="/images/chrome_2019-03-05_16-55-23.png" width="1303"/></p>
