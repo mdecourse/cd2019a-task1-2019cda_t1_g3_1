@@ -82,7 +82,7 @@
 <p><img alt="" height="180" src="/images/add url 說明2.png" width="213"/></p>
 <p>(3)以下為點開後的圖面</p>
 <p><img alt="" height="323" src="/images/add url 說明3.png" width="386"/></p>
-<p></p><h2>ssh金鑰</h2>
+<h2>ssh金鑰</h2>
 <p>參考連結:<a href="https://2019wcm.blogspot.com/2019/03/github-github-pages.html">https://2019wcm.blogspot.com/2019/03/github-github-pages.html</a></p>
 <h3>關閉跳出式登入窗</h3>
 <p>首先<span>使用</span><br/><br/><br/><span>git config --edit --system</span></p>
@@ -97,13 +97,24 @@
 <p>再輸入冒號後，再輸入wq存檔並關閉。</p>
 <p>如果要直接離開則輸入exit</p>
 <h3>製作金鑰</h3>
-<p>在<span>可攜系統的命令列視窗輸入sh或者是sh_yen</span></p>
+<p>在<span>可攜系統的命令列視窗輸入sh或者是sh_yen(可至y:\git\bin中確認)</span></p>
 <p><span>執行 Git 的 shell</span></p>
 <p><span>並輸入</span></p>
 <p><span>ssh-keygen -t rsa -b 4096 -C "This is my key"</span></p>
 <p><span>將會建立Private 與 Public 金鑰至y:\home\.ssh\id_rsa與id_rsa.pub</span></p>
-<p><span>將 id_rsa.pub 的內容複製轉貼至Github 帳號的settings(右上角頭像的)</span></p>
-<p><span>在SSH and GPG keys的SSH Public Key新建並貼上複製內容</span></p>
+<p><span>將 id_rsa.pub 的內容複製轉貼至Github 帳號的settings如下圖位置</span></p>
+<p><span><img alt="" height="387" src="/images/chrome_2019-03-24_17-21-25.png" width="191"/></span></p>
+<p><span><img alt="" height="596" src="/images/chrome_2019-03-24_17-22-01.png" width="985"/></span></p>
+<p><span></span></p>
+<p><span>在SSH and GPG keys的SSH Key新建並貼上複製內容</span></p>
+<h3>利用SSH提交推送</h3>
+<p>首先要確認倉儲是以SSH的方式clone的</p>
+<p>利用以下指令clone或</p>
+<p>git clone <strong></strong>git@github.com:倉儲擁有者/<span>倉儲名</span></p>
+<p>或是直接利用SciTE開啟倉儲的.git檔案裡面的config</p>
+<p>把url = https://github.com/<span>倉儲擁有者/</span><span>倉儲名</span></p>
+<p>改成url = git@github.com:<span>倉儲擁有者/</span><span>倉儲名</span></p>
+<p>之後直接提交推送就可以不用打帳號密碼了</p>
 <h1>問題與討論</h1>
 <h2>ungit</h2>
 <h3>問題-無法取得使用者資料-已解決</h3>
