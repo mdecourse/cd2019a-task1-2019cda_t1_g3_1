@@ -162,7 +162,52 @@
 <p>把url = https://github.com/<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>改成url = git@github.com:<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>之後直接提交推送就可以不用打帳號密碼了</p>
-<h1>問題與討論</h1>
+<h2>git</h2>
+<h3>10.1</h3>
+<h4>Plumbing and Porcelain</h4>
+<p><img alt="" height="436" src="/images/git.jpg" width="608"/></p>
+<p></p>
+<p></p>
+<h3>10.2</h3>
+<h4>Git Objects</h4>
+<h4>cat -file 從Git 取回資料</h4>
+<h4>update - ref更新引用</h4>
+<h3>10.3</h3>
+<p>Git References</p>
+<h4>如何知道最後一次提交？:</h4>
+<h4>執行  git branch </h4>
+<h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
+<h4><code class="language-console" data-lang="console">ref: refs/heads/master</code><code class="language-console" data-lang="console"><br/><br/><br/><code>執行 git checkout test<br/><br/></code></code></h4>
+<h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
+<h4><code class="language-console" data-lang="console">ref: refs/heads/test<br/><br/>也可以手動編輯此文件，但同樣可以執行更安全的命令:<br/><span><br/>執行symbolic-ref<br/><br/></span></code></h4>
+<h4><code class="language-console" data-lang="console">$ git symbolic-ref HEAD </code></h4>
+<h4><code class="language-console" data-lang="console">refs/heads/master<br/><br/>設置HEAD:<br/><br/></code></h4>
+<h4><code class="language-console" data-lang="console">$ git symbolic-ref HEAD </code><code class="language-console" data-lang="console">refs/heads/test </code></h4>
+<h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
+<h4><code class="language-console" data-lang="console">ref: refs/heads/test</code></h4>
+<pre class="highlight"><code class="language-console" data-lang="console"></code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console"><span></span><br/></code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre>
+<h3>10.4</h3>
+<p></p>
+<h3>10.5</h3>
+<h4>The Refspec</h4>
+<p>.git / config文件中添加遠端origin的名稱，遠程存儲庫的URL以及用於獲取的refspec</p>
+<pre class="highlight"><code class="language-ini" data-lang="ini">[remote "origin"]
+	url = https://github.com/schacon/simplegit-progit
+	fetch = +refs/heads/<em>:refs/remotes/origin/<br/><br/></em>如果想一次性執行某些操作，也可以在命令行中指定refspec<br/></code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console">$ git fetch origin master:refs/remotes/origin/mymaster<br/><br/>指定多個refspec<br/><br/></code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console">$ git fetch origin master:refs/remotes/origin/mymaster \
+	 topic:refs/remotes/origin/topic
+From git@github.com:schacon/simplegit
+ ! [rejected]        master     -&gt; origin/mymaster  (non fast forward)
+ * [new branch]      topic      -&gt; origin/topic<br/><br/>刪除</code><code class="language-console" data-lang="console">refspec<br/>git push origin :topic<br/><br/>git push origin -- delete topic</code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console"><br/><br/></code></pre>
+<pre class="highlight"><code class="language-ini" data-lang="ini"><br/><br/><em><br/></em></code></pre>
+<p></p>
+<p></p>
+<p></p>
+<p></p><h1>問題與討論</h1>
 <h2>ungit</h2>
 <h3>問題-無法取得使用者資料-已解決</h3>
 <p>當使用ungit提交推送時，出現如下圖的錯誤內容</p>
