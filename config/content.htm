@@ -324,18 +324,32 @@ From git@github.com:schacon/simplegit
  * [new branch]      topic      -&gt; origin/topic<br/><br/>刪除</code><code class="language-console" data-lang="console">refspec<br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/><br/><br/><br/><br/><br/><br/></code></pre>
 <p></p>
 <h2>V-rep</h2>
-<p><br/><br/></p>
+<h3>Proximity sensor</h3>
+<p><span>添加</span><span><span>接近傳感</span></span><span>器 <a href="http://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm">proximity sensor</a></span></p>
+<p><span>Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type</span></p>
+<p><span><img alt="" height="382" src="/images/bubbleRobTut2.jpg" width="482"/></span></p>
+<p><span>在 <a href="http://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm">orientation dialog</a> 對話框中</span></p>
+<p><span>沿y軸和z軸旋轉90度   點擊Rotation Selection</span></p>
+<p><span><img alt="" height="196" src="/images/感測器角度.PNG" width="384"/></span></p>
+<p><span>在 <a href="http://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm">position dialog</a> 對話框中</span></p>
+<p><span>x方向設置0.1  z方向設置0.12</span></p>
+<p><span><img alt="" height="198" src="/images/感測器位置.PNG" width="384"/></span></p>
+<p><span>修改距離傳感器的參數Show volume parameter</span></p>
+<p><span><strong>Offset</strong><span><span> </span> 0.005,<span> </span></span><strong>Angle</strong><span><span> </span> 30 <span> </span></span><strong>Range</strong><span><span> </span> 0.15</span><img alt="" height="246" src="/images/參數.PNG" width="360"/></span></p>
+<p><span>Show detection parameter中將Don’t  allow detection ifdistance smaller than取消</span></p>
+<p><span>最後將傳感器連接到機器人的身體</span></p>
+<p><span><img alt="" height="31" src="/images/連接.PNG" width="287"/></span></p>
 <h3>Vision sensor</h3>
 <p><span>添加視覺傳感器 <a href="http://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm">vision sensor</a></span></p>
-<p><span>Menubar--&gt;Add--&gt;Vision sensor--&gt;Perspective type</span></p>
-<p><span>1.將視覺傳感器和距離傳感器放置一起且方向一致</span></p>
-<p><span>2.在視覺傳感器的屬性欄中配置Far clipping plane 爲1</span></p>
+<p><span>Menu bar--&gt;Add--&gt;Vision sensor--&gt;Perspective type</span></p>
+<p><span>將視覺傳感器和距離傳感器放置一起且方向一致</span></p>
+<p><span>1. 在視覺傳感器的屬性欄中配置Far clipping plane 爲1</span></p>
 <p><span>    Resolution x 和y 設爲256和256</span></p>
+<p><span>2. 點擊show filter dialog </span></p>
 <p><span><img alt="" height="533" src="/images/視覺傳感器.PNG" width="388"/></span></p>
-<p><span>3.點擊show filter dialog  </span></p>
-<p><span>   選擇Edget detection on work image</span></p>
+<p><span>3. 選擇Edget detection on work image</span></p>
 <p><span>   然後點擊Add filter</span></p>
-<p><span>4.閾值設置爲0.2 點選OK</span></p>
+<p><span>4. 閾值設置爲0.2 點選OK</span></p>
 <p><span><img alt="" height="362" src="/images/擷取.PNG" width="371"/></span></p>
 <p><span>Floating view上右鍵 View--&gt;Associate simulation with selected vision sensor</span></p>
 <p><span><img alt="" height="213" src="/images/view.png" width="384"/></span></p>
@@ -529,3 +543,4 @@ end</pre>
 <p>允許未經身份驗證的用戶存取指定的儲存庫。</p>
 <p>$ cd /path/to/project.git</p>
 <p>$ touch git-daemon-export-ok</p>
+<p></p>
