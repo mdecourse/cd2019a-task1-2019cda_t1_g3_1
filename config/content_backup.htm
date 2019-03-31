@@ -11,8 +11,124 @@
 <p>40623135</p>
 <p>40623141</p>
 <p>40623156</p>
+<h1>手足球</h1>
+<p>圖檔位置:</p>
+<p><a href="https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63">https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63</a></p>
+<p>藉由<span>建立手足球系統來更加熟悉vrep的各項設定與操作</span></p><h2>足球自動回擊</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i1pA_CwlQ98" width="560"></iframe></p>
+<p>vrep檔案位置:</p>
 <p></p>
-<h1>課程內容整理</h1>
+<p>python原始碼:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+from time import sleep
+import sys, math
+ 
+vrep.simxFinish(-1)
+ 
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+KickBallV = 90      #手把轉速設定(度/秒)
+Move_Minus =-0.1          #手把水平移速(m/s)
+Move_Plus =0.1
+n=1
+R_KickBallVel = (math.pi/180)*KickBallV
+B_KickBallVel = -(math.pi/180)*KickBallV
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+ 
+errorCode,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+errorCode,BRod_handle=vrep.simxGetObjectHandle(clientID,'BRod',vrep.simx_opmode_oneshot_wait)
+errorCode,BRev_handle=vrep.simxGetObjectHandle(clientID,'BRev',vrep.simx_opmode_oneshot_wait)
+errorCode,BMo_handle=vrep.simxGetObjectHandle(clientID,'BMo',vrep.simx_opmode_oneshot_wait)
+errorCode,RRev_handle=vrep.simxGetObjectHandle(clientID,'RRev',vrep.simx_opmode_oneshot_wait)
+errorCode,RMo_handle=vrep.simxGetObjectHandle(clientID,'RMo',vrep.simx_opmode_oneshot_wait)
+
+if errorCode == -1:
+    print('Can not find left or right motor')
+    sys.exit()
+    
+def stop():
+    errorCode = vrep.simxStopSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+    
+def start():
+    errorCode = vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+    
+def pause():
+    errorCode = vrep.simxPauseSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+
+def getballposition():
+    errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+    vv =position_D[1] - position_P[1]
+    vvv =position_D[2] - position_P[2]
+    while (n == 1):
+        
+        if vv &lt;= 0 and vvv &lt;= 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
+        
+        elif vv &gt; 0 and vvv &lt;= 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+            
+        elif vv &lt;= 0 and vvv &gt; 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+        
+        elif vv &gt; 0 and vvv &gt; 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+        
+        
+        vrep.simxSetJointTargetVelocity(clientID,BMo_handle,vv,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_wait)
+
+start()
+getballposition()
+stop()
+
+
+
+
+
+</pre>
+<p></p><h2>手足球問題與解決方案</h2>
+<p><span style="color: #000000; background-color: #ffff00;">手足球問題一</span></p>
+<p>如何知道目前的球的位置?</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p>運用指令</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">number returnCode,number parentObjectHandle=vrep.simxGetObjectParent(number clientID,number objectHandle,number operationMode)</pre>
+<p>來得到目前座標<br/><br/></p>
+<p></p>
+<p><span style="background-color: #ffff00;">手足球問題二</span></p>
+<p>如何讓回擊的桿子偵測球的位置進行移動?</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p>利用指令得到球與桿子的y方向座標之後</p>
+<p>利用相減所得到的值可以知道球在桿子的左邊或是右邊</p>
+<p></p>
+<p><span style="background-color: #ffff00;">手足球問題三</span></p>
+<p>直接給定桿子橫向移動的速度為0.5m/s</p>
+<p>會讓他產生速度從0瞬間變<span>0.5m/s</span>的現象</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p><span style="background-color: #00ff00;"></span>把給定的速度更改為桿子與球座標的差值</p>
+<p></p><h2>參考資料</h2>
+<p></p><h1>課程內容整理</h1>
 <h2>隨身系統</h2>
 <p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
 <h3>創建資料夾</h3>
@@ -229,3 +345,61 @@ From git@github.com:schacon/simplegit
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QLw1h1b9c3Y" width="560"></iframe></p>
 <p>40623156</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/sAXEWXAc0pQ" width="560"></iframe></p>
+<h1>Git教材</h1>
+<h2>伺服器上的Git</h2>
+<h3>通訊協定種類</h3>
+<div><span>Git可以使用四種主要協議來傳輸數據：</span></div>
+<div><span>Local protocols、HTTP、Secure Shell（SSH）和Git。</span></div>
+<div><span></span></div>
+<h4><span>Local protocols</span></h4>
+<p><span><br/>優點:</span></p>
+<p><span>1.可以直接將存儲庫副本粘貼到每個人都具有共享存取權限的位置，並像設置任何其他共享目錄一樣設置讀/寫權限。</span></p>
+<p><span>2.運用這些指令(git pull /home/john/project等)</span><span>，通常會更簡單地使他們推送到遠端，並且您也方便拉取。<br/><br/>缺點:</span></p>
+<p><span>1.共享存取通常更難以從多個位置進行設置和存取。</span></p>
+<p><span>2.若在家使用筆電的話，需額外安裝遠端系統，否則會相對於基本網路存取還要來得困難與慢上許多。</span></p>
+<p><span>3.每個用戶都具有對“遠程”目錄的完全要訪問權限，並且沒有任何東西阻止他們更改或刪除內部Git文件並破壞存儲庫。</span></p>
+<h4>SSH通訊協定</h4>
+<p>優點:</p>
+<p>1.SSH相對容易設置，且它的守護程序很常見。</p>
+<p>2.透過SSH存取是安全的，所有數據傳輸都經過加密和身份驗證。</p>
+<p>3.像HTTP/S、Git與Local protocols一樣，使數據在傳輸之前盡可能緊湊。</p>
+<p>缺點:</p>
+<p>1.無法通過它對存儲庫進行匿名存取。</p>
+<p>2.如果想允許匿名存取項目並且還想使用SSH，則必須設置SSH以便推送，但其他內容可供其他人獲取。</p>
+<h4>Git協定</h4>
+<p>優點:</p>
+<p>1.為最快的網絡傳輸協議。</p>
+<p>2.若為公共項目提供大量流量或為不需要用戶身份驗證進行讀取的大型項，則可能需要設置Git守護程序。</p>
+<p>3.Git存儲庫可供所有人克隆。</p>
+<p>缺點:</p>
+<p>1.缺乏身份驗證。</p>
+<p>2.通常為唯一存取權限(即推送、寫入等)，若開啟推送存取權限，則網路上能到找到項目的URL並任何人可推送到項目裡。</p>
+<h4>HTTP</h4>
+<p>可分為兩種，分別為新制(智能)與舊制。</p>
+<p>新制(智能):</p>
+<p>與SSH或Git協定的運行方式非常相似，它可以設置為像git://協議一樣匿名服務，也可以通過SSH協議等身份驗證和加密來推送。</p>
+<p>舊制:</p>
+<p>直接將Git存儲庫提供為來自Web服務器的普通文件，優點在於設置它的簡單性。此外，任何可以訪問放置存儲庫的Web服務器的人都可以存取您的存儲庫。</p>
+<p>以下優缺點於新制(智能)HTTP</p>
+<p>優點:</p>
+<p>1.能夠使用用戶名和密碼進行身份驗證。</p>
+<p>2.通過HTTPS以只讀方式提供存儲庫。</p>
+<p>缺點:</p>
+<p>與某些服務器上的SSH相比，在HTTP/S上使用Git可能會有點棘手。</p>
+<div>
+<h4><span></span></h4>
+<div></div>
+</div>
+<h3>在伺服器上佈署Git</h3>
+<p>要clone存儲庫以創建新的存儲庫，請使用該--bare選項運行clone命令。將存儲庫目錄結束.git。如下:</p>
+<p>$ git clone --bare my_project my_project.git</p>
+<p>現在應該在目錄中擁有Git目錄數據的副本my_project.git。</p>
+<p>下面指令相當於類似的東西，但配置文件中存在一些細微差別。</p>
+<p>$ cp -Rf my_project/.git my_project.git</p>
+<p>將存儲庫複製到以下來設置新存儲庫：</p>
+<p>假設/srv/git存在於該服務器上，並且已經設置了一個名為git.example.com的SSH服務器，而希望將所有Git存儲庫存儲在該/srv/git目錄下。</p>
+<p>$ scp -r my_project.git user@git.example.com:/srv/git</p>
+<p>之後，對於有這目錄及SSH的權限的用戶就可以來clone，也有推送訪問權限。</p>
+<p>$ git clone user@git.example.com:/srv/git/my_project.git</p>
+<p>如果git init使用該--shared選項運行命令，Git將自動將組寫入權限正確添加到存儲庫。</p>
+<p>$ ssh user@git.example.com<br/>$ cd /srv/git/my_project.git<br/>$ git init --bare --shared</p>

@@ -11,8 +11,124 @@
 <p>40623135</p>
 <p>40623141</p>
 <p>40623156</p>
+<h1>手足球</h1>
+<p>圖檔位置:</p>
+<p><a href="https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63">https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63</a></p>
+<p>藉由<span>建立手足球系統來更加熟悉vrep的各項設定與操作</span></p><h2>足球自動回擊</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i1pA_CwlQ98" width="560"></iframe></p>
+<p>vrep檔案位置:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/tree/master/v-rep/40623128/TableFootBall/v-rep/tablefootball.ttt">tablefootball.ttt</a></p>
 <p></p>
-<h1>課程內容整理</h1>
+<p>python原始碼:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+from time import sleep
+import sys, math
+ 
+vrep.simxFinish(-1)
+ 
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+KickBallV = 90      #手把轉速設定(度/秒)
+Move_Minus =-0.1          #手把水平移速(m/s)
+Move_Plus =0.1
+n=1
+R_KickBallVel = (math.pi/180)*KickBallV
+B_KickBallVel = -(math.pi/180)*KickBallV
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+ 
+errorCode,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+errorCode,BRod_handle=vrep.simxGetObjectHandle(clientID,'BRod',vrep.simx_opmode_oneshot_wait)
+errorCode,BRev_handle=vrep.simxGetObjectHandle(clientID,'BRev',vrep.simx_opmode_oneshot_wait)
+errorCode,BMo_handle=vrep.simxGetObjectHandle(clientID,'BMo',vrep.simx_opmode_oneshot_wait)
+errorCode,RRev_handle=vrep.simxGetObjectHandle(clientID,'RRev',vrep.simx_opmode_oneshot_wait)
+errorCode,RMo_handle=vrep.simxGetObjectHandle(clientID,'RMo',vrep.simx_opmode_oneshot_wait)
+
+if errorCode == -1:
+    print('Can not find left or right motor')
+    sys.exit()
+    
+def stop():
+    errorCode = vrep.simxStopSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+    
+def start():
+    errorCode = vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+    
+def pause():
+    errorCode = vrep.simxPauseSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+
+def getballposition():
+    errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+    vv =position_D[1] - position_P[1]
+    vvv =position_D[2] - position_P[2]
+    while (n == 1):
+        
+        if vv &lt;= 0 and vvv &lt;= 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
+        
+        elif vv &gt; 0 and vvv &lt;= 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+            
+        elif vv &lt;= 0 and vvv &gt; 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+        
+        elif vv &gt; 0 and vvv &gt; 0.01:
+            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            vv =position_D[1]- position_P[1]
+            vvv =position_D[0] - position_P[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+        
+        
+        vrep.simxSetJointTargetVelocity(clientID,BMo_handle,vv,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_wait)
+
+start()
+getballposition()
+stop()
+
+
+
+
+
+</pre>
+<p></p><h2>手足球問題與解決方案</h2>
+<p><span style="color: #000000; background-color: #ffff00;">手足球問題一</span></p>
+<p>如何知道目前的球的位置?</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p>運用指令</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">number returnCode,number parentObjectHandle=vrep.simxGetObjectParent(number clientID,number objectHandle,number operationMode)</pre>
+<p>來得到目前座標<br/><br/></p>
+<p></p>
+<p><span style="background-color: #ffff00;">手足球問題二</span></p>
+<p>如何讓回擊的桿子偵測球的位置進行移動?</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p>利用指令得到球與桿子的y方向座標之後</p>
+<p>利用相減所得到的值可以知道球在桿子的左邊或是右邊</p>
+<p></p>
+<p><span style="background-color: #ffff00;">手足球問題三</span></p>
+<p>直接給定桿子橫向移動的速度為0.5m/s</p>
+<p>會讓他產生速度從0瞬間變<span>0.5m/s</span>的現象</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p><span style="background-color: #00ff00;"></span>把給定的速度更改為桿子與球座標的差值</p>
+<p></p><h2>參考資料</h2>
+<p></p><h1>課程內容整理</h1>
 <h2>隨身系統</h2>
 <p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
 <h3>創建資料夾</h3>
@@ -231,7 +347,7 @@ From git@github.com:schacon/simplegit
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/sAXEWXAc0pQ" width="560"></iframe></p>
 <h1>Git教材</h1>
 <h2>伺服器上的Git</h2>
-<h3><span>通訊協定種類</span></h3>
+<h3>通訊協定種類</h3>
 <div><span>Git可以使用四種主要協議來傳輸數據：</span></div>
 <div><span>Local protocols、HTTP、Secure Shell（SSH）和Git。</span></div>
 <div><span></span></div>
@@ -274,7 +390,7 @@ From git@github.com:schacon/simplegit
 <h4><span></span></h4>
 <div></div>
 </div>
-<h3><span>在伺服器上佈署Git</span></h3>
+<h3>在伺服器上佈署Git</h3>
 <p>要clone存儲庫以創建新的存儲庫，請使用該--bare選項運行clone命令。將存儲庫目錄結束.git。如下:</p>
 <p>$ git clone --bare my_project my_project.git</p>
 <p>現在應該在目錄中擁有Git目錄數據的副本my_project.git。</p>
@@ -287,5 +403,3 @@ From git@github.com:schacon/simplegit
 <p>$ git clone user@git.example.com:/srv/git/my_project.git</p>
 <p>如果git init使用該--shared選項運行命令，Git將自動將組寫入權限正確添加到存儲庫。</p>
 <p>$ ssh user@git.example.com<br/>$ cd /srv/git/my_project.git<br/>$ git init --bare --shared</p>
-<p><span></span></p>
-<p></p>
