@@ -83,12 +83,12 @@ $(document).ready(doSearch);
 <h4>如何知道最後一次提交？:</h4>
 <h4>執行  git branch </h4>
 <h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
-<h4><code class="language-console" data-lang="console">ref: refs/heads/master</code><code class="language-console" data-lang="console"><br/><br/><br/><code>執行 git checkout test<br/><br/></code></code></h4>
+<p><br/><code class="language-console" data-lang="console">ref: refs/heads/master</code><code class="language-console" data-lang="console"><br/><br/><br/><code>執行 git checkout test<br/><br/></code></code></p>
 <h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
 <h4><code class="language-console" data-lang="console">ref: refs/heads/test<br/><br/>也可以手動編輯此文件，但同樣可以執行更安全的命令:<br/><span><br/>執行symbolic-ref<br/><br/></span></code></h4>
 <h4><code class="language-console" data-lang="console">$ git symbolic-ref HEAD </code></h4>
 <h4><code class="language-console" data-lang="console">refs/heads/master<br/><br/>設置HEAD:<br/><br/></code></h4>
-<h4><code class="language-console" data-lang="console">$ git symbolic-ref HEAD </code><code class="language-console" data-lang="console">refs/heads/test </code></h4>
+<p><br/><code class="language-console" data-lang="console">$ git symbolic-ref HEAD </code><code class="language-console" data-lang="console">refs/heads/test </code></p>
 <h4><code class="language-console" data-lang="console">$ cat .git/HEAD </code></h4>
 <h4><code class="language-console" data-lang="console">ref: refs/heads/test</code></h4>
 <pre class="highlight"><code class="language-console" data-lang="console"></code></pre>
