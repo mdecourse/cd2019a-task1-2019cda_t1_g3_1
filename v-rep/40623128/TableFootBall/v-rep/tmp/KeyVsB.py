@@ -1,4 +1,5 @@
 import vrep
+import keyboard
 from time import sleep
 import sys, math
 # child threaded script: 
@@ -8,7 +9,7 @@ import sys, math
 vrep.simxFinish(-1)
  
 clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
-KickBallV = 90      #手把轉速設定(度/秒)
+KickBallV = 90     #手把轉速設定(度/秒)
 Move_Minus =-0.1          #手把水平移速(m/s)
 Move_Plus =0.1
 n=1
@@ -26,6 +27,7 @@ errorCode,BRev_handle=vrep.simxGetObjectHandle(clientID,'BRev',vrep.simx_opmode_
 errorCode,BMo_handle=vrep.simxGetObjectHandle(clientID,'BMo',vrep.simx_opmode_oneshot_wait)
 errorCode,RRev_handle=vrep.simxGetObjectHandle(clientID,'RRev',vrep.simx_opmode_oneshot_wait)
 errorCode,RMo_handle=vrep.simxGetObjectHandle(clientID,'RMo',vrep.simx_opmode_oneshot_wait)
+errorCode,RRod_handle=vrep.simxGetObjectHandle(clientID,'RRod',vrep.simx_opmode_oneshot_wait)
 
 if errorCode == -1:
     print('Can not find left or right motor')
@@ -42,43 +44,44 @@ def pause():
 
 def getballposition():
     #for i in range(steps):
-    errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
-    errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-    vv =position_D[1] - position_P[1]
-    vvv =position_D[2] - position_P[2]
+    errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_RR=vrep.simxGetObjectPosition(clientID,RRod_handle,-1,vrep.simx_opmode_oneshot)
+    Bv =position_S[1] - position_BR[1]
+    BBv =position_S[2] - position_BR[2]
+    Rv =position_S[1] - position_RR[1]
+    RRv =position_S[2] - position_RR[2]
     while (n == 1):
-        
-        if vv <= 0 and vvv <= 0.01:
-            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1]- position_P[1]
-            vvv =position_D[0] - position_P[0]
+        if Bv <= 0 and BBv <= 0.02:
+            errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            Bv =position_S[1]- position_BR[1]
+            BBv =position_S[0] - position_BR[0]
             vrep.simxSetJointTargetVelocity(clientID,BRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
-        
-        elif vv > 0 and vvv <= 0.01:
-            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1]- position_P[1]
-            vvv =position_D[0] - position_P[0]
+            
+        elif Bv > 0 and BBv <= 0.02:
+            errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            Bv =position_S[1]- position_BR[1]
+            BBv =position_S[0] - position_BR[0]
+            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
+            
+        elif Bv <= 0 and BBv > 0.02:
+            errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            Bv =position_S[1]- position_BR[1]
+            BBv =position_S[0] - position_BR[0]
             vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
             
-        elif vv <= 0 and vvv > 0.01:
-            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1]- position_P[1]
-            vvv =position_D[0] - position_P[0]
+        elif Bv > 0 and BBv > 0.02:
+            errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            Bv =position_S[1]- position_BR[1]
+            BBv =position_S[0] - position_BR[0]
             vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
         
-        elif vv > 0 and vvv > 0.01:
-            errorCode,position_P=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1]- position_P[1]
-            vvv =position_D[0] - position_P[0]
-            vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
-        
-        
-        vrep.simxSetJointTargetVelocity(clientID,BMo_handle,vv,vrep.simx_opmode_oneshot_wait)
-        #print(vvv)
+        vrep.simxSetJointTargetVelocity(clientID,BMo_handle,Bv,vrep.simx_opmode_oneshot_wait)
+        #print(BBv)
 vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
 vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_wait)
