@@ -474,7 +474,8 @@ vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_w
 start()
 getballposition()
 stop()</pre>
-<p></p><h2>手足球問題與解決方案</h2>
+<p></p>
+<h2>手足球問題與解決方案</h2>
 <p><span style="color: #000000; background-color: #ffff00;">手足球問題一</span></p>
 <p>如何知道目前的球的位置?</p>
 <p><span style="background-color: #00ff00;">解決方法:</span></p>
@@ -758,7 +759,8 @@ stop()</pre>
 <p></p>
 <p></p>
 <p></p>
-<p></p><h2>ssh金鑰</h2>
+<p></p>
+<h2>ssh金鑰</h2>
 <p>參考連結:<a href="https://2019wcm.blogspot.com/2019/03/github-github-pages.html">https://2019wcm.blogspot.com/2019/03/github-github-pages.html</a></p>
 <h3>關閉跳出式登入窗</h3>
 <p>首先<span>使用</span><br/><br/><br/><span>git config --edit --system</span></p>
@@ -796,10 +798,12 @@ stop()</pre>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">Plumbing and Porcelain</a></h4>
 <p><img alt="" height="436" src="/images/git.jpg" width="608"/></p>
 <p></p>
-<p></p><h3>10.2</h3>
+<p></p>
+<h3>10.2</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git Objects</a></h4>
 <h4>cat -file 從Git 取回資料</h4>
-<h4>update - ref更新引用</h4><h3>10.3</h3>
+<h4>update - ref更新引用</h4>
+<h3>10.3</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">Git References</a></h4>
 <h4><strong>如何知道最後一次提交？</strong>:</h4>
 <h4><strong>執行  git branch </strong></h4>
@@ -818,23 +822,50 @@ stop()</pre>
 <p><code class="language-console" data-lang="console">ref: refs/heads/test</code></p>
 <pre class="highlight"><code class="language-console" data-lang="console"></code></pre>
 <pre class="highlight"><code class="language-console" data-lang="console"><span></span><br/></code></pre>
-<pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre><h3>10.4</h3>
+<pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre>
+<h3>10.4</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Packfiles">Packfiles</a><br/><strong>使用 git cat-file 命令查看這個文件大小</strong></h4>
 <h4 class="highlight">$ git cat-file -s 033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5<br/>22044</h4>
 <h4><br/><strong>使用git gc打包文件</strong></h4>
 <h4><br/>$ git gc Counting objects: 18, done. Delta compression using up to 8 threads. Compressing objects: 100% (14/14), done. Writing objects: 100% (18/18), done. Total 18 (delta 3), reused 0 (delta 0)</h4>
-<p></p><h3>10.5</h3>
-<h4>The Refspec</h4>
-<p>.git / config文件中添加遠端origin的名稱，遠程存儲庫的URL以及用於獲取的refspec</p>
-<pre class="highlight"><code class="language-ini" data-lang="ini">[remote "origin"]
-	url = https://github.com/schacon/simplegit-progit
-	fetch = +refs/heads/<em>:refs/remotes/origin/<br/><br/></em>如果想一次性執行某些操作，也可以在命令行中指定refspec<br/></code></pre>
-<pre class="highlight"><code class="language-console" data-lang="console">$ git fetch origin master:refs/remotes/origin/mymaster<br/><br/>指定多個refspec<br/><br/></code></pre>
+<p></p>
+<h3>10.5</h3>
+<h4><a href="https://git-scm.com/book/en/v2/Git-Internals-The-Refspec">The Refspec</a></h4>
+<p><strong>.git / config文件中添加遠端origin的名稱，遠程存儲庫的URL以及用於獲取的refspec</strong></p>
+<p><code class="language-ini" data-lang="ini">[remote "origin"] url = https://github.com/schacon/simplegit-progit fetch = +refs/heads/<em>:refs/remotes/origin/<br/><br/><br/></em><strong>如果想一次性執行某些操作，也可以在命令行中指定refspec</strong></code></p>
+<p><code class="language-console" data-lang="console">$ git fetch origin master:refs/remotes/origin/mymaster<br/><br/><strong>指定多個refspec</strong><br/><br/></code></p>
 <pre class="highlight"><code class="language-console" data-lang="console">$ git fetch origin master:refs/remotes/origin/mymaster \
 	 topic:refs/remotes/origin/topic
 From git@github.com:schacon/simplegit
  ! [rejected]        master     -&gt; origin/mymaster  (non fast forward)
- * [new branch]      topic      -&gt; origin/topic<br/><br/>刪除</code><code class="language-console" data-lang="console">refspec<br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/><br/><br/><br/><br/><br/><br/></code></pre>
+ * [new branch]      topic      -&gt; origin/topic<br/><br/><strong>刪除</strong></code><code class="language-console" data-lang="console"><strong>refspec</strong><br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/></code></pre>
+<h3>10.6</h3>
+<p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
+<p><strong>Transfer Protocols--傳輸協議</strong></p>
+<p><span>Git可以透過兩種主要方式在兩個倉儲之間傳輸數據：“啞吧”協議與“智能”協議。</span><span>本章重點著重於介紹這兩個主要協議的運作方式。</span></p>
+<p><strong>The Dumb Protocol--啞巴協議</strong></p>
+<p><span><span>該協議稱為“啞巴協議”，是因為它在傳輸過程中不需要服務端的Git特定代碼; 獲取過程是一系列HTTP </span><code>GET</code><span><span>請求，使用者可以自由的呈現Git倉儲的安排。</span></span></span></p>
+<p></p><h3>10.7</h3>
+<p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
+<p><span>本章重點在介紹Git內部的維護和數據的恢復，有時Git會自動執行一個名為“auto <g class="gr_ gr_41 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="41" id="41">gc</g>”的指令，大多數情況下，指令不執行操作，但如果有過多的packfiles，則Git會執行git gc的指令，此指令會刪除不必要的文件。</span></p>
+<p><span>當需要恢復檔案時</span>可使用git long和git master兩個指令來進行恢復。</p>
+<p></p><h3>10.8</h3>
+<p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Environment-Variables">Environment Variables</a></p>
+<p>Git在<code>bash</code>shell中運行，並使用許多shell環境變量來確定它的行為方式。</p>
+<p><code><strong>GIT_EXEC_PATH：</strong>可透過運行檢查當前設置<code>git --exec-path</code>。</code></p>
+<p><code><strong>HOME：</strong>它是Git查找全局配置文件的地方。</code></p>
+<p><code><strong>GIT_CONFIG_NOSYSTEM：</strong>如果您的系統配置干擾了您的指令，但是您無權更改或刪除它，這將非常有用。</code></p>
+<p><code><strong>設置提交者的名字: </strong>GIT_COMMITTER_NAME</code></p>
+<div class="paragraph">
+<p><code><strong>“提交者”字段的電子郵件地址: </strong>GIT_COMMITTER_EMAIL</code> </p>
+</div>
+<div class="paragraph">
+<div class="paragraph">
+<p><strong>用於“提交者”字段中的日期: </strong><code>GIT_COMMITTER_DATE</code></p>
+</div>
+</div>
+<p></p><h3>10.9</h3>
+<pre class="highlight"><code class="language-console" data-lang="console"><br/><br/><br/><br/><br/><br/><br/></code></pre>
 <p></p>
 <h2>V-rep</h2>
 <h3>Proximity sensor</h3>
@@ -988,7 +1019,8 @@ end</pre>
 <p><span></span></p>
 <div><span></span>
 <div></div>
-</div><h3>在伺服器上佈署Git</h3>
+</div>
+<h3>在伺服器上佈署Git</h3>
 <p>要clone存儲庫以創建新的存儲庫，請使用該--bare選項運行clone命令。將存儲庫目錄結束.git。如下:</p>
 <p>$ git clone --bare my_project my_project.git</p>
 <p>現在應該在目錄中擁有Git目錄數據的副本my_project.git。</p>
