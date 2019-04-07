@@ -845,11 +845,13 @@ From git@github.com:schacon/simplegit
 <p><span>Git可以透過兩種主要方式在兩個倉儲之間傳輸數據：“啞吧”協議與“智能”協議。</span><span>本章重點著重於介紹這兩個主要協議的運作方式。</span></p>
 <p><strong>The Dumb Protocol--啞巴協議</strong></p>
 <p><span><span>該協議稱為“啞巴協議”，是因為它在傳輸過程中不需要服務端的Git特定代碼; 獲取過程是一系列HTTP </span><code>GET</code><span><span>請求，使用者可以自由的呈現Git倉儲的安排。</span></span></span></p>
-<p></p><h3>10.7</h3>
+<p></p>
+<h3>10.7</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
 <p><span>本章重點在介紹Git內部的維護和數據的恢復，有時Git會自動執行一個名為“auto <g class="gr_ gr_41 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="41" id="41">gc</g>”的指令，大多數情況下，指令不執行操作，但如果有過多的packfiles，則Git會執行git gc的指令，指令會刪除不必要的文件。</span></p>
 <p><span>當需要恢復檔案時</span>可使用git long和git master兩個指令來進行恢復。</p>
-<p></p><h3>10.8</h3>
+<p></p>
+<h3>10.8</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Environment-Variables">Environment Variables</a></p>
 <p>Git在<code>bash</code>shell中運行，並使用許多shell環境變量來確定它的行為方式。</p>
 <p><code><strong>GIT_EXEC_PATH：</strong>可透過運行檢查當前設置<code>git --exec-path</code>。</code></p>
@@ -864,12 +866,14 @@ From git@github.com:schacon/simplegit
 <p><strong>用於“提交者”字段中的日期: </strong><code>GIT_COMMITTER_DATE</code></p>
 </div>
 </div>
-<p></p><h3>10.9</h3>
+<p></p>
+<h3>10.9</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Summary">Summary</a><span></span></p>
 <p><span>功能很強的系統工具-Git</span></p>
 <p><span>可以輕鬆使用它作為VCS。本章介紹了許多管道指令 - 這些指令使用戶在使用上更家簡單。</span></p>
 <pre class="highlight"><code class="language-console" data-lang="console"><br/><br/><br/><br/><br/><br/><br/></code></pre>
-<p></p><h2>V-rep</h2>
+<p></p>
+<h2>V-rep</h2>
 <h3>Proximity sensor</h3>
 <p><span>添加</span><span><span>接近傳感</span></span><span>器 <a href="http://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm">proximity sensor</a></span></p>
 <p><span>Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type</span></p>
@@ -1091,5 +1095,27 @@ end</pre>
 <p>允許未經身份驗證的用戶存取指定的儲存庫。</p>
 <p>$ cd /path/to/project.git</p>
 <p>$ touch git-daemon-export-ok</p>
-<p><span></span></p>
-<p></p>
+<h2>分散式的Git</h2>
+<h3>分散式工作流程</h3>
+<p>分散式工作流程分為三種</p>
+<p>集中式工作流程、整合式管理員工作流程、企業型工作流程</p>
+<p>集中式工作流程</p>
+<p>如前者有人推送，後者必須合併前者的版本，不然會無法推送至儲存庫，是因為避免前者的資料被覆蓋。</p>
+<p>整合式管理員工作流程</p>
+<p>項目維護者=A、開發人員=B</p>
+<p>A推送到他們的公共儲存庫。</p>
+<p>B克隆該存儲庫並進行更改，並推動他們自己的公共副本。</p>
+<p>B向A發送一封電子郵件，要求A提取更改。</p>
+<p>A將B的repo添加為遠程，合併原先的資料，推送到主儲存庫。</p>
+<p>企業型工作流程</p>
+<p>老闆=A、副手=B、開發人員=C</p>
+<p>正常的C會在他們主題的分支上工作，並在重新定義他們在master上的工作。而master分支是獨裁者的分支。</p>
+<p>B將C的主題分支合併到B的master分支中。</p>
+<p>A將B的master分支合併到A的master分支中。</p>
+<p>A將他們推master送到參考存儲庫，以便其他C可以對其進行重新定義。</p>
+<h3>分散式的 Git - 對專案進行貢獻</h3>
+<p id="r_contributing_project"><a href="https://git-scm.com/book/zh-tw/v2/%E5%88%86%E6%95%A3%E5%BC%8F%E7%9A%84-Git-%E5%B0%8D%E5%B0%88%E6%A1%88%E9%80%B2%E8%A1%8C%E8%B2%A2%E7%8D%BB">對專案進行貢獻</a></p>
+<p>兩人合作圖</p>
+<p><img caption="false" height="1000" src="/images/5.2.1.JPG" width="791"/></p>
+<p><span>兩人以上合作圖</span></p>
+<p><img caption="false" height="1000" src="/images/5.2.2.JPG" width="812"/></p>
