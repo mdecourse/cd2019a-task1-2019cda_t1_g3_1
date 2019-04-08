@@ -766,6 +766,31 @@ end</pre>
 <p>至啟動隨身系統的start.bat中加入</p>
 <p><span>set USERPROFILE=%Disk%:\home</span></p>
 <p>使ungit能找到<span>y:\home中的使用者目錄</span></p>
+<h2><span>ShareX</span></h2>
+<p><span>遇到以下問題</span></p>
+<p><span>ffmpeg version N-92972-g301cee61fa Copyright (c) 2000-2019 the FFmpeg developers   </span></p>
+<p><span>built with gcc 8.2.1 (GCC) 20181201 </span></p>
+<p><span>  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth --enable-libopenmpt   </span></p>
+<p><span>libavutil      </span><span>56. 25.100 / 56. 25.100   </span></p>
+<p><span>libavcodec     58. 43.101 / 58. 43.101   </span></p>
+<p><span>libavformat    58. 25.100 / 58. 25.100  </span></p>
+<p><span>libavdevice    58.  6.101 / 58.  6.101 </span></p>
+<p>libavfilter     7. 48.100 /  7. 48.100   </p>
+<p><span>libswscale      5.  4.100 /  5.  4.100   </span></p>
+<p><span>libswresample   3.  4.100 /  3.  4.100   </span></p>
+<p><span>libpostproc    55.  4.100 / 55.  4.100 </span></p>
+<p><span>[gdigrab @ 00000298ebd8ca40] Capturing whole desktop as 1680x1050x32 at (0,0) [gdigrab @ 00000298ebd8ca40] Stream #0: not enough frames to estimate rate; consider increasing probesize Input #0, gdigrab, from 'desktop':   Duration: N/A, start: 1554687275.611611, bitrate: 1693452 kb/s     </span></p>
+<p><span>Stream #0:0: Video: bmp, bgra, 1680x1050, 1693452 kb/s, 30 fps, 1000k tbr, 1000k tbn, 1000k tbc [dshow @ 00000298ebd90900] Could not enumerate audio only devices (or none found). [dshow @ 00000298ebd90900] Searching for audio device within video devices for 麥克風 (Realtek High Definition Au [dshow @ 00000298ebd90900] Could not enumerate audio only devices (or none found). </span></p>
+<p><span>audio=麥克風 (Realtek High Definition Au: I/O error</span></p>
+<p><span><img alt="" height="587" src="/images/ShareX error.png" width="785"/></span></p>
+<h3><span>解決辦法</span></h3>
+<p class="gh-header-title"><span class="js-issue-title">google 搜尋 ShareX FFMPEG Error</span></p>
+<p class="gh-header-title">Task settings&gt;Scren recorder&gt;Screen recording options</p>
+<p class="gh-header-title"><span class="js-issue-title"><img alt="" height="461" src="/images/ShareX_uvoyCPeAes.png" width="836"/></span></p>
+<p class="gh-header-title"><span class="js-issue-title"><img alt="" height="504" src="/images/ShareX_bGem9f3MT4.png" width="786"/></span></p>
+<p class="gh-header-title">按Install recorder devices來安裝，並在Audio source選擇None</p>
+<p class="gh-header-title"><span class="js-issue-title"><img alt="" height="535" src="/images/ShareX_6s9dqUp00v.png" width="668"/></span></p>
+<p class="gh-header-title"><span class="js-issue-title"></span></p>
 <h1>組員操作影片</h1>
 <h2>如何製作可攜系統</h2>
 <p><span>40623105</span></p>
