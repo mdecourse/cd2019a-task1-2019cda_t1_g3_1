@@ -1,4 +1,5 @@
 import vrep
+import keyboard
 from time import sleep
 import sys, math
 # child threaded script: 
@@ -8,7 +9,7 @@ import sys, math
 vrep.simxFinish(-1)
  
 clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
-KickBallV = 0      #手把轉速設定(度/秒)
+KickBallV = 90     #手把轉速設定(度/秒)
 Move_Minus =-0.1          #手把水平移速(m/s)
 Move_Plus =0.1
 n=1
@@ -21,10 +22,12 @@ else:
     sys.exit('Could not connect')
  
 errorCode,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+errorCode,BRod_handle=vrep.simxGetObjectHandle(clientID,'BRod',vrep.simx_opmode_oneshot_wait)
 errorCode,BRev_handle=vrep.simxGetObjectHandle(clientID,'BRev',vrep.simx_opmode_oneshot_wait)
 errorCode,BMo_handle=vrep.simxGetObjectHandle(clientID,'BMo',vrep.simx_opmode_oneshot_wait)
 errorCode,RRev_handle=vrep.simxGetObjectHandle(clientID,'RRev',vrep.simx_opmode_oneshot_wait)
 errorCode,RMo_handle=vrep.simxGetObjectHandle(clientID,'RMo',vrep.simx_opmode_oneshot_wait)
+errorCode,RRod_handle=vrep.simxGetObjectHandle(clientID,'RRod',vrep.simx_opmode_oneshot_wait)
 
 if errorCode == -1:
     print('Can not find left or right motor')
@@ -41,30 +44,22 @@ def pause():
 
 def getballposition():
     #for i in range(steps):
-    errorCode,position_P=vrep.simxGetJointPosition(clientID,BRev_handle, vrep.simx_opmode_oneshot)
-    errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-    vv =position_D[1] - position_P
-    while (n == 1):
-        if vv<=0:
-            errorCode,position_P=vrep.simxGetJointPosition(clientID,BRev_handle, vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1]- position_P
-        elif vv>0:
-            errorCode,position_P=vrep.simxGetJointPosition(clientID,BRev_handle, vrep.simx_opmode_oneshot)
-            errorCode,position_D=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
-            vv =position_D[1] - position_P
-        vrep.simxSetJointTargetVelocity(clientID,BMo_handle,vv,vrep.simx_opmode_oneshot_wait)
-        print(position_D[1])
-        print(position_P[0])
-        print(vv)
-vrep.simxSetJointTargetVelocity(clientID,BRev_handle,0,vrep.simx_opmode_oneshot_wait)
-vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
-vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_wait)
-positionB=vrep.simxGetJointPosition(clientID,BRev_handle, vrep.simx_opmode_blocking)
+    errorCode,position_BR=vrep.simxGetObjectPosition(clientID,BRod_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+    errorCode,position_RR=vrep.simxGetObjectPosition(clientID,RRod_handle,-1,vrep.simx_opmode_oneshot)
+    Bv =position_S[1] - position_BR[1]
+    BBv =position_S[2] - position_BR[2]
+    Rv =position_S[1] - position_RR[1]
+    RRv =position_S[2] - position_RR[2]
+    try:
+        if keyboard.is_pressed('q'):  # if key 'q' is pressed 
+            print('You Pressed A Key!')
+        else:
+            pass 
+
 
 start()
 getballposition()
-sleep(1)
 stop()
 
 
