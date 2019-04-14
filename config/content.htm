@@ -705,16 +705,15 @@ stop()</pre>
 <p>改成url = git@github.com:<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>之後直接提交推送就可以不用打帳號密碼了</p>
 <h2>git</h2>
-<h3>10.1</h3>
+<h3>Plumbing and Porcelain</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">Plumbing and Porcelain</a></h4>
 <p><img alt="" height="436" src="/images/git.jpg" width="608"/></p>
 <p></p>
 <p></p>
-<h3>10.2</h3>
+<h3>Git Objects</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git Objects</a></h4>
 <h4>cat -file 從Git 取回資料</h4>
-<h4>update - ref更新引用</h4>
-<h3>10.3</h3>
+<h4>update - ref更新引用</h4><h3>Git References</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">Git References</a></h4>
 <h4><strong>如何知道最後一次提交？</strong>:</h4>
 <h4><strong>執行  git branch </strong></h4>
@@ -733,14 +732,12 @@ stop()</pre>
 <p><code class="language-console" data-lang="console">ref: refs/heads/test</code></p>
 <pre class="highlight"><code class="language-console" data-lang="console"></code></pre>
 <pre class="highlight"><code class="language-console" data-lang="console"><span></span><br/></code></pre>
-<pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre>
-<h3>10.4</h3>
+<pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre><h3>Packfiles</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Packfiles">Packfiles</a><br/><strong>使用 git cat-file 命令查看這個文件大小</strong></h4>
 <h4 class="highlight">$ git cat-file -s 033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5<br/>22044</h4>
 <h4><br/><strong>使用git gc打包文件</strong></h4>
 <h4><br/>$ git gc Counting objects: 18, done. Delta compression using up to 8 threads. Compressing objects: 100% (14/14), done. Writing objects: 100% (18/18), done. Total 18 (delta 3), reused 0 (delta 0)</h4>
-<p></p>
-<h3>10.5</h3>
+<p></p><h3>The Refspec</h3>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-The-Refspec">The Refspec</a></h4>
 <p><strong>.git / config文件中添加遠端origin的名稱，遠程存儲庫的URL以及用於獲取的refspec</strong></p>
 <p><code class="language-ini" data-lang="ini">[remote "origin"] url = https://github.com/schacon/simplegit-progit fetch = +refs/heads/<em>:refs/remotes/origin/<br/><br/><br/></em><strong>如果想一次性執行某些操作，也可以在命令行中指定refspec</strong></code></p>
@@ -749,20 +746,17 @@ stop()</pre>
 	 topic:refs/remotes/origin/topic
 From git@github.com:schacon/simplegit
  ! [rejected]        master     -&gt; origin/mymaster  (non fast forward)
- * [new branch]      topic      -&gt; origin/topic<br/><br/><strong>刪除</strong></code><code class="language-console" data-lang="console"><strong>refspec</strong><br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/></code></pre>
-<h3>10.6</h3>
+ * [new branch]      topic      -&gt; origin/topic<br/><br/><strong>刪除</strong></code><code class="language-console" data-lang="console"><strong>refspec</strong><br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/></code></pre><h3>Transfer Protocols</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
 <p><strong>Transfer Protocols--傳輸協議</strong></p>
 <p><span>Git可以透過兩種主要方式在兩個倉儲之間傳輸數據：“啞吧”協議與“智能”協議。</span><span>本章重點著重於介紹這兩個主要協議的運作方式。</span></p>
 <p><strong>The Dumb Protocol--啞巴協議</strong></p>
 <p><span><span>該協議稱為“啞巴協議”，是因為它在傳輸過程中不需要服務端的Git特定代碼; 獲取過程是一系列HTTP </span><code>GET</code><span><span>請求，使用者可以自由的呈現Git倉儲的安排。</span></span></span></p>
-<p></p>
-<h3>10.7</h3>
-<p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
+<p></p><h3>Maintenance and Data Recovery</h3>
+<h4 id="_maintenance_and_data_recovery"><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Maintenance-and-Data-Recovery">Maintenance and Data Recovery</a></h4>
 <p><span>本章重點在介紹Git內部的維護和數據的恢復，有時Git會自動執行一個名為“auto <g class="gr_ gr_41 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="41" id="41">gc</g>”的指令，大多數情況下，指令不執行操作，但如果有過多的packfiles，則Git會執行git gc的指令，指令會刪除不必要的文件。</span></p>
 <p><span>當需要恢復檔案時</span>可使用git long和git master兩個指令來進行恢復。</p>
-<p></p>
-<h3>10.8</h3>
+<p></p><h3 id="_environment_variables">Environment Variables</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Environment-Variables">Environment Variables</a></p>
 <p>Git在<code>bash</code>shell中運行，並使用許多shell環境變量來確定它的行為方式。</p>
 <p><code><strong>GIT_EXEC_PATH：</strong>可透過運行檢查當前設置<code>git --exec-path</code>。</code></p>
@@ -776,8 +770,7 @@ From git@github.com:schacon/simplegit
 <div class="paragraph">
 <p><strong>用於“提交者”字段中的日期: </strong><code>GIT_COMMITTER_DATE</code></p>
 </div>
-</div>
-<h3>10.9</h3>
+</div><h3>10.9</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Summary">Summary</a><span></span></p>
 <p><span>功能很強的系統工具-Git</span></p>
 <p><span>可以輕鬆使用它作為VCS。本章介紹了許多管道指令 - 這些指令使用戶在使用上更家簡單。</span></p>
@@ -793,7 +786,7 @@ From git@github.com:schacon/simplegit
 <p><code class="language-console" data-lang="console"><span><span><span><span><br/></span></span></span></span></code><span>git difftool</span></p>
 <p><code class="language-console" data-lang="console"><span><span>只是啟動一個外部工具，以顯示兩棵樹之間的區別，以防您想使用內置<code>git diff</code><span><span>命令</span><span>之外的其他內容</span><span>。</span></span><br/><br/></span></span></code></p>
 <pre class="highlight"></pre>
-<pre class="highlight"><code class="language-console" data-lang="console"><span>git reset<br/><br/>主要用於撤消操作，您可以通過動詞來判斷。它在<code>HEAD</code><span><span>指針</span><span>周圍移動</span><span>並可選地更改</span></span><code>index</code><span><span>或暫存區域，如果使用，還可以選擇更改工作目錄</span></span><span><span>。<br/></span><span>如果使用不當，此最終選項可能會導致此命令丟失，因此請確保在使用之前了解它。<br/></span></span></span><br/></code>git rm<br/><span></span></pre>
+<pre class="highlight"><code class="language-console" data-lang="console"><span>git reset<br/><br/>主要用於撤消操作，您可以通過動詞來判斷。它在<code>HEAD</code><span><span>指針</span><span>周圍移動</span><span>並可選地更改</span></span><code>index</code><span><span>或暫存區域，如果使用，還可以選擇更改工作目錄</span></span><span><span>。<br/></span><span>如果使用不當，此最終選項可能會導致此命令丟失，因此請確保在使用之前了解它。<br/></span></span></span></code></pre><br/>git rm<br/><span></span>
 <p><code class="language-console" data-lang="console"><span>用於從登台區域和Git的工作目錄中刪除文件。它類似於</span><code>git add</code><span><span>它為下一次提交分階段刪除文件。</span></span></code></p>
 <p><code class="language-console" data-lang="console"><span><span><br/></span></span></code>git mv</p>
 <p><span>是一個簡單的便捷命令，用於移動文件，然後</span><code>git add</code><span>在新文件和</span><code>git rm</code><span>舊文件上運行。</span><span><span>我們只</span></span><span><span>在移動檔案中</span></span><span><span>簡要提一下這個命令</span><span>。</span></span></p>
