@@ -1,0 +1,90 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>2019cda_t1_g3</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<script src="tipuesearch_content.js"></script>
+<script src="./../static/jquery.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="./../static/tipuesearch/tipuesearch.min.js"></script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script type="text/javascript">
+/*shorthand of $(document).ready(function(){};); */
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+function doSearch() {
+     $('#tipue_search_input').tipuesearch({
+        newWindow: true, minimumLength: 2
+     });
+}
+$(document).ready(doSearch);
+</script>
+
+</head><header><h1>產品協同設計第三組</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='組員.html'>組員</a><li><a href='手足球.html'>手足球</a><ul><li><a href='足球自動回擊.html'>足球自動回擊</a><li><a href='手足球雙人對打.html'>手足球雙人對打</a><li><a href='手足球電腦對電腦.html'>手足球電腦對電腦</a><li><a href='手足球手控與電腦對打.html'>手足球手控與電腦對打</a><li><a href='手足球問題與解決方案.html'>手足球問題與解決方案</a><li><a href='參考資料.html'>參考資料</a></li></ul><li><a href='課程內容整理.html'>課程內容整理</a><ul><li><a href='隨身系統.html'>隨身系統</a><ul><li><a href='創建資料夾.html'>創建資料夾</a><li><a href='SciTE.html'>SciTE</a><li><a href='安裝 python 進可攜系統.html'>安裝 python 進可攜系統</a><li><a href='start.bat.html'>start.bat</a><li><a href='stop.bat.html'>stop.bat</a><li><a href='Kdiff3.html'>Kdiff3</a></li></ul><li><a href='ungit-1.html'>ungit-1</a><ul><li><a href='如何安裝.html'>如何安裝</a></li></ul><li><a href='ssh金鑰.html'>ssh金鑰</a><ul><li><a href='關閉跳出式登入窗.html'>關閉跳出式登入窗</a><li><a href='製作金鑰.html'>製作金鑰</a><li><a href='利用SSH提交推送.html'>利用SSH提交推送</a></li></ul><li><a href='git.html'>git</a><ul><li><a href='Plumbing and Porcelain.html'>Plumbing and Porcelain</a><li><a href='Git Objects.html'>Git Objects</a><li><a href='Git References.html'>Git References</a><li><a href='Packfiles.html'>Packfiles</a><li><a href='The Refspec.html'>The Refspec</a><li><a href='Transfer Protocols.html'>Transfer Protocols</a><li><a href='Maintenance and Data Recovery.html'>Maintenance and Data Recovery</a><li><a href='Environment Variables.html'>Environment Variables</a><li><a href='Summy.html'>Summy</a><li><a href='A3.html'>A3</a><li><a href='A3-1.html'>A3-1</a><li><a href='8.1.html'>8.1</a><li><a href='8.2.html'>8.2</a><li><a href='8.3.html'>8.3</a><li><a href='8.4.html'>8.4</a><li><a href='7.2.html'>7.2</a><li><a href='7.1 工具 - 選擇修訂版本.html'>7.1 工具 - 選擇修訂版本</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='Proximity sensor.html'>Proximity sensor</a><li><a href='Vision sensor.html'>Vision sensor</a><li><a href='bubbleRob腳本.html'>bubbleRob腳本</a><li><a href='bubbleRob.html'>bubbleRob</a></li></ul><li><a href='Onshape.html'>Onshape</a></li></ul><li><a href='問題與討論.html'>問題與討論</a><ul><li><a href='ungit-2.html'>ungit-2</a><ul><li><a href='問題-無法取得使用者資料-已解決.html'>問題-無法取得使用者資料-已解決</a></li></ul><li><a href='ShareX.html'>ShareX</a><ul><li><a href='解決辦法.html'>解決辦法</a></li></li></ul></ul><li><a href='組員操作影片.html'>組員操作影片</a><ul><li><a href='如何製作可攜系統.html'>如何製作可攜系統</a><li><a href='v-rep tutorial.html'>v-rep tutorial</a></li></ul><li><a href='Git教材.html'>Git教材</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul><li><a href='分散式的Git.html'>分散式的Git</a><ul><li><a href='分散式工作流程.html'>分散式工作流程</a><li><a href='分散式的 Git - 對專案進行貢獻.html'>分散式的 Git - 對專案進行貢獻</a></li></ul><li><a href='Fork.html'>Fork</a></li></ul><li><a href='ungit 手冊.html'>ungit 手冊</a><ul><li><a href='part1.html'>part1</a><ul><li><a href='Open.html'>Open</a><li><a href='Fetch from origin.html'>Fetch from origin</a><li><a href='Submodules.html'>Submodules</a><li><a href='Branch.html'>Branch</a><li><a href='忽略內容.html'>忽略內容</a></li></ul><li><a href='part2.html'>part2</a><ul><li><a href='提交.html'>提交</a><li><a href='Tag.html'>Tag</a><li><a href='Megre.html'>Megre</a><li><a href='Move.html'>Move</a><li><a href='Cherry pick.html'>Cherry pick</a><li><a href='Revert.html'>Revert</a><li><a href='Reset.html'>Reset</a><li><a href='Rebase.html'>Rebase</a><li><a href='Squash.html'>Squash</a></li></li></ul></ul><li><a href='bubbleRob心得.html'>bubbleRob心得</a><ul><li><a href='40623156.html'>40623156</a></li></ul></nav><section><div id="tipue_search_content">7.2 << <a href='7.2.html'>Previous</a> <a href='V-rep.html'>Next</a> >> V-rep<br /><h1>7.1 工具 - 選擇修訂版本</h1>
+<div class="paragraph">如何獲取單個與區間提交的多種方法。<br/>簡短的 SHA-1<br/>Git 十分智能，你只需要提供SHA-1 的前幾個字符就可以獲得對應的那次提交，當然你提供的SHA-1 字符數量不得少於4 個，並且沒有歧義——也就是說，當前倉庫中只有一個對像以這段SHA-1 開頭。<br/><br/>假設這個提交是 1c002dd....，如果你想 git show 這個提交，下面的命令是等價的（假設簡短的版本沒有歧義）：<br/><br/>$ git show 1c002dd4b536e7479fe34593e72e6c6c1819e53b<br/>$ git show 1c002dd4b536e7479f<br/>$ git show 1c002d<br/><br/>分支引用<br/>你想要查看一個分支的最後一次提交的對象，假設 topic1 分支指ca82a6d ，那麼以下的命令是等價的:<br/>$ git show ca82a6dff817ec66f44342007202690a93763949<br/>$ git show topic1<br/>rev-parse 的 Git 探測工具<br/>想知道某個分支指向哪個特定的 SHA-1，或者看任何一個例子中被簡寫的 SHA-1<br/><br/>引用日誌<br/>你可以使用 git reflog 来查看引用日誌<br/><br/>查看你的master分支在昨天的時候指向了哪個提交<br/>$ git show master@{yesterday}<br/><br/>運行可以git log -g來查看類似於git log輸出格式的引用日誌信息<br/>祖先引用<br/>你可以使用HEAD^來查看上一個提交，也就是“HEAD的父提交”：<br/>$ git show HEAD^<br/><br/>後面添加一個數字 - 例如d921970^2代表“d921970的第二父提交”這個語法只適用於合併（merge）的提交<br/>$ git show d921970^2<br/><br/>另一種指明祖先提交的方法是~，因此HEAD~和HEAD^是等價的<br/>提交區間<br/>$ git log master..experiment<br/>查看在master分支中而不在experiment分支中的提交<br/>$ git log experiment..master<br/>多點 <br/>下列3個命令是等價的：<br/>$ git log refA..refB<br/>$ git log ^refA refB<br/>$ git log refB --not refA<br/>所有被refA或refB包含的但是不被refC包含的提交<br/>$ git log refA refB ^refC<br/>$ git log refA refB --not refC<br/>三點<br/>master或者experiment中所有遊戲的但不是兩者教育學習語言文字的提交<br/>$ git log master...experiment</div>
+<div class="paragraph"></div>
+<div class="paragraph"></div>
+<div class="paragraph"><span></span></div>
+<div class="paragraph"><span></span></div>
+<div class="paragraph"><span></span></div>
+<div class="paragraph"><span></span></div>
+<div class="paragraph"></div>
+<div class="paragraph"></div><br />7.2 << <a href='7.2.html'>Previous</a> <a href='V-rep.html'>Next</a> >> V-rep</div></section></div></body></html>
