@@ -1037,6 +1037,8 @@ end</pre>
 <p>40623109</p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/QosyxCNOQco" width="560"></iframe></p>
 <p>操作檔案：<a href="https://drive.google.com/drive/folders/1nBPLird0-Ml4HGcLlrA7KfkSC3g5ckt2?usp=sharing">bubbleRob.ttt</a></p>
+<p>40623118</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/asLy_QOghgg" width="560"></iframe></p>
 <p>40623127</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/80291HOGlJ8" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/EKa-8bDXtVo" width="560"></iframe></p><h1>Git教材</h1>
 <h2>伺服器上的Git</h2>
@@ -1155,24 +1157,26 @@ end</pre>
 <p>$ cd /path/to/project.git</p>
 <p>$ touch git-daemon-export-ok</p>
 <h2>分散式的Git</h2>
-<h3>分散式工作流程</h3>
+<p><span>對Git中的項目做出貢獻以及維護自己的項目或整合其他用戶的貢獻</span></p><h3>分散式工作流程</h3>
 <p>分散式工作流程分為三種</p>
 <p>集中式工作流程、整合式管理員工作流程、企業型工作流程</p>
+<p></p>
 <p>集中式工作流程</p>
 <p>如前者有人推送，後者必須合併前者的版本，不然會無法推送至儲存庫，是因為避免前者的資料被覆蓋。</p>
+<p></p>
 <p>整合式管理員工作流程</p>
 <p>項目維護者=A、開發人員=B</p>
 <p>A推送到他們的公共儲存庫。</p>
 <p>B克隆該存儲庫並進行更改，並推動他們自己的公共副本。</p>
 <p>B向A發送一封電子郵件，要求A提取更改。</p>
 <p>A將B的repo添加為遠程，合併原先的資料，推送到主儲存庫。</p>
+<p></p>
 <p>企業型工作流程</p>
 <p>老闆=A、副手=B、開發人員=C</p>
 <p>正常的C會在他們主題的分支上工作，並在重新定義他們在master上的工作。而master分支是獨裁者的分支。</p>
 <p>B將C的主題分支合併到B的master分支中。</p>
 <p>A將B的master分支合併到A的master分支中。</p>
-<p>A將他們推master送到參考存儲庫，以便其他C可以對其進行重新定義。</p>
-<h3>分散式的 Git - 對專案進行貢獻</h3>
+<p>A將他們推master送到參考存儲庫，以便其他C可以對其進行重新定義。</p><h3>分散式的 Git - 對專案進行貢獻</h3>
 <p id="r_contributing_project"><a href="https://git-scm.com/book/zh-tw/v2/%E5%88%86%E6%95%A3%E5%BC%8F%E7%9A%84-Git-%E5%B0%8D%E5%B0%88%E6%A1%88%E9%80%B2%E8%A1%8C%E8%B2%A2%E7%8D%BB">對專案進行貢獻</a></p>
 <p>兩人合作圖</p>
 <p><img caption="false" height="1000" src="/images/5.2.1.JPG" width="791"/></p>
@@ -1191,12 +1195,11 @@ end</pre>
 <p>先將所Fork到的專案clone下來，新建一個版本後，再回推回去。</p>
 <p>這時自己所Fork的專案要回推至原專案時，需要給原作者發送請求，方法如下</p>
 <p>到原專案的右方案</p>
-<p>pull request   &gt;   New pull resques   t&gt;   compare across forks  &gt;<br/>在base fork選原專案的master至head fork選自己專案master   &gt;   最後按下 Click to create a pull request for this comparison ，這樣就建立起一個pull request了。</p>
+<p>pull request   &gt;   New pull resquest   &gt;   compare across forks  &gt;<br/>在base fork選原專案的master至head fork選自己專案master   &gt;   最後按下 Click to create a pull request for this comparison ，這樣就建立起一個pull request了。</p>
 <p>最後，我們先看一下右上角有個Able to merge的地方，會預先告訴你合併的結果，顯示你的版本跟原版本是否有衝突發生。</p>
 <p>如果都沒問題，可以再輸入一些說明文字給原作者，並按下 Send pull request 即可建立完成。</p>
 <p>管理 Pull Requests方面，可能是來自某個 fork 裡的分支，<br/>或是同個倉儲裡的某個分支。而接收到時，會以電郵(信箱)通知。</p>
-<p>觀看所接受到的pull resquest沒問題後，按下 Merge pull request 即可完成合併工作。</p>
-<h1>ungit 手冊</h1>
+<p>觀看所接受到的pull resquest沒問題後，按下 Merge pull request 即可完成合併工作。</p><h1>ungit 手冊</h1>
 <h2>part1</h2>
 <h3>Open</h3>
 <p>1.首先打開隨身碟命令提示字元，進入tmp下的組別資料夾，打 kungit</p>
@@ -1280,7 +1283,8 @@ end</pre>
 <p><img alt="" height="70" src="/images/新增一行.png" width="190"/></p>
 <p>c. 檔案以忽略除了456.txt的文件</p>
 <p><img alt="" height="256" src="/images/顯示456.png" width="395"/></p><h2>part2</h2>
-<h3>Commit</h3>
+<h3>提交</h3>
+<p>Commit</p>
 <p><span></span>1. Create an empty commit (新增提交)</p>
 <p>依序下圖步驟操作即可新增提交</p>
 <p><img caption="false" height="61" src="/images/push1.png" width="475"/></p>
