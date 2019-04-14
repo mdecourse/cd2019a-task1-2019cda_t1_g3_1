@@ -762,7 +762,7 @@ From git@github.com:schacon/simplegit
 <p><span>本章重點在介紹Git內部的維護和數據的恢復，有時Git會自動執行一個名為“auto <g class="gr_ gr_41 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="41" id="41">gc</g>”的指令，大多數情況下，指令不執行操作，但如果有過多的packfiles，則Git會執行git gc的指令，指令會刪除不必要的文件。</span></p>
 <p><span>當需要恢復檔案時</span>可使用git long和git master兩個指令來進行恢復。</p>
 <p></p>
-<h3 id="_environment_variables">Environment Variables</h3>
+<h3>Environment Variables</h3>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Environment-Variables">Environment Variables</a></p>
 <p>Git在<code>bash</code>shell中運行，並使用許多shell環境變量來確定它的行為方式。</p>
 <p><code><strong>GIT_EXEC_PATH：</strong>可透過運行檢查當前設置<code>git --exec-path</code>。</code></p>
@@ -879,10 +879,38 @@ From git@github.com:schacon/simplegit
 </div>
 <div class="paragraph"><span></span></div>
 <div class="paragraph"><span></span></div>
-<div class="paragraph"></div>
-<div class="paragraph"></div>
-<div class="paragraph"><span></span></div>
-<div class="paragraph"></div>
+<div class="paragraph">
+<h3>8.1</h3>
+<p>(有工具可以解決圖形衝突<span>)</span></p>
+<p><span>外部合併和差異工具</span></p>
+<p></p>
+<p>您可以設置一個外部工具，來自動解決圖形衝突，而不必手動解決。</p>
+<p>強制視覺合併工具<span>" (P4Merge) </span>來執行差異和合併解析度<span>, </span>因為它是一個不錯的圖形工具<span>, </span>並且是免費的。</p>
+<h3>8.2</h3>
+<p>Git 屬性資料還允許您在匯出專案存檔時執行一些有趣的操作。</p>
+<p> </p>
+<p>您可以告訴<span> Git </span>在生成存檔時不要匯出某些檔或目錄。如果有一個子目錄或檔不希望包含在存檔檔中<span>, </span>但您確實希望簽入專案<span>, </span>則可以通過export-ignore確定這些檔。</p>
+<p>例如<span>, </span>假設您在test/子目錄中有一些測試檔案<span>, </span>而將它們包含在專案的<span> tarball </span>匯出中是沒有意義的。您可以將以下行添加到<span> Git </span>屬性檔中<span>:</span></p>
+<p>test/ export-ignore</p>
+<p>合併策略</p>
+<p>您還可以使用<span> Git </span>屬性告訴<span> Git </span>對專案中的特定檔使用不同的合併策略。一個非常有用的選擇是告訴<span> Git </span>不要嘗試合併特定的檔時<span>, </span>他們有衝突<span>, </span>而是使用你的一方合併超過別人的。</p>
+<p>如果專案中的分支存在分歧或是專用的<span>, </span>但您希望能夠將更改合併回其中<span>, </span>並且希望忽略某些檔<span>, </span>這將很有説明。假設您有一個名為database.xml " 的資料庫設置檔<span>, </span>該檔在兩個分支中是不同的<span>, </span>並且您希望在不弄亂資料庫檔案的情況下合併到其他分支中。</p>
+<h3>8.3</h3>
+<br/><span style="font-size: 12.0pt; font-family: 標楷體; color: #4e443c; font-weight: normal;">整理 自訂</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 標楷體; color: #f14e32;">Git Hooks<o:p></o:p></span>
+<p>教你一些鉤子的用法並告訴妳這些能尬麻<span>? </span>使用鉤子來檢查提交消息是否符合所需的模式等等<span>…..</span></p>
+<p>前<span>4</span>種掛鉤與提交過程有關</p>
+<h4><b><span style="font-size: 10.0pt; font-family: 標楷體; color: #626262;">新興工作流程掛鉤</span></b><span lang="EN-US" style="font-size: 10.0pt; font-family: 標楷體; color: #626262;"><o:p></o:p></span></h4>
+<h4 style="line-height: 16.8pt; background: white; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 18.75pt 0cm 11.25pt 0cm;"><b><span style="font-size: 10.0pt; font-family: 標楷體; color: #626262;">電子郵件工作流程掛鉤<span lang="EN-US"><o:p></o:p></span></span></b></h4>
+<h4 style="line-height: 16.8pt; background: white; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 18.75pt 0cm 11.25pt 0cm;"><b><span style="font-size: 10.0pt; font-family: 標楷體; color: #626262;">其他用戶端掛鉤</span></b></h4>
+<h4 style="line-height: 16.8pt; background: white; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 18.75pt 0cm 11.25pt 0cm;"><span style="font-size: 10.0pt; font-family: 標楷體; color: #626262; font-weight: normal;">伺服器端掛鉤</span></h4>
+</div>
+<div class="paragraph">
+<p>注意<span>:</span> 此腳本無法停止推送過程<span>, </span>但用戶端在完成之前不會斷開連接<span>, </span>因此<span>, </span>如果您嘗試執行任何可能需要很長時間的操作<span>, </span>請務必小心。</p>
+<h3>8.4</h3>
+<p></p>
+<h6>本章要用你所學過的知識來建一個<span>git</span>工作流，並將構建用戶端腳本<span>, </span>以説明開發人員知道他們的推送是否會被拒絕<span>, </span>以及實際強制實施策略的伺服器腳本。</h6>
+<p></p>
+</div>
 <div class="paragraph"><span></span></div>
 <div class="paragraph"><span></span></div>
 <div class="paragraph"><span></span></div>
@@ -1032,6 +1060,9 @@ end</pre>
 <p>40623156</p>
 <p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/sAXEWXAc0pQ" width="560"></iframe></p>
 <h2>v-rep tutorial</h2>
+<p>40623109</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/QosyxCNOQco" width="560"></iframe></p>
+<p>操作檔案：<a href="https://drive.google.com/drive/folders/1nBPLird0-Ml4HGcLlrA7KfkSC3g5ckt2?usp=sharing">bubbleRob.ttt</a></p>
 <p>40623127</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/80291HOGlJ8" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/EKa-8bDXtVo" width="560"></iframe></p>
 <h1>Git教材</h1>
