@@ -619,10 +619,10 @@ stop()</pre>
 <h1>課程內容整理</h1>
 <h2>隨身系統</h2>
 <p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
-<h3>創建資料夾</h3>
+<h4>創建資料夾</h4>
 <p><span>創建一個放置可攜檔案的資料夾</span></p>
 <p>並在裡面<span>創建一個data資料夾用來連結y槽</span></p>
-<h3>SciTE</h3>
+<h4>SciTE</h4>
 <p>安裝SciTE至data資料夾中</p>
 <p><span>使用windos的</span><span> </span><span>full download版本</span></p>
 <p>SciTE Download:<a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a></p>
@@ -631,7 +631,7 @@ stop()</pre>
 <p><img alt="" height="925" src="/images/Sc1_HLqRO2uJD4.png" width="849"/></p>
 <p>利用ctrl+f找到code.page並改為下圖所示</p>
 <p><img alt="" height="823" src="/images/Sc1_54NV2TXXw1.png" width="820"/></p>
-<h3>安裝 python 進可攜系統</h3>
+<h4>安裝 python 進可攜系統</h4>
 <p>安裝時選取自訂義安裝</p>
 <p><img alt="" height="379" src="/images/python-3.7.2-amd64_sT8hqE8YyH.png" width="664"/></p>
 <p>勾選所需要的項目</p>
@@ -645,18 +645,18 @@ stop()</pre>
 <p><span><img alt="" height="721" src="/images/HxD64_r0XgABHZja.png" width="855"/></span></p>
 <p><span></span></p>
 <p>更改完成後就可以把整個p37資料夾移至data資料夾</p>
-<h3>start.bat</h3>
+<h4>start.bat</h4>
 <p>利用安裝的SciTE製作start.bat檔案</p>
 <p><img alt="" height="823" src="/images/Sc1_dNriWtOuUE.png" width="820"/></p>
-<h3>stop.bat</h3>
+<h4>stop.bat</h4>
 <p><span>利用安裝的SciTE製作stop.bat檔案</span></p>
 <p><img alt="" height="298" src="/images/Sc1_Rdatkc1err.png" width="474"/></p>
-<h3>Kdiff3</h3>
+<h4>Kdiff3</h4>
 <p>在製作過程中想要快速了解兩個檔案之間的差異可以使用Kdiff3來快速比對出不一樣的地方。</p>
 <p><span>Kdiff3: </span><a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://kdiff3.sourceforge.net/" rel="nofollow" spellcheck="false" target="_blank">http://kdiff3.sourceforge.net/</a></p>
-<h2>ungit</h2>
+<h2>Git - ungit</h2>
 <p>使用圖形化介面讓使用者更加了解目前所在的分支與倉儲狀況</p>
-<h3>如何安裝</h3>
+<h4>如何安裝</h4>
 <p>參考連結<a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html">http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html</a></p>
 <p>至上方連結處下載<span> </span><a href="https://drive.google.com/file/d/1G3cEZsw6d7NjqLLgu9jljVNBd6wF-ZrG/view?usp=sharing">nodejs_with_ungit.7z</a></p>
 <p>下載完成後解壓縮到隨身系統資料夾的data中</p>
@@ -669,10 +669,9 @@ stop()</pre>
 <p><span><img alt="" height="859" src="/images/Sc1_2019-03-09_12-25-15.png" width="1250"/></span></p>
 <p><span></span>之後在中空白的SciTE中輸入</p>
 <p>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %%U"</p>
-<p>存檔至Data中並命名為kungit.bat</p>
-<h2>ssh金鑰</h2>
+<p>存檔至Data中並命名為kungit.bat</p><h2>ssh金鑰</h2>
 <p>參考連結:<a href="https://2019wcm.blogspot.com/2019/03/github-github-pages.html">https://2019wcm.blogspot.com/2019/03/github-github-pages.html</a></p>
-<h3>關閉跳出式登入窗</h3>
+<h4>關閉跳出式登入窗</h4>
 <p>首先<span>使用</span><br/><br/><br/><span>git config --edit --system</span></p>
 <p>叫出vi<span>編輯器,編輯git的設定檔案</span></p>
 <p><span>使用按鍵H,J,K,L控制上下左右</span></p>
@@ -684,7 +683,7 @@ stop()</pre>
 <p>刪除後按ESC鍵離開編輯模式</p>
 <p>再輸入冒號後，再輸入wq存檔並關閉。</p>
 <p>如果要直接離開則輸入exit</p>
-<h3>製作金鑰</h3>
+<h4>製作金鑰</h4>
 <p>在<span>可攜系統的命令列視窗輸入sh或者是sh_yen(可至y:\git\bin中確認)</span></p>
 <p><span>執行 Git 的 shell</span></p>
 <p><span>並輸入</span></p>
@@ -695,7 +694,7 @@ stop()</pre>
 <p><span><img alt="" height="596" src="/images/chrome_2019-03-24_17-22-01.png" width="985"/></span></p>
 <p><span></span></p>
 <p><span>在SSH and GPG keys的SSH Key新建並貼上複製內容</span></p>
-<h3>利用SSH提交推送</h3>
+<h4>利用SSH提交推送</h4>
 <p>首先要確認倉儲是以SSH的方式clone的</p>
 <p>利用以下指令clone或</p>
 <p>git clone <strong></strong>git@github.com:倉儲擁有者/<span>倉儲名</span></p>
@@ -704,16 +703,16 @@ stop()</pre>
 <p>改成url = git@github.com:<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>之後直接提交推送就可以不用打帳號密碼了</p>
 <h2>git</h2>
-<h3>Plumbing and Porcelain</h3>
+<h4>Plumbing and Porcelain</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">Plumbing and Porcelain</a></h4>
 <p><img alt="" height="436" src="/images/git.jpg" width="608"/></p>
 <p></p>
 <p></p>
-<h3>Git Objects</h3>
+<h4>Git Objects</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git Objects</a></h4>
 <h4>cat -file 從Git 取回資料</h4>
 <h4>update - ref更新引用</h4>
-<h3>Git References</h3>
+<h4>Git References</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">Git References</a></h4>
 <h4><strong>如何知道最後一次提交？</strong>:</h4>
 <h4><strong>執行  git branch </strong></h4>
@@ -733,13 +732,13 @@ stop()</pre>
 <pre class="highlight"><code class="language-console" data-lang="console"></code></pre>
 <pre class="highlight"><code class="language-console" data-lang="console"><span></span><br/></code></pre>
 <pre class="highlight"><code class="language-console" data-lang="console"><code></code><br/></code></pre>
-<h3>Packfiles</h3>
+<h4>Packfiles</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Packfiles">Packfiles</a><br/><strong>使用 git cat-file 命令查看這個文件大小</strong></h4>
 <h4 class="highlight">$ git cat-file -s 033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5<br/>22044</h4>
 <h4><br/><strong>使用git gc打包文件</strong></h4>
 <h4><br/>$ git gc Counting objects: 18, done. Delta compression using up to 8 threads. Compressing objects: 100% (14/14), done. Writing objects: 100% (18/18), done. Total 18 (delta 3), reused 0 (delta 0)</h4>
 <p></p>
-<h3>The Refspec</h3>
+<h4>The Refspec</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-The-Refspec">The Refspec</a></h4>
 <p><strong>.git / config文件中添加遠端origin的名稱，遠程存儲庫的URL以及用於獲取的refspec</strong></p>
 <p><code class="language-ini" data-lang="ini">[remote "origin"] url = https://github.com/schacon/simplegit-progit fetch = +refs/heads/<em>:refs/remotes/origin/<br/><br/><br/></em><strong>如果想一次性執行某些操作，也可以在命令行中指定refspec</strong></code></p>
@@ -749,19 +748,19 @@ stop()</pre>
 From git@github.com:schacon/simplegit
  ! [rejected]        master     -&gt; origin/mymaster  (non fast forward)
  * [new branch]      topic      -&gt; origin/topic<br/><br/><strong>刪除</strong></code><code class="language-console" data-lang="console"><strong>refspec</strong><br/>git push origin :topic<br/><br/>git push origin -- delete topic<br/><br/><br/></code></pre>
-<h3>Transfer Protocols</h3>
+<h4>Transfer Protocols</h4>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Transfer-Protocols">Transfer Protocols</a></p>
 <p><strong>Transfer Protocols--傳輸協議</strong></p>
 <p><span>Git可以透過兩種主要方式在兩個倉儲之間傳輸數據：“啞吧”協議與“智能”協議。</span><span>本章重點著重於介紹這兩個主要協議的運作方式。</span></p>
 <p><strong>The Dumb Protocol--啞巴協議</strong></p>
 <p><span><span>該協議稱為“啞巴協議”，是因為它在傳輸過程中不需要服務端的Git特定代碼; 獲取過程是一系列HTTP </span><code>GET</code><span><span>請求，使用者可以自由的呈現Git倉儲的安排。</span></span></span></p>
 <p></p>
-<h3>Maintenance and Data Recovery</h3>
+<h4>Maintenance and Data Recovery</h4>
 <h4 id="_maintenance_and_data_recovery"><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Maintenance-and-Data-Recovery">Maintenance and Data Recovery</a></h4>
 <p><span>本章重點在介紹Git內部的維護和數據的恢復，有時Git會自動執行一個名為“auto <g class="gr_ gr_41 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="41" id="41">gc</g>”的指令，大多數情況下，指令不執行操作，但如果有過多的packfiles，則Git會執行git gc的指令，指令會刪除不必要的文件。</span></p>
 <p><span>當需要恢復檔案時</span>可使用git long和git master兩個指令來進行恢復。</p>
 <p></p>
-<h3>Environment Variables</h3>
+<h4>Environment Variables</h4>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Environment-Variables">Environment Variables</a></p>
 <p>Git在<code>bash</code>shell中運行，並使用許多shell環境變量來確定它的行為方式。</p>
 <p><code><strong>GIT_EXEC_PATH：</strong>可透過運行檢查當前設置<code>git --exec-path</code>。</code></p>
@@ -776,11 +775,11 @@ From git@github.com:schacon/simplegit
 <p><strong>用於“提交者”字段中的日期: </strong><code>GIT_COMMITTER_DATE</code></p>
 </div>
 </div>
-<h3>Summy</h3>
+<h4>Summy</h4>
 <p><a href="https://git-scm.com/book/zh-tw/v2/Git-Internals-Summary">Summary</a><span></span></p>
 <p><span>功能很強的系統工具-Git</span></p>
 <p><span>可以輕鬆使用它作為VCS。本章介紹了許多管道指令 - 這些指令使用戶在使用上更家簡單。</span></p>
-<h3>A3</h3>
+<h4>A3</h4>
 <p><span>git config</span></p>
 <p><span><span>該</span><code>git config</code><span><span>命令幾乎已在本書的每一章中使用</span></span></span></p>
 <p><code class="language-console" data-lang="console"><span><span>在初次設置Git中，</span></span><span><span>我們在開始使用Git之前用它來指定我們的名字，電子郵件地址和編輯器首選項</span></span></code></p>
@@ -812,7 +811,7 @@ From git@github.com:schacon/simplegit
 <div class="paragraph"><span></span></div>
 <div class="paragraph"></div>
 </div>
-<h3>A3-1</h3>
+<h4>A3-1</h4>
 <div class="paragraph">git tag<br/><span></span></div>
 <div class="paragraph"><span><span></span></span></div>
 <div class="paragraph"><span><span><span>該</span><code>git tag</code><span><span>命令用於為代碼歷史記錄中的特定點提供永久書籤。</span><span>通常，這用於發布容。</span></span></span></span></div>
@@ -879,13 +878,13 @@ From git@github.com:schacon/simplegit
 <div class="paragraph"><span></span></div>
 <div class="paragraph"><span></span></div>
 <div class="paragraph">
-<h3>8.1</h3>
+<h4>8.1</h4>
 <p>(有工具可以解決圖形衝突<span>)</span></p>
 <p><span>外部合併和差異工具</span></p>
 <p></p>
 <p>您可以設置一個外部工具，來自動解決圖形衝突，而不必手動解決。</p>
 <p>強制視覺合併工具<span>" (P4Merge) </span>來執行差異和合併解析度<span>, </span>因為它是一個不錯的圖形工具<span>, </span>並且是免費的。</p>
-<h3>8.2</h3>
+<h4>8.2</h4>
 <p>Git 屬性資料還允許您在匯出專案存檔時執行一些有趣的操作。</p>
 <p> </p>
 <p>您可以告訴<span> Git </span>在生成存檔時不要匯出某些檔或目錄。如果有一個子目錄或檔不希望包含在存檔檔中<span>, </span>但您確實希望簽入專案<span>, </span>則可以通過export-ignore確定這些檔。</p>
@@ -894,7 +893,7 @@ From git@github.com:schacon/simplegit
 <p>合併策略</p>
 <p>您還可以使用<span> Git </span>屬性告訴<span> Git </span>對專案中的特定檔使用不同的合併策略。一個非常有用的選擇是告訴<span> Git </span>不要嘗試合併特定的檔時<span>, </span>他們有衝突<span>, </span>而是使用你的一方合併超過別人的。</p>
 <p>如果專案中的分支存在分歧或是專用的<span>, </span>但您希望能夠將更改合併回其中<span>, </span>並且希望忽略某些檔<span>, </span>這將很有説明。假設您有一個名為database.xml " 的資料庫設置檔<span>, </span>該檔在兩個分支中是不同的<span>, </span>並且您希望在不弄亂資料庫檔案的情況下合併到其他分支中。</p>
-<h3>8.3</h3>
+<h4>8.3</h4>
 <br/><span style="font-size: 12.0pt; font-family: 標楷體; color: #4e443c; font-weight: normal;">整理 自訂</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 標楷體; color: #f14e32;">Git Hooks<o:p></o:p></span>
 <p>教你一些鉤子的用法並告訴妳這些能尬麻<span>? </span>使用鉤子來檢查提交消息是否符合所需的模式等等<span>…..</span></p>
 <p>前<span>4</span>種掛鉤與提交過程有關</p>
@@ -905,14 +904,14 @@ From git@github.com:schacon/simplegit
 </div>
 <div class="paragraph">
 <p>注意<span>:</span> 此腳本無法停止推送過程<span>, </span>但用戶端在完成之前不會斷開連接<span>, </span>因此<span>, </span>如果您嘗試執行任何可能需要很長時間的操作<span>, </span>請務必小心。</p>
-<h3>8.4</h3>
+<h4>8.4</h4>
 <p></p>
 <h6>本章要用你所學過的知識來建一個<span>git</span>工作流，並將構建用戶端腳本<span>, </span>以説明開發人員知道他們的推送是否會被拒絕<span>, </span>以及實際強制實施策略的伺服器腳本。</h6>
 <p></p>
-<h3>7.2</h3>
+<h4>7.2</h4>
 <p>交互式暫存<br/>運行git add時使用-i或者--interactive選項，Git將會進入一個交互式終端模式<br/>$ git add -i<br/>暫存與取消暫存文件<br/>在如果What now&gt;提示符後鍵入2或u，腳本將會提示想要暫存哪個文件<br/>Update&gt;&gt; 1,2</p>
 <p>如果在Update&gt;&gt;提示符後不輸入任何東西並直接按回車，Git將會暫存之前選擇的文件<br/>要取消暫存TODO文件，使用3或r（撤消）選項</p>
-<h3>7.1 工具 - 選擇修訂版本</h3>
+<h4>7.1 工具 - 選擇修訂版本</h4>
 <div class="paragraph">如何獲取單個與區間提交的多種方法。<br/>簡短的 SHA-1<br/>Git 十分智能，你只需要提供SHA-1 的前幾個字符就可以獲得對應的那次提交，當然你提供的SHA-1 字符數量不得少於4 個，並且沒有歧義——也就是說，當前倉庫中只有一個對像以這段SHA-1 開頭。<br/><br/>假設這個提交是 1c002dd....，如果你想 git show 這個提交，下面的命令是等價的（假設簡短的版本沒有歧義）：<br/><br/>$ git show 1c002dd4b536e7479fe34593e72e6c6c1819e53b<br/>$ git show 1c002dd4b536e7479f<br/>$ git show 1c002d<br/><br/>分支引用<br/>你想要查看一個分支的最後一次提交的對象，假設 topic1 分支指ca82a6d ，那麼以下的命令是等價的:<br/>$ git show ca82a6dff817ec66f44342007202690a93763949<br/>$ git show topic1<br/>rev-parse 的 Git 探測工具<br/>想知道某個分支指向哪個特定的 SHA-1，或者看任何一個例子中被簡寫的 SHA-1<br/><br/>引用日誌<br/>你可以使用 git reflog 来查看引用日誌<br/><br/>查看你的master分支在昨天的時候指向了哪個提交<br/>$ git show master@{yesterday}<br/><br/>運行可以git log -g來查看類似於git log輸出格式的引用日誌信息<br/>祖先引用<br/>你可以使用HEAD^來查看上一個提交，也就是“HEAD的父提交”：<br/>$ git show HEAD^<br/><br/>後面添加一個數字 - 例如d921970^2代表“d921970的第二父提交”這個語法只適用於合併（merge）的提交<br/>$ git show d921970^2<br/><br/>另一種指明祖先提交的方法是~，因此HEAD~和HEAD^是等價的<br/>提交區間<br/>$ git log master..experiment<br/>查看在master分支中而不在experiment分支中的提交<br/>$ git log experiment..master<br/>多點 <br/>下列3個命令是等價的：<br/>$ git log refA..refB<br/>$ git log ^refA refB<br/>$ git log refB --not refA<br/>所有被refA或refB包含的但是不被refC包含的提交<br/>$ git log refA refB ^refC<br/>$ git log refA refB --not refC<br/>三點<br/>master或者experiment中所有遊戲的但不是兩者教育學習語言文字的提交<br/>$ git log master...experiment</div>
 <div class="paragraph"></div>
 <div class="paragraph"></div>
@@ -923,7 +922,7 @@ From git@github.com:schacon/simplegit
 <div class="paragraph"></div>
 <div class="paragraph"></div>
 <h2>V-rep</h2>
-<h3>Proximity sensor</h3>
+<h4>Proximity sensor</h4>
 <p><span>添加</span><span><span>接近傳感</span></span><span>器 <a href="http://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm">proximity sensor</a></span></p>
 <p><span>Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type</span></p>
 <p><span><img alt="" height="382" src="/images/bubbleRobTut2.jpg" width="482"/></span></p>
@@ -938,7 +937,7 @@ From git@github.com:schacon/simplegit
 <p><span>Show detection parameter中將Don’t  allow detection ifdistance smaller than取消</span></p>
 <p><span>最後將傳感器連接到機器人的身體</span></p>
 <p><span><img alt="" height="31" src="/images/連接.PNG" width="287"/></span></p>
-<h3>Vision sensor</h3>
+<h4>Vision sensor</h4>
 <p><span>添加視覺傳感器 <a href="http://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm">vision sensor</a></span></p>
 <p><span>Menu bar--&gt;Add--&gt;Vision sensor--&gt;Perspective type</span></p>
 <p><span>將視覺傳感器和距離傳感器放置一起且方向一致</span></p>
@@ -954,7 +953,7 @@ From git@github.com:schacon/simplegit
 <p><span><img alt="" height="213" src="/images/view.png" width="384"/></span></p>
 <p><span>就可以看到視覺感測器的畫面</span></p>
 <p><span><img alt="" height="394" src="/images/傳感器畫面.gif" width="480"/></span></p>
-<h3>bubbleRob腳本</h3>
+<h4>bubbleRob腳本</h4>
 <p>選擇對象BubbleRob---&gt;右鍵選擇Add--&gt;Associate child script--&gt;Non threaded</p>
 <p>腳本文件語言爲lua語言</p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function speedChange_callback(ui,id,newVal)
@@ -1000,7 +999,7 @@ function sysCall_cleanup()
 	simUI.destroy(ui)
 end</pre>
 <pre class="lightRedBox"><br/><br/></pre>
-<h3>bubbleRob</h3>
+<h4>bubbleRob</h4>
 <p>成品圖</p>
 <p><code class="language-ini" data-lang="ini"><br/><em><img alt="" height="406" src="/images/成品圖.gif" width="804"/><br/></em></code></p>
 </div>
@@ -1019,7 +1018,7 @@ end</pre>
 <p><a href="https://cad.onshape.com/documents/2899f2d3c4bc487f26c20116/w/d033a8f68da9655d35a0447e/e/5a79d0e99bf372851e03c03a">組合圖連結</a></p>
 <h1>問題與討論</h1>
 <h2>ungit</h2>
-<h3>問題-無法取得使用者資料-已解決</h3>
+<h4>問題-無法取得使用者資料-已解決</h4>
 <p>當使用ungit提交推送時，出現如下圖的錯誤內容</p>
 <p><img alt="" height="953" src="/images/chrome_2019-03-05_16-55-23.png" width="1303"/></p>
 <p>解決方法:</p>
@@ -1043,7 +1042,7 @@ end</pre>
 <p><span>Stream #0:0: Video: bmp, bgra, 1680x1050, 1693452 kb/s, 30 fps, 1000k tbr, 1000k tbn, 1000k tbc [dshow @ 00000298ebd90900] Could not enumerate audio only devices (or none found). [dshow @ 00000298ebd90900] Searching for audio device within video devices for 麥克風 (Realtek High Definition Au [dshow @ 00000298ebd90900] Could not enumerate audio only devices (or none found). </span></p>
 <p><span>audio=麥克風 (Realtek High Definition Au: I/O error</span></p>
 <p><span><img alt="" height="587" src="/images/ShareX error.png" width="785"/></span></p>
-<h3>解決辦法</h3>
+<h4>解決辦法</h4>
 <p class="gh-header-title"><span class="js-issue-title">google 搜尋 ShareX FFMPEG Error</span></p>
 <p class="gh-header-title">Task settings&gt;Scren recorder&gt;Screen recording options</p>
 <p class="gh-header-title"><span class="js-issue-title"><img alt="" height="461" src="/images/ShareX_uvoyCPeAes.png" width="836"/></span></p>
@@ -1082,7 +1081,7 @@ end</pre>
 <div><span>Local protocols、HTTP、Secure Shell（SSH）和Git。</span></div>
 <p>通過上方多種方式啟動並運行遠程Git存儲庫，以便您可以與其他人協作或共享您的工作。</p>
 <p>運行自己的服務器可以為您提供很多控制，並允許您在自己的防火牆內運行服務器，但是這樣的服務器通常需要相當多的時間來設置和維護。</p>
-<h3>通訊協定種類</h3>
+<h4>通訊協定種類</h4>
 <div><span></span></div>
 <div><strong>Local protocols</strong><br/><span></span></div>
 <p><span>優點:</span></p>
@@ -1123,7 +1122,7 @@ end</pre>
 <div><span></span>
 <div></div>
 </div>
-<h3>在伺服器上佈署Git</h3>
+<h4>在伺服器上佈署Git</h4>
 <p>要clone存儲庫以創建新的存儲庫，請使用該--bare選項運行clone命令。將存儲庫目錄結束.git。如下:</p>
 <p>$ git clone --bare my_project my_project.git</p>
 <p>現在應該在目錄中擁有Git目錄數據的副本my_project.git。</p>
@@ -1137,7 +1136,7 @@ end</pre>
 <p>如果git init使用該--shared選項運行命令，Git將自動將組寫入權限正確添加到存儲庫。</p>
 <p>$ ssh user@git.example.com<br/>$ cd /srv/git/my_project.git<br/>$ git init --bare --shared</p>
 <p></p>
-<h3>產生個人的SSH公鑰</h3>
+<h4>產生個人的SSH公鑰</h4>
 <p>在該目錄並列出內容來輕鬆檢查是否已有密鑰。<br/>輸入指令後有出現文件為id_dsa(id_rsa)為自己私人的密鑰，而文件後方多了.pub則為公鑰。如下:<br/><strong>~/.ssh為目錄</strong></p>
 <p>$ cd ~/.ssh</p>
 <p>$ ls</p>
@@ -1151,7 +1150,7 @@ end</pre>
 <p>之後，會需要確保密鑰（.ssh/id_rsa）的位置，需輸入兩次密碼，不需要則可空白。</p>
 <p>如用戶需要複製有公鑰文件的內容，輸入下列指令。<br/><strong>~/.ssh/id_rsa為公鑰位置</strong></p>
 <p>$ cat ~/.ssh/id_rsa.pub</p>
-<h3>伺服器的設定</h3>
+<h4>伺服器的設定</h4>
 <p>如要設置SSH存取的服務端，則需使用下列方式來進行身分驗證。</p>
 <p>**git為用戶名、 .ssh為目錄、authorized_keys為驗證**</p>
 <p>$ sudo adduser git</p>
@@ -1169,7 +1168,7 @@ end</pre>
 <p>$ git init --bare</p>
 <p>將文件推送至遠端儲存庫。</p>
 <p>**myproject為文件**</p>
-<h3>Git常駐程式</h3>
+<h4>Git常駐程式</h4>
 <p>如不想將大量的項目或人員都添加SSH密鑰時，以守護進程的方式運行下列指令:<br/>此方法雖然設置方便而快速，但因沒有密鑰的身分驗證，所以任何人都可以存取裡面的內容。多用於世界性的公開項目。</p>
 <p>$ git daemon --reuseaddr --base-path=/opt/git/ /opt/git/</p>
 <p><strong>--reuseaddr是允許服務器重新啟動而無需等待舊連接超時</strong></p>
@@ -1194,7 +1193,7 @@ end</pre>
 <p>$ touch git-daemon-export-ok</p>
 <h2>分散式的Git</h2>
 <p><span>對Git中的項目做出貢獻以及維護自己的項目或整合其他用戶的貢獻</span></p>
-<h3>分散式工作流程</h3>
+<h4>分散式工作流程</h4>
 <p>分散式工作流程分為三種</p>
 <p>集中式工作流程、整合式管理員工作流程、企業型工作流程</p>
 <p></p>
@@ -1214,7 +1213,7 @@ end</pre>
 <p>B將C的主題分支合併到B的master分支中。</p>
 <p>A將B的master分支合併到A的master分支中。</p>
 <p>A將他們推master送到參考存儲庫，以便其他C可以對其進行重新定義。</p>
-<h3>分散式的 Git - 對專案進行貢獻</h3>
+<h4>分散式的 Git - 對專案進行貢獻</h4>
 <p id="r_contributing_project"><a href="https://git-scm.com/book/zh-tw/v2/%E5%88%86%E6%95%A3%E5%BC%8F%E7%9A%84-Git-%E5%B0%8D%E5%B0%88%E6%A1%88%E9%80%B2%E8%A1%8C%E8%B2%A2%E7%8D%BB">對專案進行貢獻</a></p>
 <p>兩人合作圖</p>
 <p><img caption="false" height="1000" src="/images/5.2.1.JPG" width="791"/></p>
@@ -1449,10 +1448,6 @@ end</pre>
 <p><img alt="" height="189" src="/images/squash說明3.png" width="475"/></p>
 <p><img alt="" height="167" src="/images/squash說明4.png" width="475"/></p>
 <p></p>
-<h1>bubbleRob心得</h1>
-<h2>40623156-1</h2>
-<p>花了兩個禮拜製作bubbleRob，在這過程中遇到了很多困難像是看不懂英文教材，單字拼湊起來又看不懂整段話的意思，不斷的詢問同學，聽口頭上的敘述還是聽不太懂，最後同學還是很有耐心的全部步驟重新做一次，一個個的步驟解釋到我懂才進行下一步，上學期所學的V-REP單純的是各機構之間的配合與作動，但是這學期多了感應器的加入，讓我再次地對V-REP有了更深入的了解。</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FGv-hcRTvCw" width="560"></iframe></p>
 <h1>期中報告</h1>
 <h2>40623105</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wP_3zweIpPQ" width="560"></iframe></p>
