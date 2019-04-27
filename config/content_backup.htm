@@ -1,4 +1,5 @@
 <h1>組員</h1>
+<p>40623105</p>
 <p>40623109</p>
 <p>40623112</p>
 <p>40623118</p>
@@ -7,8 +8,7 @@
 <p>40623128</p>
 <p>40623135</p>
 <p>40623141</p>
-<p>40623156</p>
-<h1>手足球</h1>
+<p>40623156</p><h1>手足球</h1>
 <p>圖檔位置:</p>
 <p><a href="https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63">https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63</a></p>
 <p>藉由<span>建立手足球系統來更加熟悉vrep的各項設定與操作</span></p>
@@ -613,10 +613,56 @@ stop()</pre>
 <p>會讓他產生速度從0瞬間變<span>0.5m/s</span>的現象</p>
 <p><span style="background-color: #00ff00;">解決方法:</span></p>
 <p><span style="background-color: #00ff00;"></span>把給定的速度更改為桿子與球座標的差值</p>
-<p></p>
-<h2>參考資料</h2>
-<p></p>
-<h1>課程內容整理</h1>
+<p><span style="background-color: #ffff00;">手足球問題四</span></p>
+<p>如果球速過快直接穿過電腦控制的那邊的桿子</p>
+<p>會造成把球卡回牆邊不會回擊</p>
+<p><span style="background-color: #00ff00;">解決方法:</span></p>
+<p></p><h2>參考資料</h2>
+<p><a href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm</a></p><h2>如何使用Python Remote API</h2>
+<p>首先完成vrep的模擬設定</p>
+<p>再來對著要新增程式的物件點選右鍵<span>→add→<a href="http://www.coppeliarobotics.com/helpFiles/en/childScripts.htm">Associated child script</a>→threaded</span></p>
+<p><span>會多出如下圖的圖示</span></p>
+<p><span><img alt="" height="321" src="/images/vrep_2019-04-27_12-51-50.png" width="248"/></span></p>
+<p>點開上圖紅框內左邊的圖示並輸入以下程式碼</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">threadFunction=function()
+
+sim.setThreadSwitchTiming(2) -- Default timing for automatic thread switching
+
+-- Here we execute the regular thread code:
+res,err=xpcall(threadFunction,function(err) return debug.traceback(err) end)
+    if not res then
+	sim.addStatusbarMessage('Lua runtime error: '..err)
+    end
+
+-- Put some clean-up code here:
+simRemoteApi.start(19997)
+end
+</pre>
+<p><span> </span></p>
+<p>到V-REP資料夾<span>→</span>programming<span>→</span>remoteApiBindings<span>→</span>python<span>→</span>python中</p>
+<p>複製vrep.py和vrepConst.py</p>
+<p>跟programming<span>→</span>remoteApiBindings<span>→</span>lib<span>→</span>lib<span>→</span>Windows<span>→</span>64Bit中</p>
+<p>複製remoteApi.dll到<span>你要存程式的資料夾中</span></p>
+<p> 打開wscite並輸入以下程式碼</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+import sys, math
+# child threaded script: 
+# 內建使用 port 19997 若要加入其他 port, 在  serve 端程式納入
+#simExtRemoteApiStart(19999)
+ 
+vrep.simxFinish(-1)
+ 
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')</pre>
+<p>存成<span>→</span>檔名.py</p>
+<p>並執行</p>
+<p>如果執行結果為</p>
+<p>Connected to remote server<br/>&gt;Exit code: 0</p>
+<p>那就可以開始編寫程式了</p><h1>課程內容整理</h1>
 <h2>隨身系統</h2>
 <p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
 <h4>創建資料夾</h4>
@@ -1448,9 +1494,6 @@ end</pre>
 <p><img alt="" height="189" src="/images/squash說明3.png" width="475"/></p>
 <p><img alt="" height="167" src="/images/squash說明4.png" width="475"/></p>
 <p></p>
-<h2>40623156-1</h2>
-<p>花了兩個禮拜製作bubbleRob，在這過程中遇到了很多困難像是看不懂英文教材，單字拼湊起來又看不懂整段話的意思，不斷的詢問同學，聽口頭上的敘述還是聽不太懂，最後同學還是很有耐心的全部步驟重新做一次，一個個的步驟解釋到我懂才進行下一步，上學期所學的V-REP單純的是各機構之間的配合與作動，但是這學期多了感應器的加入，讓我再次地對V-REP有了更深入的了解。</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FGv-hcRTvCw" width="560"></iframe></p>
 <h1>期中報告</h1>
 <h2>40623105</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wP_3zweIpPQ" width="560"></iframe></p>
