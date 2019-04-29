@@ -1,4 +1,14 @@
-<h1>組員</h1>
+<h1>手足球系統模擬</h1>
+<h1>零組件尺寸分析</h1>
+<h1>參數設計與繪圖</h1>
+<h1>V-rep 動態模擬</h1>
+<h1>送球機構設計與模擬</h1>
+<h1>系統功能展示</h1>
+<h1>細部設計與 BOM</h1>
+<h1>專案口頭簡報</h1>
+<h1>專案報告書</h1>
+<h1>第十週</h1>
+<h2>組員</h2>
 <p>40623105</p>
 <p>40623109</p>
 <p>40623112</p>
@@ -8,11 +18,12 @@
 <p>40623128</p>
 <p>40623135</p>
 <p>40623141</p>
-<p>40623156</p><h1>手足球</h1>
+<p>40623156</p>
+<h2>手足球</h2>
 <p>圖檔位置:</p>
 <p><a href="https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63">https://cad.onshape.com/documents/0bfaa15bd19b1324aaa7e507/w/04eb23a61d6467f8c87c3a8e/e/ecd14e928fc285a5eb479e63</a></p>
 <p>藉由<span>建立手足球系統來更加熟悉vrep的各項設定與操作</span></p>
-<h2>足球自動回擊</h2>
+<h3>足球自動回擊</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i1pA_CwlQ98" width="560"></iframe></p>
 <p>vrep檔案位置:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/tree/master/v-rep/40623128/TableFootBall/v-rep/tablefootball.ttt">tablefootball.ttt</a></p>
 <p></p>
@@ -107,7 +118,7 @@ stop()
 
 </pre>
 <p>＿</p>
-<h2>手足球雙人對打</h2>
+<h3>手足球雙人對打</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/V1aZ9RahfXk" width="560"></iframe></p>
 <p><span>vrep檔案位置:</span><a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/tree/master/v-rep/40623128/TableFootBall/v-rep/tablefootball.ttt">tablefootball.ttt</a></p>
 <p>python控制程式</p>
@@ -212,7 +223,7 @@ start()
 getballposition()
 stop()</pre>
 <p></p>
-<h2>手足球電腦對電腦</h2>
+<h3>手足球電腦對電腦</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/e4sEH5GBXBk" width="560"></iframe></p>
 <p><span>vrep檔案位置:</span><a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/tree/master/v-rep/40623128/TableFootBall/v-rep/tablefootball.ttt">tablefootball.ttt</a></p>
 <p></p>
@@ -472,7 +483,7 @@ start()
 getballposition()
 stop()</pre>
 <p></p>
-<h2>手足球手控與電腦對打</h2>
+<h3>手足球手控與電腦對打</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/G6hB6AbP7NA" width="560"></iframe></p>
 <p><span>vrep檔案位置:</span><a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/tree/master/v-rep/40623128/TableFootBall/v-rep/tablefootball.ttt">tablefootball.ttt</a></p>
 <p>python原始碼:</p>
@@ -594,7 +605,7 @@ start()
 getballposition()
 stop()</pre>
 <p></p>
-<h2>手足球問題與解決方案</h2>
+<h3>手足球問題與解決方案</h3>
 <p><span style="color: #000000; background-color: #ffff00;">手足球問題一</span></p>
 <p>如何知道目前的球的位置?</p>
 <p><span style="background-color: #00ff00;">解決方法:</span></p>
@@ -617,8 +628,10 @@ stop()</pre>
 <p>如果球速過快直接穿過電腦控制的那邊的桿子</p>
 <p>會造成把球卡回牆邊不會回擊</p>
 <p><span style="background-color: #00ff00;">解決方法:</span></p>
-<p></p><h2>參考資料</h2>
-<p><a href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm</a></p><h2>如何使用Python Remote API</h2>
+<p></p>
+<h3>參考資料</h3>
+<p><a href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm</a></p>
+<h3>如何使用Python Remote API</h3>
 <p>首先完成vrep的模擬設定</p>
 <p>再來對著要新增程式的物件點選右鍵<span>→add→<a href="http://www.coppeliarobotics.com/helpFiles/en/childScripts.htm">Associated child script</a>→threaded</span></p>
 <p><span>會多出如下圖的圖示</span></p>
@@ -662,8 +675,9 @@ else:
 <p>並執行</p>
 <p>如果執行結果為</p>
 <p>Connected to remote server<br/>&gt;Exit code: 0</p>
-<p>那就可以開始編寫程式了</p><h1>課程內容整理</h1>
-<h2>隨身系統</h2>
+<p>那就可以開始編寫程式了</p>
+<h2>課程內容整理</h2>
+<h3>隨身系統</h3>
 <p>藉由自行製作隨身系統，來了解隨身系統的運作方式，以便了解工具的使用與設定，並可以量身打造所需的隨身系統。</p>
 <h4>創建資料夾</h4>
 <p><span>創建一個放置可攜檔案的資料夾</span></p>
@@ -700,7 +714,7 @@ else:
 <h4>Kdiff3</h4>
 <p>在製作過程中想要快速了解兩個檔案之間的差異可以使用Kdiff3來快速比對出不一樣的地方。</p>
 <p><span>Kdiff3: </span><a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://kdiff3.sourceforge.net/" rel="nofollow" spellcheck="false" target="_blank">http://kdiff3.sourceforge.net/</a></p>
-<h2>Git - ungit</h2>
+<h3>Git - ungit</h3>
 <p>使用圖形化介面讓使用者更加了解目前所在的分支與倉儲狀況</p>
 <h4>如何安裝</h4>
 <p>參考連結<a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html">http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%BA%8C.html</a></p>
@@ -715,7 +729,8 @@ else:
 <p><span><img alt="" height="859" src="/images/Sc1_2019-03-09_12-25-15.png" width="1250"/></span></p>
 <p><span></span>之後在中空白的SciTE中輸入</p>
 <p>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %%U"</p>
-<p>存檔至Data中並命名為kungit.bat</p><h2>ssh金鑰</h2>
+<p>存檔至Data中並命名為kungit.bat</p>
+<h3>ssh金鑰</h3>
 <p>參考連結:<a href="https://2019wcm.blogspot.com/2019/03/github-github-pages.html">https://2019wcm.blogspot.com/2019/03/github-github-pages.html</a></p>
 <h4>關閉跳出式登入窗</h4>
 <p>首先<span>使用</span><br/><br/><br/><span>git config --edit --system</span></p>
@@ -748,7 +763,7 @@ else:
 <p>把url = https://github.com/<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>改成url = git@github.com:<span>倉儲擁有者/</span><span>倉儲名</span></p>
 <p>之後直接提交推送就可以不用打帳號密碼了</p>
-<h2>git</h2>
+<h3>git</h3>
 <h4>Plumbing and Porcelain</h4>
 <h4><a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">Plumbing and Porcelain</a></h4>
 <p><img alt="" height="436" src="/images/git.jpg" width="608"/></p>
@@ -967,7 +982,7 @@ From git@github.com:schacon/simplegit
 <div class="paragraph"><span></span></div>
 <div class="paragraph"></div>
 <div class="paragraph"></div>
-<h2>V-rep</h2>
+<h3>V-rep</h3>
 <h4>Proximity sensor</h4>
 <p><span>添加</span><span><span>接近傳感</span></span><span>器 <a href="http://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm">proximity sensor</a></span></p>
 <p><span>Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type</span></p>
@@ -1049,7 +1064,7 @@ end</pre>
 <p>成品圖</p>
 <p><code class="language-ini" data-lang="ini"><br/><em><img alt="" height="406" src="/images/成品圖.gif" width="804"/><br/></em></code></p>
 </div>
-<h2>Onshape</h2>
+<h3>Onshape</h3>
 <p><a href="https://cad.onshape.com/documents/2899f2d3c4bc487f26c20116/w/d033a8f68da9655d35a0447e/e/5a79d0e99bf372851e03c03a">手足球製作</a></p>
 <p>足球員</p>
 <p><img caption="false" height="565" src="/images/足球員.PNG" width="1200"/></p>
@@ -1062,8 +1077,8 @@ end</pre>
 <p>40623118：製作手把與進行組合圖組裝</p>
 <p>40623141：製作手足球員與場地</p>
 <p><a href="https://cad.onshape.com/documents/2899f2d3c4bc487f26c20116/w/d033a8f68da9655d35a0447e/e/5a79d0e99bf372851e03c03a">組合圖連結</a></p>
-<h1>問題與討論</h1>
-<h2>ungit</h2>
+<h2>問題與討論</h2>
+<h3>ungit</h3>
 <h4>問題-無法取得使用者資料-已解決</h4>
 <p>當使用ungit提交推送時，出現如下圖的錯誤內容</p>
 <p><img alt="" height="953" src="/images/chrome_2019-03-05_16-55-23.png" width="1303"/></p>
@@ -1071,7 +1086,7 @@ end</pre>
 <p>至啟動隨身系統的start.bat中加入</p>
 <p><span>set USERPROFILE=%Disk%:\home</span></p>
 <p>使ungit能找到<span>y:\home中的使用者目錄</span></p>
-<h2>ShareX</h2>
+<h3>ShareX</h3>
 <p><span>遇到以下問題</span></p>
 <p><span>ffmpeg version N-92972-g301cee61fa Copyright (c) 2000-2019 the FFmpeg developers   </span></p>
 <p><span>built with gcc 8.2.1 (GCC) 20181201 </span></p>
@@ -1096,8 +1111,8 @@ end</pre>
 <p class="gh-header-title">按Install recorder devices來安裝，並在Audio source選擇None</p>
 <p class="gh-header-title"><span class="js-issue-title"><img alt="" height="535" src="/images/ShareX_6s9dqUp00v.png" width="668"/></span></p>
 <p class="gh-header-title"><span class="js-issue-title"></span></p>
-<h1>組員操作影片</h1>
-<h2>如何製作可攜系統</h2>
+<h2>組員操作影片</h2>
+<h3>如何製作可攜系統</h3>
 <p><span>40623105</span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/cYlIszAHFn0" width="560"></iframe></span><span></span></p>
 <p><span>40623109</span></p>
@@ -1108,7 +1123,7 @@ end</pre>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QLw1h1b9c3Y" width="560"></iframe></p>
 <p>40623156</p>
 <p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/sAXEWXAc0pQ" width="560"></iframe></p>
-<h2>v-rep tutorial</h2>
+<h3>v-rep tutorial</h3>
 <p>40623105</p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/dlpnm4fO50Y" width="560"></iframe></p>
 <p>40623109</p>
@@ -1123,8 +1138,8 @@ end</pre>
 <h2 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">配置虛擬主機</yt-formatted-string></h2>
 <p>40623156</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/-GuwOCD0s_I" width="560"></iframe></p>
-<h1>Git教材</h1>
-<h2>伺服器上的Git</h2>
+<h2>Git教材</h2>
+<h3>伺服器上的Git</h3>
 <div><span>Git可以使用四種主要協議來傳輸數據：</span></div>
 <div><span>Local protocols、HTTP、Secure Shell（SSH）和Git。</span></div>
 <p>通過上方多種方式啟動並運行遠程Git存儲庫，以便您可以與其他人協作或共享您的工作。</p>
@@ -1239,7 +1254,7 @@ end</pre>
 <p>允許未經身份驗證的用戶存取指定的儲存庫。</p>
 <p>$ cd /path/to/project.git</p>
 <p>$ touch git-daemon-export-ok</p>
-<h2>分散式的Git</h2>
+<h3>分散式的Git</h3>
 <p><span>對Git中的項目做出貢獻以及維護自己的項目或整合其他用戶的貢獻</span></p>
 <h4>分散式工作流程</h4>
 <p>分散式工作流程分為三種</p>
@@ -1267,7 +1282,7 @@ end</pre>
 <p><img caption="false" height="1000" src="/images/5.2.1.JPG" width="791"/></p>
 <p><span>兩人以上合作圖</span></p>
 <p><img caption="false" height="1000" src="/images/5.2.2.JPG" width="812"/></p>
-<h2>Fork</h2>
+<h3>Fork</h3>
 <p>如果你想參與一個你沒有推送權限的專案，你可以「fork」一份。</p>
 <p>這代表說 GitHub會複製一份這個專案的副本給你，<br/>並且你對這副本有全部的權限。</p>
 <p>這副本會存在於你的帳號下，你可以對它進行推送。如下</p>
@@ -1285,8 +1300,8 @@ end</pre>
 <p>如果都沒問題，可以再輸入一些說明文字給原作者，並按下 Send pull request 即可建立完成。</p>
 <p>管理 Pull Requests方面，可能是來自某個 fork 裡的分支，<br/>或是同個倉儲裡的某個分支。而接收到時，會以電郵(信箱)通知。</p>
 <p>觀看所接受到的pull resquest沒問題後，按下 Merge pull request 即可完成合併工作。</p>
-<h1>ungit 手冊</h1>
-<h2>part1</h2>
+<h2>ungit 手冊</h2>
+<h3>part1</h3>
 <p><span style="background-color: #ffff00;">開啟</span></p>
 <p>1.首先打開隨身碟命令提示字元，進入tmp下的組別資料夾，打 kungit</p>
 <p><img alt="" height="186" src="data:image/png;base64,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" width="335"/></p>
@@ -1371,7 +1386,7 @@ end</pre>
 <p><img alt="" height="70" src="/images/新增一行.png" width="190"/></p>
 <p>c. 檔案以忽略除了456.txt的文件</p>
 <p><img alt="" height="256" src="/images/顯示456.png" width="395"/></p>
-<h2>part2</h2>
+<h3>part2</h3>
 <p><span style="background-color: #ffff00;">提交Commit</span></p>
 <p><span></span>1. Create an empty commit (新增提交)</p>
 <p>依序下圖步驟操作即可新增提交</p>
@@ -1496,25 +1511,25 @@ end</pre>
 <p><img alt="" height="189" src="/images/squash說明3.png" width="475"/></p>
 <p><img alt="" height="167" src="/images/squash說明4.png" width="475"/></p>
 <p></p>
-<h1>期中報告</h1>
-<h2>40623105</h2>
+<h2>期中報告</h2>
+<h3>40623105</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wP_3zweIpPQ" width="560"></iframe></p>
-<h2>40623118</h2>
+<h3>40623118</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/7u0L7r0cscQ" width="560"></iframe></p>
-<h2>40623128</h2>
+<h3>40623128</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/MS5mS83qbRc" width="560"></iframe></p>
-<h2>40623141</h2>
+<h3>40623141</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1H3pEqcmjPY" width="560"></iframe></p>
-<h2>40623156</h2>
+<h3>40623156</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/luwpM80QXf8" width="560"></iframe></p>
-<h2>40623127</h2>
+<h3>40623127</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/72o_EBAd0qw" width="560"></iframe></p>
-<h2>40623112</h2>
+<h3>40623112</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YMjwRkkOS-I" width="560"></iframe></p>
-<h2>40623135</h2>
+<h3>40623135</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6g_SdKJTlo8" width="560"></iframe></p>
-<h2>40623109</h2>
+<h3>40623109</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/H8riMTZJCU8" width="560"></iframe></p>
 <p></p>
-<h2>40623125</h2>
+<h3>40623125</h3>
 <p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/epNjWZlKWow" width="560"></iframe></p>
