@@ -98,7 +98,7 @@ def getballposition():
             elif keyboard.is_pressed('c'):
                 vrep.simxSetJointTargetVelocity(clientID,BMo_handle,-0.05,vrep.simx_opmode_oneshot_wait)
             '''
-            elif keyboard.is_pressed('o'): 
+            if keyboard.is_pressed('o'): 
                 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('p'):  
                 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
