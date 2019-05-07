@@ -9,7 +9,7 @@ import sys, math
 vrep.simxFinish(-1)
  
 clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
-KickBallV = 90    
+KickBallV =360   
 Move_Minus =-0.1         
 Move_Plus =0.1
 n=1
@@ -66,24 +66,24 @@ def getballposition():
             elif keyboard.is_pressed('b'):
                 vrep.simxSetJointTargetVelocity(clientID,BRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('z'):
-                vrep.simxSetJointTargetVelocity(clientID,BMo_handle,0.05,vrep.simx_opmode_oneshot_wait)
+                vrep.simxSetJointTargetVelocity(clientID,BMo_handle,0.2,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('x'):
                 vrep.simxSetJointTargetVelocity(clientID,BMo_handle,0,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('c'):
-                vrep.simxSetJointTargetVelocity(clientID,BMo_handle,-0.05,vrep.simx_opmode_oneshot_wait)
+                vrep.simxSetJointTargetVelocity(clientID,BMo_handle,-0.2,vrep.simx_opmode_oneshot_wait)
         except:
             break 
         try:
-            elif keyboard.is_pressed('o'): 
+            if keyboard.is_pressed('o'): 
                 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('p'):  
                 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('y'):  
-                vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0.05,vrep.simx_opmode_oneshot_wait)
+                vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0.2,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('u'):  
                 vrep.simxSetJointTargetVelocity(clientID,RMo_handle,0,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('i'):  
-                vrep.simxSetJointTargetVelocity(clientID,RMo_handle,-0.05,vrep.simx_opmode_oneshot_wait)
+                vrep.simxSetJointTargetVelocity(clientID,RMo_handle,-0.2,vrep.simx_opmode_oneshot_wait)
         except:
             break
         MMMB = Bv*2
