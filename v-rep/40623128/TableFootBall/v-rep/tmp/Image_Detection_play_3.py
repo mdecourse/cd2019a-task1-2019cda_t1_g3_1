@@ -122,7 +122,7 @@ if clientID!=-1:
         ret_red = track_red_object(img2)
         ret_blue = track_blue_object(img2)
         #print('B=',ret_blue[1],ret_blue[0])#y軸座標為0 x軸座標為1
-        print('R=',ret_red[1],ret_red[0])
+        #print('R=',ret_red[1],ret_red[0])
         #print('G=',ret_green[1],ret_green[0])
         #'''
         if ret_green != None and ret_red != None and ret_blue != None:
@@ -147,10 +147,11 @@ if clientID!=-1:
                 
                 
             if  ret_blue[1] >=18 and ret_green[1] <= 17:
-                if ret_green[1] >62.5:
-                    speed(BMo_handle,0.2)
-                    time.sleep(1)
-                    speed(B_handle,2)
+                if ret_green[0] >62.5:
+                    speed(BMo_handle,2)
+                    time.sleep(0.1)
+                    speed(BRev_handle,20)
+                    time.sleep(0.1)
                     if ret_green[1] != ret_blue[1]:
                         Bv = float(ret_green[0])-float(ret_blue[0])
                         if Bv<0.0:
@@ -162,10 +163,11 @@ if clientID!=-1:
                     else:
                         speed(BRev_handle,2)
                     
-                elif ret_green[1] <62.5:
-                    speed(BMo_handle,-0.2)
-                    time.sleep(1)
-                    speed(BRev_handle,2)
+                elif ret_green[0] <62.5:
+                    speed(BMo_handle,-2)
+                    time.sleep(0.1)
+                    speed(BRev_handle,20)
+                    time.sleep(0.1)
                     if ret_green[1] != ret_blue[1]:
                         Bv = float(ret_green[0])-float(ret_blue[0])
                         if Bv<0.0:
@@ -184,30 +186,47 @@ if clientID!=-1:
                 else:
                     pass
                     
+            
+            if  ret_red[1] <=236 and ret_green[1] >= 237:
+                if ret_green[0] >62.5:
+                    speed(RMo_handle,2)
+                    time.sleep(0.1)
+                    speed(RRev_handle,-20)
+                    time.sleep(0.1)
+                    if ret_green[1] != ret_red[1]:
+                        Bv = float(ret_green[0])-float(ret_red[0])
+                        if Bv<0.0:
+                            speed(RMo_handle,Rv*-0.02)
+                        elif Bv>0.0:
+                            speed(RMo_handle,Rv*-0.02)
+                        else:
+                            pass
+                    else:
+                        speed(BRev_handle,2)
                     
-            if  ret_red[1] <=236 and ret_green[1] >= 231:
-                if ret_green[1] >62.5:
-                    speed(RMo_handle,0.2)
-                    time.sleep(0.5)
-                    speed(RRev_handle,-2)
-                    time.sleep(0.5)
-                    speed(RMo_handle,-0.2)
-                    time.sleep(1)
-                    
-                elif ret_green[1] <62.5:
-                    speed(RMo_handle,-0.2)
-                    time.sleep(0.5)
-                    speed(RRev_handle,-2)
-                    time.sleep(0.5)
-                    speed(RMo_handle,0.2)
-                    time.sleep(1)
-            elif ret_green[1] == ret_blue[1]:
+                elif ret_green[0] <62.5:
+                    speed(RMo_handle,-2)
+                    time.sleep(0.1)
+                    speed(RRev_handle,20)
+                    time.sleep(0.1)
+                    if ret_green[1] != ret_red[1]:
+                        Bv = float(ret_green[0])-float(ret_red[0])
+                        if Bv<0.0:
+                            speed(RMo_handle,Rv*-0.02)
+                        elif Bv>0.0:
+                            speed(RMo_handle,Rv*-0.02)
+                        else:
+                            pass
+                    else:
+                        speed(RRev_handle,2)
+            elif ret_green[0]-ret_red[0] >= -3 and ret_green[0]-ret_red[0] <= 3:
                 if RRv<-10.0:
                     speed(RRev_handle,-2)
                 elif RRv>-10.0:
                     speed(RRev_handle,2)
                 else:
                     pass
+                    
             #'''
       # overlay rectangle marker if something is found by OpenCV
         if ret_green:

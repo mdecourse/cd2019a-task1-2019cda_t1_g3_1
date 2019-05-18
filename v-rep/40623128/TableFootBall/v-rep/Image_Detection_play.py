@@ -140,15 +140,15 @@ if clientID!=-1:
                 speed(RMo_handle,Rv*-0.02)
             else:
                 speed(RMo_handle,0)
-            if RRv<0.0:
+            if RRv<-10.0:
                 speed(RRev_handle,-2)
-            elif RRv>0.0:
+            elif RRv>-10.0:
                 speed(RRev_handle,2)
             else:
                 pass
-            if BBv<0.0:
+            if BBv<10.0:
                 speed(BRev_handle,-2)
-            elif BBv>0.0:
+            elif BBv>10.0:
                 speed(BRev_handle,2)
             else:
                 pass

@@ -10,7 +10,6 @@ import cv2, numpy
 #   https://github.com/simondlevy/OpenCV-Python-Hacks/blob/master/greenball_tracker.py
 def speed(handle,speed):
     vrep.simxSetJointTargetVelocity(clientID,handle,speed,vrep.simx_opmode_oneshot_wait)
-        
 def track_green_object(image):
     # Blur the image to reduce noise100
     blur = cv2.GaussianBlur(image, (5,5),0)
@@ -130,6 +129,8 @@ if clientID!=-1:
             BBv=float(ret_green[1])-float(ret_blue[1])
             Rv = float(ret_green[0])-float(ret_red[0])
             RRv=float(ret_green[1])-float(ret_red[1])
+            
+            
             if Bv<0.0:
                 speed(BMo_handle,Bv*-0.02)
             elif Bv>0.0:
@@ -146,37 +147,23 @@ if clientID!=-1:
                 pass
                 
                 
-            if  ret_blue[1] >=18 and ret_green[1] <= 17:
+            if  ret_blue[1] >=20 and ret_green[1] <= 19:
                 if ret_green[1] >62.5:
                     speed(BMo_handle,0.2)
+                    time.sleep(0.5)
+                    speed(BRev_handle,2)
+                    time.sleep(0.5)
+                    speed(BMo_handle,-0.2)
                     time.sleep(1)
-                    speed(B_handle,2)
-                    if ret_green[1] != ret_blue[1]:
-                        Bv = float(ret_green[0])-float(ret_blue[0])
-                        if Bv<0.0:
-                            speed(BMo_handle,Bv*-0.02)
-                        elif Bv>0.0:
-                            speed(BMo_handle,Bv*-0.02)
-                        else:
-                            pass
-                    else:
-                        speed(BRev_handle,2)
                     
                 elif ret_green[1] <62.5:
                     speed(BMo_handle,-0.2)
-                    time.sleep(1)
+                    time.sleep(0.5)
                     speed(BRev_handle,2)
-                    if ret_green[1] != ret_blue[1]:
-                        Bv = float(ret_green[0])-float(ret_blue[0])
-                        if Bv<0.0:
-                            speed(BMo_handle,Bv*-0.02)
-                        elif Bv>0.0:
-                            speed(BMo_handle,Bv*-0.02)
-                        else:
-                            pass
-                    else:
-                        speed(BRev_handle,2)
-            elif ret_green[0]-ret_blue[0] >= -3 and ret_green[0]-ret_blue[0] <= 3:
+                    time.sleep(0.5)
+                    speed(BMo_handle,0.2)
+                    time.sleep(1)
+            else:
                 if BBv<10.0:
                     speed(BRev_handle,-2)
                 elif BBv>10.0:
@@ -201,7 +188,7 @@ if clientID!=-1:
                     time.sleep(0.5)
                     speed(RMo_handle,0.2)
                     time.sleep(1)
-            elif ret_green[1] == ret_blue[1]:
+            else:
                 if RRv<-10.0:
                     speed(RRev_handle,-2)
                 elif RRv>-10.0:
