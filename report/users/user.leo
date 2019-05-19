@@ -23,39 +23,23 @@
 </v>
 <v t="leo.20171119234822.1"><vh>各章節內容</vh>
 <v t="yen.20170429214845.1"><vh>@path paragraph</vh>
-<v t="yen.20170429214838.1"><vh>@clean computer_hardware.md</vh>
-<v t="yen.20170429214838.3"><vh>電腦硬體</vh></v>
+<v t="leo.20190106201047.1"><vh>@clean introduction.md</vh></v>
+<v t="leo.20190519180750.1"><vh>@clean tablefootball_design.md</vh>
+<v t="leo.20190519181552.1"><vh>零組件尺寸分析</vh></v>
+<v t="leo.20190519181710.1"><vh>參數設計與繪圖</vh></v>
+<v t="leo.20190519181713.1"><vh>細部設計與 BOM</vh></v>
 </v>
-<v t="yen.20170429215041.1"><vh>@clean operating_system.md</vh>
-<v t="yen.20170429215130.1"><vh>Windows</vh></v>
-<v t="yen.20170429215205.1"><vh>Ubuntu</vh></v>
+<v t="leo.20190519180919.1"><vh>@clean vrep_tablefootball.md</vh></v>
+<v t="leo.20190106201247.3"><vh>@clean vrep_take_ball.md</vh>
+<v t="leo.20190519181857.1"><vh>送球機構設計</vh></v>
+<v t="leo.20190519181902.1"><vh>送球機構模擬</vh></v>
 </v>
-<v t="yen.20170429215252.1"><vh>@clean computer_network.md</vh>
-<v t="yen.20170429215308.1"><vh>IPv4</vh></v>
-<v t="yen.20170429215316.1"><vh>IPv6</vh></v>
-</v>
-<v t="yen.20170429215416.1"><vh>@clean computer_programming.md</vh>
-<v t="yen.20170429215446.2"><vh>C</vh></v>
-<v t="yen.20170429215446.3"><vh>Python</vh></v>
-<v t="yen.20170429215446.4"><vh>Brython</vh></v>
-<v t="yen.20170429215446.5"><vh>PyQt</vh></v>
-</v>
-<v t="yen.20170429215617.1"><vh>@clean computer_aided_design.md</vh>
-<v t="yen.20170429215851.1"><vh>自動控制</vh></v>
-<v t="yen.20170429215830.1"><vh>機械系統模擬</vh></v>
-<v t="yen.20170429215802.1"><vh>演化運算</vh></v>
-</v>
-<v t="yen.20170429215922.1"><vh>@clean leo_editor.md</vh>
-<v t="yen.20170429220001.1"><vh>Scripting</vh></v>
-</v>
-<v t="yen.20170429220128.1"><vh>@clean github.md</vh>
-<v t="yen.20170429220137.1"><vh>Github</vh></v>
-</v>
-<v t="yen.20170429220231.1"><vh>@clean fossil.md</vh>
-<v t="yen.20170429220231.2"><vh>Fossil commands</vh></v>
-</v>
-<v t="yen.20170429220335.1"><vh>@clean onshape.md</vh>
-<v t="yen.20170429220335.2"><vh>FeatureScript</vh></v>
+<v t="leo.20190110193829.1"><vh>@clean vrep_python_control.md</vh>
+<v t="leo.20190519182839.1"><vh>雙人鍵盤控制對打</vh></v>
+<v t="leo.20190519182843.1"><vh>單人鍵盤控制與電腦對打</vh></v>
+<v t="leo.20190519182841.1"><vh>雙電腦對打</vh></v>
+<v t="leo.20190519182954.1"><vh>影像辨識位置</vh></v>
+<v t="leo.20190519183024.1"><vh>影像辨識對打</vh></v>
 </v>
 </v>
 </v>
@@ -86,20 +70,12 @@ g.es("---Pandoc---")
 
 # 選擇所要納入的 Markdown 檔案, 不納入的檔案名稱前方加上  # 即可
 chapter_list = " ".join("./paragraph/" + i for i in [
-#"computer_hardware.md",
-#"operating_system.md", 
-#"computer_network.md", 
-#"computer_programming.md", 
-#"computer_aided_design.md", 
-#"leo_editor.md", 
-#"github.md", 
-#"fossil.md", 
-"onshape.md", 
-#"cmsimfly.md", 
-#"pygrouf.md", 
-#"pyslvs.md", 
-#"pylinkage.md", 
-#"pyduino.md", 
+"introduction.md", 
+"vrep_python_control.md", 
+"tablefootball_design.md", 
+"vrep_take_ball.md", 
+"vrep_tablefootball.md",
+"vrep_python_control.md"
 ])
 
 # 若系統並未正確轉檔, 可以將 os.system 改為 g.es 表示要使用 Leo Editor 的 global 物件中的 echo string 將指令印在 log 區
@@ -113,18 +89,21 @@ g.es('-'*12)</t>
 <t tx="ahshoe.20161120122151.1">---
 university_zh: '國立虎尾科技大學'
 institute_zh: '機械設計工程系'
-category_zh: '電腦輔助設計實習 ag4 期末報告'
-title_zh: '3D 列印機'
-title_en: '3D Printer'
+category_zh: '產品協同設計第三組'
+title_zh: '手足球'
+title_en: 'Table Football'
 author:
+- 設計二甲 40623105 陳微云
 - 設計二甲 40623109 李如芳
-- 設計二甲 40623124 葉修宏
+- 設計二甲 40623112 王柏翔
+- 設計二甲 40623118 楊秉澤
+- 設計二甲 40623125 鍾旻諺
 - 設計二甲 40623127 張育偉 
 - 設計二甲 40623128 張華倞
-- 設計二甲 40623130 陳鉅忠 
-- 設計二甲 40623154 黃馨慧 
+- 設計二甲 40623135 洪明棋
+- 設計二甲 40623141 何立翔
+- 設計二甲 40623156 林聖翰
 advisor_zh: '嚴家銘'
-date: '20190110'
 ---
 
 @others
@@ -206,15 +185,17 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="ahshoe.20170317115820.1">---
 abstract: |
-    列印機外觀
+    手足球系統設計
     
-    列印機使用材料
+    手足球系統模擬
     
-    V-rep模擬的設定過程
+    送球機構設計
     
-    V-rep python remote api編寫過程
+    送球機構模擬
     
-    Onshape自訂義功能練習過程
+    手足球系統功能
+    
+    V-rep python remote api
     
 ---
 
@@ -222,6 +203,86 @@ abstract: |
 </t>
 <t tx="leo.20171119234752.1"></t>
 <t tx="leo.20171119234822.1"></t>
+<t tx="leo.20190106201047.1">前言
+===
+
+![Test][test]
+
+[test]: ./images/kmol.png {#fig:駱駝}
+
+
+@others
+</t>
+<t tx="leo.20190106201247.3"> 送球機構設計與模擬
+===
+
+
+@others</t>
+<t tx="leo.20190110193829.1">系統功能展示
+===
+
+@others</t>
+<t tx="leo.20190519180750.1">設計與繪圖
+===
+
+
+@others
+</t>
+<t tx="leo.20190519180919.1">手足球系統模擬
+===
+
+
+@others</t>
+<t tx="leo.20190519181552.1">零組件尺寸分析
+---
+
+
+@others</t>
+<t tx="leo.20190519181710.1">參數設計與繪圖
+---
+
+
+@others</t>
+<t tx="leo.20190519181713.1">細部設計與 BOM
+---
+
+
+@others</t>
+<t tx="leo.20190519181857.1">送球機構設計
+---
+
+
+@others</t>
+<t tx="leo.20190519181902.1">送球機構模擬
+---
+
+
+@others</t>
+<t tx="leo.20190519182839.1">雙人鍵盤控制對打
+---
+
+
+@others</t>
+<t tx="leo.20190519182841.1">雙電腦對打
+---
+
+
+@others</t>
+<t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
+---
+
+
+@others</t>
+<t tx="leo.20190519182954.1">影像辨識位置
+---
+
+
+@others</t>
+<t tx="leo.20190519183024.1">影像辨識對打
+---
+
+
+@others</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -229,376 +290,6 @@ abstract: |
 各自選擇要編輯的 .md 檔案, 可以使用 @edit 或 @clean 節點編輯指令
 
 除非必要否則不更動 markdown 目錄下的 template.tex 檔案</t>
-<t tx="yen.20170429214838.1">電腦硬體
-===
-
-電腦硬體 的概要
-
-@others</t>
-<t tx="yen.20170429214838.3">前言內容。
-
-\ 
-
-一個範例數學式：$$\beta=\cos^{-1}{\frac{L0^{2}+d_{AB}^{2}-R0^{2}}{2\times{L0\times{d_{AB}}}}}$$
-
-\ 
-
-關於數學式可以參考這裡：[http://www.hostmath.com/][]
-
-[http://www.hostmath.com/]: http://www.hostmath.com/
-
-提及了某篇刊物[@myart]在這裡。
-</t>
 <t tx="yen.20170429214845.1"></t>
-<t tx="yen.20170429215041.1">操作系統
-===
-
-操作系統 的概要
-
-@others</t>
-<t tx="yen.20170429215130.1">Windows
----
-
-Windows 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
-
-</t>
-<t tx="yen.20170429215205.1">Ubuntu
----
-
-Ubuntu 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
-
-[Kmol]: ./images/operating_system/kmol.png {#fig:駱駝}</t>
-<t tx="yen.20170429215252.1">電腦網路
-===
-
-電腦網路 的概要
-
-@others</t>
-<t tx="yen.20170429215308.1">IPv4
----
-
-IPv4 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
-
-[Kmol]: ./images/computer_network/kmol.png {#fig:駱駝}</t>
-<t tx="yen.20170429215316.1">IPv6
----
-
-IPv6 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案 [google]
-
-[google]: http://www.google.com
-
-[google] test</t>
-<t tx="yen.20170429215416.1">計算機程式
-===
-
-計算機程式 的概要
-
-@others</t>
-<t tx="yen.20170429215446.2">C
----
-
-C 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215446.3">Python
----
-
-Python 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215446.4">Brython
----
-
-Brython 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215446.5">PyQt
----
-
-PyQt 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215617.1">電腦輔助設計
-===
-
-電腦輔助設計 的概要
-
-@others</t>
-<t tx="yen.20170429215802.1">演化運算 (Evolutionary Computation)
----
-
-演化運算 (Evolutionary Computation) 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215830.1">機械系統模擬
----
-
-機械系統模擬 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215851.1">自動控制
----
-
-自動控制 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="yen.20170429215922.1">Leo Editor
-===
-
-Leo Editor 的概要
-
-@others</t>
-<t tx="yen.20170429220001.1">Scripting
----
-
-Scripting 的內容</t>
-<t tx="yen.20170429220128.1">Github
-===
-
-Github 的概要
-
-@others</t>
-<t tx="yen.20170429220137.1">Github
----
-
-Github 的內容</t>
-<t tx="yen.20170429220231.1">Fossil SCM
-===
-
-Fossil SCM 的概要
-
-@others</t>
-<t tx="yen.20170429220231.2">Fossil Commands
----
-
-Fossil Commands 的內容</t>
-<t tx="yen.20170429220335.1">OnShape
-===
-
-OnShape 的概要
-
-@others
-</t>
-<t tx="yen.20170429220335.2">FeatureScript
----
-
-FeatureScript 的內容
-
-
-</t>
 </tnodes>
 </leo_file>

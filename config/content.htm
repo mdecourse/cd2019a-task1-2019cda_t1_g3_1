@@ -355,7 +355,42 @@ else:
 <p></p><h1>結案報告</h1>
 <h2>專案口頭簡報</h2>
 <h2>專案報告書</h2>
-<h1>第十週</h1>
+<h3>如何開始編輯報告書</h3>
+<p>可參考:<a href="https://mdecp2018.github.io/finalproject-bgx/content/Kmol-editor.html">https://mdecp2018.github.io/finalproject-bgx/content/Kmol-editor.html</a></p>
+<p>首先下載:<a href="https://drive.google.com/open?id=1lH3J-EETOpNruAz86Mi8A4PcKkgJOsh2">miktex_portable_and_pandoc.7z</a></p>
+<p>下載完成後解壓縮至隨身系統中(y槽中)</p>
+<p>完成後會多出兩個資料夾</p>
+<p>分別是 pandoc-2.4-windows-x86_64 和 miktex_portable</p>
+<p>接著用SciTE 開啟start.bat</p>
+<p>並在path=的最後方新增</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">%Disk%:\pandoc-2.4-windows-x86_64;%Disk%:\miktex_portable\texmfs\install\miktex\bin;</pre>
+<p>接著在cmd<span>(小黑窗)</span>中輸入</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">python -m pip install pandoc-fignos pandoc-tablenos pandoc-eqnos</pre>
+<p>等他安裝完成</p>
+<p>完成後重新啟動可攜系統即可</p>
+<h3>編輯報告書須知</h3>
+<h4>首次使用</h4>
+<p>報告書相關檔案位於</p>
+<p>cd2019a-task1-2019cda_t1_g3_1/report</p>
+<p>首次開始編輯時先至<span>report/user中複製user.leo並改為(自己的學號).leo</span></p>
+<p><span>之後要編輯請開啟自己的.leo檔</span></p>
+<h4>如何建立新的章節</h4>
+<p> 章節內容 &gt; @path paragraph &gt; 點選任意章節</p>
+<p>按下 Ctrl + i</p>
+<p><em>並把新增的分頁命名為@clean 檔案名稱.md</em></p>
+<p><i>建議取成英文名稱且一眼就看的出來是哪篇章節的</i></p>
+<p>完成後到最上端尋找@button Report pdf的頁籤</p>
+<p>並在約29行的位置<span>如圖</span></p>
+<p><img alt="" height="416" src="/images/pythonw_2019-05-19_19-25-34.png" width="878"/></p>
+<p><em>"檔案名稱.md"</em></p>
+<p><i>如果有哪一個章節暫時不需要可以在該章節最前端新增 #</i></p>
+<h4><i>leo editer常用快速鍵</i></h4>
+<p><i>Ctrl + i 建立新頁籤</i></p>
+<p><i>Ctrl + r 頁籤往右移</i></p>
+<p><i>Ctrl + l 頁籤往左移</i></p>
+<p><i>Ctrl + u 頁籤往上移</i></p>
+<p><i>Ctrl + d 頁籤往下移</i></p>
+<p><i></i></p><h1>第十週</h1>
 <h2>組員</h2>
 <p>40623105</p>
 <p>40623109</p>
