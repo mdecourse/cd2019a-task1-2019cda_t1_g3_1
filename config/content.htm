@@ -681,8 +681,139 @@ if clientID!=-1:
 else:
   print("Failed to connect to remote API Server")
   vrep.simxFinish(clientID)</pre>
+<h3>第十四週-更改影像辨識方式</h3>
+<p>此程式目前只有尋找藍色物件位置</p>
+<p><img alt="" height="221" src="/images/vrep_2019-05-26_17-56-43.png" width="477"/></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+import time
+import random as rng
+from PIL import Image as I
+import array
+
+import cv2, numpy
+
+# function based on: 
+#   https://github.com/simondlevy/OpenCV-Python-Hacks/blob/master/greenball_tracker.py
+def speed(handle,speed):
+    vrep.simxSetJointTargetVelocity(clientID,handle,speed,vrep.simx_opmode_oneshot_wait)
+
+def track_blue_object(image):
+    # Blur the image to reduce noise100
+    blur = cv2.GaussianBlur(image, (3,3),0)
+    # Convert BGR to HSV
+    hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
+    # Threshold the HSV image for only blue colors
+    ran = 20
+    lower_blue = numpy.array([0-ran,100,100])
+    upper_blue = numpy.array([0+ran,255,255])
+    # Threshold the HSV image to get only blue colors
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+    # Blur the mask
+    bmask = cv2.GaussianBlur(mask, (5,5),0)
+    
+    threshold = 100
+    canny_output = cv2.Canny(bmask, threshold,threshold*2)
+    contours, _ = cv2.findContours(canny_output, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    # Get the moments
+    mu = [None]*len(contours)
+    for i in range(len(contours)):
+        mu[i] = cv2.moments(contours[i])
+    # Get the mass centers
+    mc = [None]*len(contours)
+    for i in range(len(contours)):
+        # add 1e-5 to avoid division by zero
+        mc[i] = (mu[i]['m10'] / (mu[i]['m00'] + 1e-5), mu[i]['m01'] / (mu[i]['m00'] + 1e-5))
+    return mc
+
+vrep.simxFinish(-1)
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+
+if clientID!=-1:
+  print('Connected to remote API server')
+  # get vision sensor objects
+  res, v0 = vrep.simxGetObjectHandle(clientID, 'vs1', vrep.simx_opmode_oneshot_wait)
+  res, v1 = vrep.simxGetObjectHandle(clientID, 'vs2', vrep.simx_opmode_oneshot_wait)
+  err, resolution, image = vrep.simxGetVisionSensorImage(clientID, v0, 0, vrep.simx_opmode_streaming)
+  err,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+  err,BRod_handle=vrep.simxGetObjectHandle(clientID,'BRod',vrep.simx_opmode_oneshot_wait)
+  err,BRev_handle=vrep.simxGetObjectHandle(clientID,'BRev',vrep.simx_opmode_oneshot_wait)
+  err,BMo_handle=vrep.simxGetObjectHandle(clientID,'BMo',vrep.simx_opmode_oneshot_wait)
+  err,RRev_handle=vrep.simxGetObjectHandle(clientID,'RRev',vrep.simx_opmode_oneshot_wait)
+  err,RMo_handle=vrep.simxGetObjectHandle(clientID,'RMo',vrep.simx_opmode_oneshot_wait)
+  err,RRod_handle=vrep.simxGetObjectHandle(clientID,'RRod',vrep.simx_opmode_oneshot_wait)
+  time.sleep(1)
+  while (vrep.simxGetConnectionId(clientID) != -1):
+    # get image from vision sensor 'v0'
+    err, resolution, image = vrep.simxGetVisionSensorImage(clientID, v0, 0, vrep.simx_opmode_buffer)
+    if err == vrep.simx_return_ok:
+        image_byte_array = array.array('b', image)
+        image_buffer = I.frombuffer("RGB", (resolution[0],resolution[1]), bytes(image_byte_array), "raw", "RGB", 0, 1)
+        img2 = numpy.asarray(image_buffer)
+        # try to find something blue
+        ret_blue = track_blue_object(img2)
+        ret_blue_odd = ret_blue[::2]
+        # get the position of blue Object
+        for i in range(len(ret_blue_odd)):
+            if ret_blue_odd[i][1] &gt;=13 and ret_blue_odd[i][1] &lt;=20:
+                blue00 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+                
+            elif ret_blue_odd[i][1] &gt;= 57 and ret_blue_odd[i][1] &lt;=64:
+                if ret_blue_odd[i][0] &lt; ret_blue_odd[i+1][0]:
+                    blue01 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+                elif ret_blue[i][0] &gt;= ret_blue[i+1][0]:
+                    blue02 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+        # blue00 is first rod object position
+        # blue01 is  second rod and left object position
+        # blue02 is second rod and right object position
+        
+        
+        if ret_blue:
+            for i in range(len(ret_blue)):
+                cv2.rectangle(img2,(int(ret_blue[i][0] - 2),int(ret_blue[i][1] - 5)), (int(ret_blue[i][0] + 2),int(ret_blue[i][1] + 5)), (0x33,0xcc,0xff), 1)
+        img2 = img2.ravel()
+        vrep.simxSetVisionSensorImage(clientID, v1, img2, 0, vrep.simx_opmode_oneshot)
+    elif err == vrep.simx_return_novalue_flag:
+      print("no image yet")
+      pass
+    else:
+      print(err)
+else:
+  print("Failed to connect to remote API Server")
+  vrep.simxFinish(clientID)</pre>
+<p></p><h3>系統功能問題與討論</h3>
+<p><span style="background-color: #00ff00;">問題:</span></p>
+<p>第十三週-影像辨識機器對打</p>
+<p>如果球打到桿子後方會無法回擊<br/><br/></p>
+<p><span style="background-color: #ffff00;">解決方法:</span></p>
+<p>更改判斷球位置的方式如<a href="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E5%9B%9B%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%A9%9F%E5%99%A8%E5%B0%8D%E6%89%93%E4%BF%AE%E6%AD%A3%E5%8D%81%E4%B8%89%E9%80%B1%E9%8C%AF%E8%AA%A4.html">第十四週內容</a></p>
+<p><span style="background-color: #00ff00;">問題:</span></p>
+<p>無法判別多根桿子<br/><img alt="" height="226" src="/images/vrep_2019-05-26_17-34-25.png" width="487"/></p>
+<p>原因:</p>
+<p>程式會尋找所有藍色物件的質心</p>
+<p><span style="background-color: #ffff00;">解決方法:</span></p>
+<p>更改尋找物件方式</p>
+<p>由原本的找尋藍色物件改成尋找藍色物件的輪廓</p>
+<p><span style="background-color: #00ff00;">問題:</span></p>
+<p>由於尋找物件<span>輪廓順序是隨機的</span><br/><br/></p>
+<p>所以無法直接給予相對應物件座標位置</p>
+<p><span style="background-color: #ffff00;">解決方法:</span></p>
+<p>新增以下判斷式來設定各物件位置變數</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 只取奇數項
+ret_blue_odd = ret_blue[::2]
+for i in range(len(ret_blue_odd)):
+    if ret_blue_odd[i][1] &gt;=13 and ret_blue_odd[i][1] &lt;=20:
+        blue00 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+                 
+    elif ret_blue_odd[i][1] &gt;= 57 and ret_blue_odd[i][1] &lt;=64:
+        if ret_blue_odd[i][0] &lt; ret_blue_odd[i+1][0]:
+            blue01 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+        elif ret_blue[i][0] &gt;= ret_blue[i+1][0]:
+            blue02 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
+# blue00 is first rod object position
+# blue01 is  second rod and left object position
+# blue02 is second rod and right object position</pre>
 <p></p>
-<h1>結案報告</h1>
+<p></p><h1>結案報告</h1>
 <h2>專案口頭簡報</h2>
 <h2>專案報告書</h2>
 <h3>如何開始編輯報告書</h3>
