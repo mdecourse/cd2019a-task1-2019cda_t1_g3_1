@@ -43,11 +43,11 @@ def track_blue_object(image):
     blur = cv2.GaussianBlur(image, (5,5),0)
     # Convert BGR to HSV
     hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
-    # Threshold the HSV image for only green colors
+    # Threshold the HSV image for only blue colors
     range = 15
     lower_red = numpy.array([0-range,100,100])
     upper_red = numpy.array([0+range,255,255])
-    # Threshold the HSV image to get only green colors
+    # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_red, upper_red)
     # Blur the mask
     bmask = cv2.GaussianBlur(mask, (5,5),0)
@@ -70,7 +70,7 @@ def track_red_object(image):
     blur = cv2.GaussianBlur(image, (5,5),0)
     # Convert BGR to HSV
     hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
-    # Threshold the HSV image for only green colors
+    # Threshold the HSV image for only red colors
     range = 15
     lower_blue = numpy.array([120-range,100,100])
     upper_blue = numpy.array([120+range,255,255])
@@ -124,7 +124,6 @@ if clientID!=-1:
         #print('B=',ret_blue[1],ret_blue[0])#y軸座標為0 x軸座標為1
         #print('R=',ret_red[1],ret_red[0])
         #print('G=',ret_green[1],ret_green[0])
-        #'''
         if ret_green != None and ret_red != None and ret_blue != None:
             Bv = float(ret_green[0])-float(ret_blue[0])
             BBv=float(ret_green[1])-float(ret_blue[1])
@@ -145,10 +144,10 @@ if clientID!=-1:
             else:
                 pass
                 
-                
+            
             if  ret_blue[1] >=18 and ret_green[1] <= 17:
                 if ret_green[0] >62.5:
-                    speed(BMo_handle,2)
+                    speed(BMo_handle,0.5)
                     time.sleep(0.1)
                     speed(BRev_handle,20)
                     time.sleep(0.1)
@@ -164,7 +163,7 @@ if clientID!=-1:
                         speed(BRev_handle,2)
                     
                 elif ret_green[0] <62.5:
-                    speed(BMo_handle,-2)
+                    speed(BMo_handle,-0.5)
                     time.sleep(0.1)
                     speed(BRev_handle,20)
                     time.sleep(0.1)
@@ -186,34 +185,33 @@ if clientID!=-1:
                 else:
                     pass
                     
-            
             if  ret_red[1] <=236 and ret_green[1] >= 237:
                 if ret_green[0] >62.5:
-                    speed(RMo_handle,2)
+                    speed(RMo_handle,0.5)
                     time.sleep(0.1)
                     speed(RRev_handle,-20)
                     time.sleep(0.1)
                     if ret_green[1] != ret_red[1]:
-                        Bv = float(ret_green[0])-float(ret_red[0])
-                        if Bv<0.0:
+                        Rv = float(ret_green[0])-float(ret_red[0])
+                        if Rv<0.0:
                             speed(RMo_handle,Rv*-0.02)
-                        elif Bv>0.0:
+                        elif Rv>0.0:
                             speed(RMo_handle,Rv*-0.02)
                         else:
                             pass
                     else:
-                        speed(BRev_handle,2)
+                        speed(RRev_handle,2)
                     
                 elif ret_green[0] <62.5:
-                    speed(RMo_handle,-2)
+                    speed(RMo_handle,-0.5)
                     time.sleep(0.1)
-                    speed(RRev_handle,20)
+                    speed(RRev_handle,-20)
                     time.sleep(0.1)
                     if ret_green[1] != ret_red[1]:
-                        Bv = float(ret_green[0])-float(ret_red[0])
-                        if Bv<0.0:
+                        Rv = float(ret_green[0])-float(ret_red[0])
+                        if Rv<0.0:
                             speed(RMo_handle,Rv*-0.02)
-                        elif Bv>0.0:
+                        elif Rv>0.0:
                             speed(RMo_handle,Rv*-0.02)
                         else:
                             pass
@@ -227,7 +225,6 @@ if clientID!=-1:
                 else:
                     pass
                     
-            #'''
       # overlay rectangle marker if something is found by OpenCV
         if ret_green:
             cv2.rectangle(img2,(ret_green[0]-5,ret_green[1]-5), (ret_green[0]+5,ret_green[1]+5), (0x99,0xff,0x33), 1)
