@@ -798,7 +798,9 @@ else:
 <p>所以無法直接給予相對應物件座標位置</p>
 <p><span style="background-color: #ffff00;">解決方法:</span></p>
 <p>新增以下判斷式來設定各物件位置變數</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(len(ret_blue_odd)):
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 只取奇數項
+ret_blue_odd = ret_blue[::2]
+for i in range(len(ret_blue_odd)):
     if ret_blue_odd[i][1] &gt;=13 and ret_blue_odd[i][1] &lt;=20:
         blue00 = (ret_blue_odd[i][0], ret_blue_odd[i][1])
                  
