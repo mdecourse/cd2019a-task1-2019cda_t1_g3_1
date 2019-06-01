@@ -30,8 +30,6 @@ abstract: |
     
     手足球系統功能
     
-    V-rep python remote api
-    
 ---
 
 

@@ -38,8 +38,8 @@
 <v t="leo.20190519182839.1"><vh>雙人鍵盤控制對打</vh></v>
 <v t="leo.20190519182843.1"><vh>單人鍵盤控制與電腦對打</vh></v>
 <v t="leo.20190519182841.1"><vh>雙電腦對打</vh></v>
-<v t="leo.20190519182954.1"><vh>影像辨識位置</vh></v>
-<v t="leo.20190519183024.1"><vh>影像辨識對打</vh></v>
+<v t="leo.20190601163505.1"><vh>影像辨識</vh></v>
+<v t="leo.20190601163506.1"><vh>影像辨識對打</vh></v>
 </v>
 </v>
 </v>
@@ -71,7 +71,6 @@ g.es("---Pandoc---")
 # 選擇所要納入的 Markdown 檔案, 不納入的檔案名稱前方加上  # 即可
 chapter_list = " ".join("./paragraph/" + i for i in [
 "introduction.md", 
-"vrep_python_control.md", 
 "tablefootball_design.md", 
 "vrep_take_ball.md", 
 "vrep_tablefootball.md",
@@ -195,8 +194,6 @@ abstract: |
     
     手足球系統功能
     
-    V-rep python remote api
-    
 ---
 
 
@@ -217,11 +214,13 @@ abstract: |
 ===
 
 
-@others</t>
+@others
+</t>
 <t tx="leo.20190110193829.1">系統功能展示
 ===
 
-@others</t>
+@others
+</t>
 <t tx="leo.20190519180750.1">設計與繪圖
 ===
 
@@ -232,57 +231,107 @@ abstract: |
 ===
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519181552.1">零組件尺寸分析
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519181710.1">參數設計與繪圖
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519181713.1">細部設計與 BOM
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519181857.1">送球機構設計
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519181902.1">送球機構模擬
 ---
 
 
-@others</t>
+
+
+@others
+</t>
 <t tx="leo.20190519182839.1">雙人鍵盤控制對打
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519182841.1">雙電腦對打
 ---
 
 
-@others</t>
+
+@others
+</t>
 <t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
 ---
 
 
-@others</t>
-<t tx="leo.20190519182954.1">影像辨識位置
+
+@others
+</t>
+<t tx="leo.20190601163505.1">影像辨識
+---
+
+利用vrep的vision sensor來拍攝模擬畫面，並輸出至外部python程式中進行影像處理。
+
+首先進行影像模糊化來降低雜訊
+
+![原圖][opencvori]
+
+[opencvori]: ./images/opencv_ori.png {#fig:駱駝}
+
+![模糊處理後][opencvblur]
+
+[opencvblur]: ./images/opencv_blur.png {#fig:駱駝}
+
+處理完的圖片再進行顏色處理把RGB轉為
+
+![hsv處理後][opencvhsv]
+
+[opencvhsv]: ./images/opencv_hsv.png {#fig:駱駝}
+
+處理完後運用opencv的
+[canny](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html)
+來尋找物體邊界，並用找到的邊界計算形心位置。
+
+
+@others
+</t>
+<t tx="leo.20190601163506.1">影像辨識電腦對打
 ---
 
 
-@others</t>
-<t tx="leo.20190519183024.1">影像辨識對打
----
+利用上一節所得形心座標判斷各球員與球的相對運動
+，再利用判斷的結果控制球員該往哪裡移動，或是否該踢球(整體架構如下圖)。
 
+![守門員程式架構][Diagram]
 
-@others</t>
+[Diagram]: ./images/Diagram.png {#fig:駱駝}
+
+@others
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
