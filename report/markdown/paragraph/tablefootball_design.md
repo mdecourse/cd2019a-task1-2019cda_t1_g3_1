@@ -9,6 +9,23 @@
 
 在撥桿的部分原本是呈現長方形的，因考慮到了沒有角度在撥球時可能會造成球的動向無法預期，所以在兩邊斜面的部分增加了10度的傾角。
 
+<<<<<<< HEAD
+![撥桿修改圖][polemod]
+
+[polemod]: ./images/撥桿修改圖.jpg
+
+搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
+
+![送球機構本體修改圖][bsmmod]
+
+[bsmmod]: ./images/送球機透本體修改圖.jpg
+
+在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
+
+![入球口修改圖][bmmod]
+
+[bmmod]: ./images/入球口修改圖.jpg
+=======
 ![撥桿修改圖][SAM0]
 
 [SAM0]: ./images/撥桿修改圖.jpg
@@ -24,6 +41,7 @@
 ![入球口修改圖][SAM2]
 
 [SAM2]: ./images/入球口修改圖.jpg
+>>>>>>> 4620d55824410fb1e9a44af5abe01b71b0891f73
 
 繪圖影片
 
@@ -32,10 +50,27 @@ https://youtu.be/l5HXjuSZNig
 參數設計與繪圖
 ---
 
+送球機構繪製:https://youtu.be/l5HXjuSZNig
 
 
 細部設計與 BOM
 ---
 
+發球機構: 
 
+1.發球機構本體:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/cc2fcff733a6da56f285b8b8
+
+![發球機構本體][bsmt]
+
+[bsmt]: ./images/發球機構本體.jpg
+
+2.撥桿:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/79a2471d3dbdab0247698c7b
+
+![撥桿][polet]
+
+[polet]: ./images/撥桿.jpg
 
