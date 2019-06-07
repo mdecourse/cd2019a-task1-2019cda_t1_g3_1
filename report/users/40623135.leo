@@ -33,7 +33,7 @@
 <v t="leo.20190519181713.1"><vh>細部設計與 BOM</vh></v>
 </v>
 <v t="leo.20190519180919.1"><vh>@clean vrep_tablefootball.md</vh></v>
-<v t="leo.20190106201247.3"><vh>@clean vrep_take_ball.md</vh>
+<v t="leo.20190106201247.3" a="E"><vh>@clean vrep_take_ball.md</vh>
 <v t="leo.20190519181857.1"><vh>送球機構設計</vh></v>
 <v t="leo.20190519181902.1"><vh>送球機構模擬</vh></v>
 </v>
@@ -286,9 +286,9 @@ https://youtu.be/l5HXjuSZNig
 
 球門的外型依照球桌的大小與軌道的進球口進行尺寸配合，內部為了讓球可以順利的進入軌道進行了多次的斜度變動，在進球口處也利用圓角讓球可以更順暢的流通，外型用Draft分上下殼修改外型的斜度。
 
-![球門3D圖][polet]
+![球門3D圖][pull]
 
-[polet]: ./images/球門3D圖.jpg
+[pull]: ./images/球門3D圖.png
 
 @others
 </t>
@@ -320,6 +320,14 @@ https://youtu.be/l5HXjuSZNig
 ![撥桿][polet]
 
 [polet]: ./images/撥桿.jpg
+
+3.球門:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
+
+![球門三視圖][ppt]
+
+[ppt]: ./images/球門三視圖.png
 
 
 @others
