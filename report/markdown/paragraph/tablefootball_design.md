@@ -82,12 +82,4 @@ https://youtu.be/l5HXjuSZNig
 
 [polet]: ./images/撥桿.jpg
 
-3.球門:
-
-工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
-
-![球門三視圖][polet]
-
-[polet]: ./images/球門三視圖.jpg
-
 
