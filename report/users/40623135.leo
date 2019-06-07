@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2"/>
-<globals/>
+<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
+<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
+	<global_window_position top="50" left="50" height="500" width="700"/>
+	<global_log_window_position top="0" left="0" height="0" width="0"/>
+</globals>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -12,8 +15,8 @@
 </v>
 <v t="40323230.20170123213451.1"><vh>@button Report pdf</vh></v>
 <v t="yen.20170429132400.1"><vh>協同著作規劃</vh></v>
-<v t="yen.20170429103742.1"><vh>@path ./../</vh>
-<v t="yen.20170429103940.1"><vh>@path markdown</vh>
+<v t="yen.20170429103742.1" a="E"><vh>@path ./../</vh>
+<v t="yen.20170429103940.1" a="E"><vh>@path markdown</vh>
 <v t="ahshoe.20170322182713.1"><vh>@edit reference.md</vh></v>
 <v t="ahshoe.20170322181453.1"><vh>@edit refer.bib</vh></v>
 <v t="leo.20171119234752.1"><vh>封面以及摘要</vh>
@@ -21,16 +24,16 @@
 <v t="ahshoe.20170317115820.1"><vh>摘要</vh></v>
 </v>
 </v>
-<v t="leo.20171119234822.1"><vh>各章節內容</vh>
-<v t="yen.20170429214845.1"><vh>@path paragraph</vh>
+<v t="leo.20171119234822.1" a="E"><vh>各章節內容</vh>
+<v t="yen.20170429214845.1" a="E"><vh>@path paragraph</vh>
 <v t="leo.20190106201047.1"><vh>@clean introduction.md</vh></v>
-<v t="leo.20190519180750.1"><vh>@clean tablefootball_design.md</vh>
+<v t="leo.20190519180750.1" a="E"><vh>@clean tablefootball_design.md</vh>
 <v t="leo.20190519181552.1"><vh>零組件尺寸分析</vh></v>
 <v t="leo.20190519181710.1"><vh>參數設計與繪圖</vh></v>
 <v t="leo.20190519181713.1"><vh>細部設計與 BOM</vh></v>
 </v>
 <v t="leo.20190519180919.1"><vh>@clean vrep_tablefootball.md</vh></v>
-<v t="leo.20190106201247.3"><vh>@clean vrep_take_ball.md</vh>
+<v t="leo.20190106201247.3" a="E"><vh>@clean vrep_take_ball.md</vh>
 <v t="leo.20190519181857.1"><vh>送球機構設計</vh></v>
 <v t="leo.20190519181902.1"><vh>送球機構模擬</vh></v>
 </v>
@@ -237,13 +240,62 @@ abstract: |
 <t tx="leo.20190519181552.1">零組件尺寸分析
 ---
 
+7.送球機構:
 
+在撥桿的部分原本是呈現長方形的，因考慮到了沒有角度在撥球時可能會造成球的動向無法預期，所以在兩邊斜面的部分增加了10度的傾角。
+
+
+![撥桿修改圖][polemod]
+
+[polemod]: ./images/撥桿修改圖.jpg
+
+搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
+
+![送球機構本體修改圖][bsmmod]
+
+[bsmmod]: ./images/送球機透本體修改圖.jpg
+
+在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
+
+![入球口修改圖][bmmod]
+
+[bmmod]: ./images/入球口修改圖.jpg
+
+![撥桿修改圖][SAM0]
+
+[SAM0]: ./images/撥桿修改圖.jpg
+
+搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
+
+![送球機構本體修改圖][SAM1]
+
+[SAM1]: ./images/送球機透本體修改圖.jpg
+
+在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
+
+![入球口修改圖][SAM2]
+
+[SAM2]: ./images/入球口修改圖.jpg
+
+
+繪圖影片
+
+https://youtu.be/l5HXjuSZNig
+
+8.球門:
+
+球門的外型依照球桌的大小與軌道的進球口進行尺寸配合，內部為了讓球可以順利的進入軌道進行了多次的斜度變動，在進球口處也利用圓角讓球可以更順暢的流通，外型用Draft分上下殼修改外型的斜度。
+
+![球門3D圖][goals]
+s
+[goals]: ./images/球門3D圖.png
 
 @others
 </t>
 <t tx="leo.20190519181710.1">參數設計與繪圖
 ---
 
+送球機構繪製:https://youtu.be/l5HXjuSZNig
 
 
 @others
@@ -251,6 +303,33 @@ abstract: |
 <t tx="leo.20190519181713.1">細部設計與 BOM
 ---
 
+發球機構: 
+
+1.發球機構本體:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/cc2fcff733a6da56f285b8b8
+
+![發球機構本體][bsmt]
+
+[bsmt]: ./images/發球機構本體.jpg
+
+2.撥桿:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/79a2471d3dbdab0247698c7b
+
+![撥桿][polet]
+
+[polet]: ./images/撥桿.jpg
+
+
+
+3.球門:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
+
+![球門三視圖][gole]
+
+[gole]: ./images/球門三視圖.png
 
 
 @others
@@ -258,13 +337,24 @@ abstract: |
 <t tx="leo.20190519181857.1">送球機構設計
 ---
 
+本組將軌道的部分隱藏在球桌下方，軌道不凸出球桌外圍影響操作者操作，此外也將發球機構簡單化，利用單純的轉動系統讓球進入機構後以撥桿旋轉將球從球桌正中間發出，而選轉撥桿的好處還有能依得分系統的判斷，以正逆轉的方式控制球的動向。
+
+![送球機構設計][partdd]
+
+[partdd]: ./images/送球機構設計 .jpg
+
+
 
 
 @others
 </t>
 <t tx="leo.20190519181902.1">送球機構模擬
 ---
+40623156
 
+製作發球機構模擬，確定發球機構能順利進行發球的動作。
+
+https://youtu.be/VNxQo9RTClY
 
 
 
