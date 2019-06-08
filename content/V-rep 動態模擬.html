@@ -131,6 +131,12 @@ $(document).ready(doSearch);
 <p><img caption="false" height="268" src="./../images/軸簡化5.png" width="300"/></p>
 <p><span>圖2.3：</span>軸簡化後產生的新圓柱</p>
 <p><img caption="false" height="292" src="./../images/軸簡化後的圓柱.png" width="550"/></p>
+<p><br/>接下來要進行篩子的簡化，複製篩子至新的場景，之後的簡化也和軸非常相似，選取篩子並點選形狀編輯模式工具欄按鈕，將篩子全部框選進行簡化，如圖2.4，再點選簡化的對話框 Operations on selected triangles 中的 Extract cylinder ，之後會出現 Primitive cylinder 的對話框並按下 OK 即會產生一個圓柱如圖2.5，將新圓柱物件命名為 s1_dyn，並剪下貼回第一場景上即可。</p>
+<p>圖2.4：框選篩子需簡化部分</p>
+<p><img alt="" height="154" src="./../images/篩子簡化3.png" width="200"/></p>
+<p>圖2.5：篩子簡化後產生的新物件</p>
+<p><img alt="" height="184" src="./../images/篩子簡化後產生的新物件.png" width="200"/></p>
+<p>其餘的篩子及軸的簡化，可以參考人物簡化的最後一段。</p>
 <p>足球桌簡化</p>
 <p><span style="background-color: #ebff54;">模擬步驟</span></p>
 <p>將所有物件都簡化好後，開始進入模擬的步驟，為了在<a href="http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm">場景層次結構</a>中的物件更好找到，將所有的物件都命名能更快的找的所需要使用的物件。首先先加入平移軸<a href="http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm">Prismatic joints</a> (使用[Add--&gt;Joint--&gt;Prismatic])及旋轉軸<a href="http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm">Revolute joints</a> (使用[Add--&gt;Joint--&gt;Revolute])，並分別命名為 Prismatic_joint_1 及 Revolute_joint_1 ，之後將所有我需要用的物件都拉到 Table_dyn 下，如圖4.1及圖4.2。</p>
@@ -167,5 +173,4 @@ $(document).ready(doSearch);
 <p>圖4.14：對話框勾選 - Revolute_joint_1</p>
 <p><img caption="false" height="392" src="./../images/21-2.png" width="300"/></p>
 <p>圖4.15：模擬圖</p>
-<p><img caption="false" height="579" src="./../images/22.png" width="900"/></p>
-<br />細部設計與 BOM << <a href='細部設計與 BOM.html'>Previous</a> <a href='V-rep簡化與模擬測試.html'>Next</a> >> V-rep簡化與模擬測試</div></section></div></body></html>
+<p><img caption="false" height="579" src="./../images/22.png" width="900"/></p><br />細部設計與 BOM << <a href='細部設計與 BOM.html'>Previous</a> <a href='V-rep簡化與模擬測試.html'>Next</a> >> V-rep簡化與模擬測試</div></section></div></body></html>
