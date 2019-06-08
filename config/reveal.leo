@@ -25,6 +25,21 @@
 <v t="leo.20180902120523.11"><vh>大綱</vh>
 <v t="leo.20180902120523.12"><vh>大綱內容</vh></v>
 </v>
+<v t="leo.20190608201120.1"><vh>手足球系統設計</vh>
+<v t="leo.20190608201343.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20190608201353.1"><vh>手足球系統模擬</vh>
+<v t="leo.20190608201355.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20190608201355.2"><vh>送球機構設計</vh>
+<v t="leo.20190608201453.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20190608201518.1"><vh>送球機構模擬</vh>
+<v t="leo.20190608201537.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20190608201552.1"><vh>手足球系統功能</vh>
+<v t="leo.20190608201610.1"><vh>newHeadline</vh></v>
+</v>
 <v t="leo.20190519200723.1"><vh>快捷鍵</vh>
 <v t="leo.20190519200723.2"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -348,5 +363,45 @@ vertical: body pane on the botton</t>
 
 </t>
 <t tx="leo.20190608192742.1"></t>
+<t tx="leo.20190608201120.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190608201343.1">## 手足球系統設計
+
+123123</t>
+<t tx="leo.20190608201353.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190608201355.1">## 手足球系統模擬
+
+123123</t>
+<t tx="leo.20190608201355.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190608201453.1">## 送球機構設計
+
+123123</t>
+<t tx="leo.20190608201518.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190608201537.1">## 送球機構模擬
+
+123123</t>
+<t tx="leo.20190608201552.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190608201610.1">## 手足球系統功能
+
+123123</t>
 </tnodes>
 </leo_file>
