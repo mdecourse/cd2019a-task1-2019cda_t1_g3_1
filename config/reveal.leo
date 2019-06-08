@@ -18,6 +18,7 @@
 <v t="leo.20180902120523.6"><vh>body</vh>
 <v t="leo.20180902120523.7"><vh>reveal div</vh>
 <v t="leo.20180902120523.8"><vh>slides div</vh>
+<v t="leo.20190608192742.1"><vh>手足球系統設計</vh></v>
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
@@ -346,5 +347,6 @@ vertical: body pane on the botton</t>
 * 按 Esc 可以退出全螢幕或全域檢視 (Escape)
 
 </t>
+<t tx="leo.20190608192742.1"></t>
 </tnodes>
 </leo_file>
