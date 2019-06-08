@@ -128,6 +128,76 @@
 足球桌簡化
 ---
 
+[影片簡易版](https://youtu.be/YmQlG03cHHk)
+
+Toggle shape edit mode(左六)僅對於"一個"物體作簡化形成多個三角形
+
+先開啟另一個New scene，將球桌複製過來做簡化。
+
+球桌長板子有兩種方式，按Toggle shape edit mode後，
+
+1.為選取所想要的平面(可不須全選)，選取四角後按Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)。
+
+![選取三角形後按Extract cuboid][table01]
+
+[table01]: ./images/table/01vrep_bCCda9LjkF.png {#fig:駱駝 }
+
+![OK][table02]
+
+[table02]: ./images/table/02vrep_ppSOMPNriG.png {#fig:駱駝 }
+
+![關閉Shape Edition後按 NO][table03]
+
+[table03]: ./images/table/03vrep_RmP1pLfqp9.png {#fig:駱駝 }
+
+
+Scene objects properties(左二)>Shape>View/modify geometry>Keep proportions取消勾選，在Bounding box size長厚度後，在Object/item shift(上七)座移動，與球桌對齊。
+
+![View/modify geometry][table04]
+
+[table04]: ./images/table/04vrep_6CBLXrMxxk.png{#fig:駱駝 width=50%}
+
+![取消勾選並調整板厚][table05]
+
+[table05]: ./images/table/05.png{#fig:駱駝 width=50%}
+
+![X方向調整][table06]
+
+[table06]: ./images/table/06vrep_Mhr4H2vVfE.png{#fig:駱駝 width=50%}
+
+![調整位置][table07]
+
+[table07]: ./images/table/07OsZIho157g.png{#fig:駱駝 width=50%}
+
+
+
+2.為選取所想要的平面(可不須全選)，選取四角後"再選取平面上方三角形(厚度)"Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)，就完成了。
+
+![多選取板厚的三角形][球桌08]
+
+[球桌08]: ./images/球桌/08vrep_V9xQmjrfqx.png{#fig:駱駝 width=50%}
+
+選取完後一樣按Extract cuboid>OK>關閉Shape Edition>NO
+
+![兩種方式厚度比較][球桌09]
+
+[球桌09]: ./images/球桌/09vrep_NK3aZ9CqGA.png{#fig:駱駝 width=50%}
+
+其他地方的板子操作也是如此，之後會發現板子相互干涉，但對模擬或是簡化不會有影響。
+
+![簡化後的板子相互干涉][球桌10]
+
+[球桌10]: ./images/球桌/10vrep_45niDCVb7M.png{#fig:駱駝 width=50%}
+
+**
+
+Extract shape 為類似像皮膚一樣的一層
+
+Extract cuboid 為長平板
+
+Extract cylinder 為長圓柱
+
+Extract sphere 為長球
 
 模擬步驟
 ---

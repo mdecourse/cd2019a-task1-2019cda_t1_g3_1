@@ -25,11 +25,16 @@
 ![入球口修改圖][bmmod]
 
 [bmmod]: ./images/入球口修改圖.jpg
+<<<<<<< HEAD
+
+![撥桿修改圖][SAM0]
+=======
 
 
 
 ![撥桿修改圖][SAM0]
 
+>>>>>>> cfb2b37ceb256defd6730d168706380969b4258f
 
 
 繪圖影片
@@ -104,7 +109,12 @@ W15進度
 
 [goals]: ./images/球門3D圖.png
 
+<<<<<<< HEAD
+參數設計與繪圖
+---
+=======
 
+>>>>>>> cfb2b37ceb256defd6730d168706380969b4258f
 
 
 送球機構繪製:https://youtu.be/l5HXjuSZNig
