@@ -72,7 +72,7 @@ def getballposition():
         BRev_deg = (BRev_pos/math.pi)*180
 
 
-        try:
+        try: #紅色桿子
             if keyboard.is_pressed('o'): 
                 vrep.simxSetJointTargetVelocity(clientID,RRev_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
             elif keyboard.is_pressed('p'):  
@@ -87,7 +87,7 @@ def getballposition():
             break 
 
 
-        if position_S[0] <= 0 and BRev_deg <= -25: #球進入擊球區 and 桿子擊出
+        if position_S[0] <= 0 and BRev_deg <= -25: #球進入擊球區 and 桿子擊出 藍色桿子
             if position_BR[1]<=0.5: #桿子偏右邊
                 speed(BMo_handle, 0.08)
                 sleep(0.2)
