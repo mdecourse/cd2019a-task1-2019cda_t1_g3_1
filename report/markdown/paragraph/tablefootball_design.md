@@ -156,15 +156,34 @@ W15進度
 
 [poletD]: ./images/桿子.png
 
-
-
-3.球門:
+6.球門:
 
 工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
 
 ![球門三視圖][gole]
 
 [gole]: ./images/球門三視圖.png
+
+7.足球員
+工程圖連結網站請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/83f38694788c755ab69cb18c
+
+![球員工程圖][boa]
+
+[boa]: ./images/足球員工程圖.png
+
+8.塞子
+工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/40911ab194ff8009ffdd6238
+
+![塞子工程圖][bob]
+
+[bob]: ./images/塞子工程圖.png
+
+9.爆炸圖
+連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/bf399e06fdf1d159d2657944
+
+![爆炸圖][boc]
+
+[boc]: ./images/爆炸圖.png
 
 
 
