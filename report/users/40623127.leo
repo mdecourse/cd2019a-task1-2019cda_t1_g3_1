@@ -360,6 +360,76 @@ abstract: |
 足球桌簡化
 ---
 
+[影片簡易版](https://youtu.be/YmQlG03cHHk)
+
+Toggle shape edit mode(左六)僅對於"一個"物體作簡化形成多個三角形
+
+先開啟另一個New scene，將球桌複製過來做簡化。
+
+球桌長板子有兩種方式，按Toggle shape edit mode後，
+
+1.為選取所想要的平面(可不須全選)，選取四角後按Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)。
+
+![選取三角形後按Extract cuboid][table01]
+
+[table01]: ./images/table/01vrep_bCCda9LjkF.png {#fig:駱駝 }
+
+![OK][table02]
+
+[table02]: ./images/table/02vrep_ppSOMPNriG.png {#fig:駱駝 }
+
+![關閉Shape Edition後按 NO][table03]
+
+[table03]: ./images/table/03vrep_RmP1pLfqp9.png {#fig:駱駝 }
+
+
+Scene objects properties(左二)&gt;Shape&gt;View/modify geometry&gt;Keep proportions取消勾選，在Bounding box size長厚度後，在Object/item shift(上七)座移動，與球桌對齊。
+
+![View/modify geometry][table04]
+
+[table04]: ./images/table/04vrep_6CBLXrMxxk.png{#fig:駱駝 width=50%}
+
+![取消勾選並調整板厚][table05]
+
+[table05]: ./images/table/05.png{#fig:駱駝 width=50%}
+
+![X方向調整][table06]
+
+[table06]: ./images/table/06vrep_Mhr4H2vVfE.png{#fig:駱駝 width=50%}
+
+![調整位置][table07]
+
+[table07]: ./images/table/07OsZIho157g.png{#fig:駱駝 width=50%}
+
+
+
+2.為選取所想要的平面(可不須全選)，選取四角後"再選取平面上方三角形(厚度)"Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)，就完成了。
+
+![多選取板厚的三角形][球桌08]
+
+[球桌08]: ./images/球桌/08vrep_V9xQmjrfqx.png{#fig:駱駝 width=50%}
+
+選取完後一樣按Extract cuboid&gt;OK&gt;關閉Shape Edition&gt;NO
+
+![兩種方式厚度比較][球桌09]
+
+[球桌09]: ./images/球桌/09vrep_NK3aZ9CqGA.png{#fig:駱駝 width=50%}
+
+其他地方的板子操作也是如此，之後會發現板子相互干涉，但對模擬或是簡化不會有影響。
+
+![簡化後的板子相互干涉][球桌10]
+
+[球桌10]: ./images/球桌/10vrep_45niDCVb7M.png{#fig:駱駝 width=50%}
+
+**
+
+Extract shape 為類似像皮膚一樣的一層
+
+Extract cuboid 為長平板
+
+Extract cylinder 為長圓柱
+
+Extract sphere 為長球
 
 模擬步驟
 ---
@@ -469,11 +539,16 @@ abstract: |
 ![入球口修改圖][bmmod]
 
 [bmmod]: ./images/入球口修改圖.jpg
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
+
 
 ![撥桿修改圖][SAM0]
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; d04c8f90e3f19d50c9b2ce28c4ace2187e2f6c0f
+
+
+
+
+![撥桿修改圖][SAM0]
+
+
 
 
 繪圖影片
@@ -490,18 +565,18 @@ w11進度
 
 ![國際球桌][nike]
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
 [nike]: ./images/w11-1.png
-=======
+
 [SAM2]: ./images/入球口修改圖.jpg
 
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; d04c8f90e3f19d50c9b2ce28c4ace2187e2f6c0f
+
 
 W12進度
 
 本周繪製完(球桌)(球員)，和一些((手把)和串聯球員的(桿件)，以及另外一個分工小組的分球機構還在等我們的尺寸確定，他們的送球軌道尺寸才能配合到我們的球桌上，配合之後我們兩邊再去做一些尺寸的微調，讓分球機構能完美的和球桌合體。
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
 ![球桌][nikeD]
 
 [nikeD]: ./images/w12-1.png
@@ -541,18 +616,22 @@ W14進度
 W15進度
 
 我們前兩個禮拜已經把所有機構做好限制，這禮拜做最後檢查然後就把圖交由操作V-rep組員去做簡化與模擬。
-=======
+
 8.球門:
 
 球門的外型依照球桌的大小與軌道的進球口進行尺寸配合，內部為了讓球可以順利的進入軌道進行了多次的斜度變動，在進球口處也利用圓角讓球可以更順暢的流通，外型用Draft分上下殼修改外型的斜度。
 
 ![球門3D圖][goals]
-s
+
 [goals]: ./images/球門3D圖.png
+
 
 參數設計與繪圖
 ---
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; d04c8f90e3f19d50c9b2ce28c4ace2187e2f6c0f
+
+
+
+
 
 送球機構繪製:https://youtu.be/l5HXjuSZNig
 
@@ -580,7 +659,7 @@ s
 
 [polet]: ./images/撥桿.jpg
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
 3.球桌:
 
 工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/af2860e27a45e3d65e4744ae
@@ -604,17 +683,36 @@ s
 ![桿子][poletD]
 
 [poletD]: ./images/桿子.png
-=======
 
-
-3.球門:
+6.球門:
 
 工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
 
 ![球門三視圖][gole]
 
 [gole]: ./images/球門三視圖.png
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; d04c8f90e3f19d50c9b2ce28c4ace2187e2f6c0f
+
+7.足球員
+工程圖連結網站請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/83f38694788c755ab69cb18c
+
+![球員工程圖][boa]
+
+[boa]: ./images/足球員工程圖.png
+
+8.塞子
+工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/40911ab194ff8009ffdd6238
+
+![塞子工程圖][bob]
+
+[bob]: ./images/塞子工程圖.png
+
+9.爆炸圖
+連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/bf399e06fdf1d159d2657944
+
+![爆炸圖][boc]
+
+[boc]: ./images/爆炸圖.png
+
 
 
 @others
