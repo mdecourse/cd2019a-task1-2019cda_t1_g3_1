@@ -25,20 +25,42 @@
 <v t="leo.20180902120523.11"><vh>大綱</vh>
 <v t="leo.20180902120523.12"><vh>大綱內容</vh></v>
 </v>
-<v t="leo.20190608201120.1"><vh>手足球系統設計</vh>
-<v t="leo.20190608201343.1"><vh>newHeadline</vh></v>
+<v t="leo.20190609163032.1"><vh>手足球系統設計</vh>
+<v t="leo.20190609163032.2"><vh>第一頁</vh>
+<v t="leo.20190609163032.3"><vh>內容</vh></v>
 </v>
-<v t="leo.20190608201353.1"><vh>手足球系統模擬</vh>
-<v t="leo.20190608201355.1"><vh>newHeadline</vh></v>
+<v t="leo.20190609163032.4"><vh>第二頁</vh>
+<v t="leo.20190609163032.5"><vh>內容</vh></v>
 </v>
-<v t="leo.20190608201355.2"><vh>送球機構設計</vh>
-<v t="leo.20190608201453.1"><vh>newHeadline</vh></v>
 </v>
-<v t="leo.20190608201518.1"><vh>送球機構模擬</vh>
-<v t="leo.20190608201537.1"><vh>newHeadline</vh></v>
+<v t="leo.20190609163106.1"><vh>手足球系統模擬</vh>
+<v t="leo.20190609163106.2"><vh>第一頁</vh>
+<v t="leo.20190609163106.3"><vh>內容</vh></v>
 </v>
-<v t="leo.20190608201552.1"><vh>手足球系統功能</vh>
-<v t="leo.20190608201610.1"><vh>newHeadline</vh></v>
+<v t="leo.20190609163106.4"><vh>第二頁</vh>
+<v t="leo.20190609163106.5"><vh>內容</vh></v>
+</v>
+</v>
+<v t="leo.20190609163116.1"><vh>送球機構設計</vh>
+<v t="leo.20190609163116.2"><vh>第一頁</vh>
+<v t="leo.20190609163116.3"><vh>內容</vh></v>
+</v>
+<v t="leo.20190609163116.4"><vh>第二頁</vh>
+<v t="leo.20190609163116.5"><vh>內容</vh></v>
+</v>
+</v>
+<v t="leo.20190609163118.1"><vh>送球機構模擬</vh>
+<v t="leo.20190609163118.2"><vh>第一頁</vh>
+<v t="leo.20190609163118.3"><vh>內容</vh></v>
+</v>
+<v t="leo.20190609163118.4"><vh>第二頁</vh>
+<v t="leo.20190609163118.5"><vh>內容</vh></v>
+</v>
+</v>
+<v t="leo.20190609163330.1"><vh>手足球系統功能</vh>
+<v t="leo.20190609163330.2"><vh>第一頁</vh>
+<v t="leo.20190609163330.3"><vh>內容</vh></v>
+</v>
 </v>
 <v t="leo.20190519200723.1"><vh>快捷鍵</vh>
 <v t="leo.20190519200723.2"><vh>投影片快捷鍵</vh></v>
@@ -363,66 +385,157 @@ vertical: body pane on the botton</t>
 
 </t>
 <t tx="leo.20190608192742.1"></t>
-<t tx="leo.20190608201120.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+<t tx="leo.20190609163032.1">&lt;section&gt;
 @others
-
-    &lt;/script&gt;
 &lt;/section&gt;
 
 </t>
-<t tx="leo.20190608201343.1">## 手足球系統設計
-
-123123
-
-</t>
-<t tx="leo.20190608201353.1">&lt;section data-markdown&gt;
+<t tx="leo.20190609163032.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
-
     &lt;/script&gt;
 &lt;/section&gt;
 
-</t>
-<t tx="leo.20190608201355.1">## 手足球系統模擬
 
-123123
+
+						
 </t>
-<t tx="leo.20190608201355.2">&lt;section data-markdown&gt;
+<t tx="leo.20190609163032.3">### 手足球系統設計
+</t>
+<t tx="leo.20190609163032.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
-
     &lt;/script&gt;
 &lt;/section&gt;
 
-</t>
-<t tx="leo.20190608201453.1">## 送球機構設計
 
-123123
+
+						
 </t>
-<t tx="leo.20190608201518.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+<t tx="leo.20190609163032.5">### 手足球系統設計
+</t>
+<t tx="leo.20190609163106.1">&lt;section&gt;
 @others
-
-    &lt;/script&gt;
 &lt;/section&gt;
 
 </t>
-<t tx="leo.20190608201537.1">## 送球機構模擬
-
-123123
-</t>
-<t tx="leo.20190608201552.1">&lt;section data-markdown&gt;
+<t tx="leo.20190609163106.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
-
     &lt;/script&gt;
 &lt;/section&gt;
 
-</t>
-<t tx="leo.20190608201610.1">## 手足球系統功能
 
-123123
+
+						
 </t>
+<t tx="leo.20190609163106.3">### 手足球系統模擬
+
+</t>
+<t tx="leo.20190609163106.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163106.5">### 手足球系統模擬
+</t>
+<t tx="leo.20190609163116.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190609163116.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163116.3">### 送球機構設計
+</t>
+<t tx="leo.20190609163116.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163116.5">### 送球機構設計
+
+
+</t>
+<t tx="leo.20190609163118.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190609163118.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163118.3">### 送球機構模擬
+</t>
+<t tx="leo.20190609163118.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163118.5">### 送球機構模擬
+</t>
+<t tx="leo.20190609163330.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190609163330.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609163330.3">### 手足球系統功能
+
+[影像辨識](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%8C%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%B0%8B%E6%89%BE%E7%90%83%E5%92%8C%E6%A1%BF%E5%AD%90%E4%BD%8D%E7%BD%AE.html)
+
+[影像辨識機器對打(單個球員)](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%B8%89%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%A9%9F%E5%99%A8%E5%B0%8D%E6%89%93.html)
+
+[影像辨識-可辨識多個球員](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E5%9B%9B%E9%80%B1-%E6%9B%B4%E6%94%B9%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%96%B9%E5%BC%8F.html)
+
+[影像辨識多個球員踢球](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%94%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%A4%9A%E5%80%8B%E7%90%83%E5%93%A1%E8%B8%A2%E7%90%83.html)</t>
 </tnodes>
 </leo_file>
