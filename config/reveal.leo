@@ -366,42 +366,63 @@ vertical: body pane on the botton</t>
 <t tx="leo.20190608201120.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
     &lt;/script&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190608201343.1">## 手足球系統設計
 
-123123</t>
+123123
+
+</t>
 <t tx="leo.20190608201353.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
     &lt;/script&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190608201355.1">## 手足球系統模擬
 
-123123</t>
+123123
+</t>
 <t tx="leo.20190608201355.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
     &lt;/script&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190608201453.1">## 送球機構設計
 
-123123</t>
+123123
+</t>
 <t tx="leo.20190608201518.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
     &lt;/script&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190608201537.1">## 送球機構模擬
 
-123123</t>
+123123
+</t>
 <t tx="leo.20190608201552.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
     &lt;/script&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190608201610.1">## 手足球系統功能
 
-123123</t>
+123123
+</t>
 </tnodes>
 </leo_file>
