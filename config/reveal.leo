@@ -486,6 +486,7 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20190609163116.3">### 送球機構設計
+
 &lt;img src="https://raw.githubusercontent.com/mdekmol/cd2019a-task1-2019cda_t1_g3_1/master/images/%E9%80%81%E7%90%83%E6%A9%9F%E6%A7%8B%E8%A8%AD%E8%A8%88%20.jpg"&gt;
 
 
