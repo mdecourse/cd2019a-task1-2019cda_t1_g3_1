@@ -25,6 +25,14 @@
 <v t="leo.20180902120523.11"><vh>大綱</vh>
 <v t="leo.20180902120523.12"><vh>大綱內容</vh></v>
 </v>
+<v t="leo.20190609204612.1"><vh>球桌尺寸設計</vh>
+<v t="leo.20190609204657.1"><vh>第一頁</vh>
+<v t="leo.20190609204659.1"><vh>內容</vh></v>
+</v>
+<v t="leo.20190609204659.2"><vh>第二頁</vh>
+<v t="leo.20190609204659.3"><vh>內容</vh></v>
+</v>
+</v>
 <v t="leo.20190609163032.1"><vh>手足球系統設計</vh>
 <v t="leo.20190609163032.2"><vh>第一頁</vh>
 <v t="leo.20190609163032.3"><vh>內容</vh></v>
@@ -396,24 +404,6 @@ vertical: body pane on the botton</t>
 <t tx="leo.20190609163032.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
-### 球桌尺寸設計
-    &lt;/script&gt;
-&lt;/section&gt;
-
-&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-### 球桌尺寸設計
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-&lt;/section&gt;
-
-&lt;section&gt;
-&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
     &lt;/script&gt;
 &lt;/section&gt;
@@ -595,5 +585,30 @@ vertical: body pane on the botton</t>
 &lt;iframe width="560" height="314" src="https://www.youtube.com/embed/SfJS8gxvADE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 </t>
+<t tx="leo.20190609204612.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20190609204657.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190609204659.1">### 球桌尺寸設計
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/images/%E5%A1%9E%E5%AD%903D%E5%9C%96.png" width="250" height="200"&gt;
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/images/%E7%90%83%E6%A1%8C.png" width="250" height="200"&gt;
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/images/%E6%89%8B%E6%8A%8A.png" width="250" height="200"&gt;
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/images/%E7%90%83%E5%93%A1.png" width="250" height="200"&gt;
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/images/%E7%B5%84%E5%90%88%E5%9C%96.PNG" width="250" height="200"&gt;</t>
+<t tx="leo.20190609204659.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190609204659.3">### 球桌尺寸設計
+
+我們的球桌是參考了網路上給的球桌尺寸再下去做球員之間的距離尺寸設計，還有為了不讓球卡在四個角落，所以我們給予了四個斜坡做改善，還有塞子的設計用途是給球員在移動上有所限制不會亂跑，也有緩衝用途不會因操控者太聚精會神讓足球員高速撞擊有所損壞。</t>
 </tnodes>
 </leo_file>
