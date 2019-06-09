@@ -508,6 +508,13 @@ Extract sphere 為長球
 </t>
 <t tx="leo.20190519181552.1">零組件尺寸分析
 ---
+6.送球軌道:
+
+由於尺寸過小的關係，再加上需要配合送球機構以及軌道的關係修改了相當多次，為配合到機構之間的距離將尺寸從120改成135
+
+![送球軌道草圖][track]
+
+[track]: ./images/送球軌道草圖.jpg
 
 7.送球機構:
 
@@ -530,7 +537,15 @@ Extract sphere 為長球
 
 [bmmod]: ./images/入球口修改圖.jpg
 
+
 ![撥桿修改圖][SAM0]
+
+
+
+
+![撥桿修改圖][SAM0]
+
+
 
 
 繪圖影片
@@ -604,11 +619,15 @@ W15進度
 球門的外型依照球桌的大小與軌道的進球口進行尺寸配合，內部為了讓球可以順利的進入軌道進行了多次的斜度變動，在進球口處也利用圓角讓球可以更順暢的流通，外型用Draft分上下殼修改外型的斜度。
 
 ![球門3D圖][goals]
-s
+
 [goals]: ./images/球門3D圖.png
+
 
 參數設計與繪圖
 ---
+
+
+
 
 
 送球機構繪製:https://youtu.be/l5HXjuSZNig
@@ -662,15 +681,34 @@ s
 
 [poletD]: ./images/桿子.png
 
-
-
-3.球門:
+6.球門:
 
 工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
 
 ![球門三視圖][gole]
 
 [gole]: ./images/球門三視圖.png
+
+7.足球員
+工程圖連結網站請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/83f38694788c755ab69cb18c
+
+![球員工程圖][boa]
+
+[boa]: ./images/足球員工程圖.png
+
+8.塞子
+工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/40911ab194ff8009ffdd6238
+
+![塞子工程圖][bob]
+
+[bob]: ./images/塞子工程圖.png
+
+9.爆炸圖
+連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/bf399e06fdf1d159d2657944
+
+![爆炸圖][boc]
+
+[boc]: ./images/爆炸圖.png
 
 
 
