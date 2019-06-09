@@ -4,13 +4,11 @@
 
 零組件尺寸分析
 ---
+
 6.送球軌道:
 
 由於尺寸過小的關係，再加上需要配合送球機構以及軌道的關係修改了相當多次，為配合到機構之間的距離將尺寸從120改成135
 
-![送球軌道草圖][track]
-
-[track]: ./images/送球軌道草圖.jpg
 
 7.送球機構:
 
@@ -19,29 +17,19 @@
 
 ![撥桿修改圖][polemod]
 
-[polemod]: ./images/撥桿修改圖.jpg
+[polemod]: ./images/撥桿修改圖.jpg {#fig:駱駝}
 
 搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
 
 ![送球機構本體修改圖][bsmmod]
 
-[bsmmod]: ./images/送球機透本體修改圖.jpg
+[bsmmod]: ./images/送球機透本體修改圖.jpg {#fig:駱駝}
 
 在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
 
 ![入球口修改圖][bmmod]
 
-[bmmod]: ./images/入球口修改圖.jpg
-
-
-![撥桿修改圖][SAM0]
-
-
-
-
-![撥桿修改圖][SAM0]
-
-
+[bmmod]: ./images/入球口修改圖.jpg {#fig:駱駝}
 
 
 繪圖影片
@@ -50,6 +38,7 @@ https://youtu.be/l5HXjuSZNig
 
 參數設計與繪圖
 ---
+
 w11進度
 
 本周進行人員的工作分配，王柏翔與鍾旻諺分配到參數設計與繪圖的工作，我們先上網搜尋手足球桌的國際規格之後，參考國際比賽桌的尺寸之後再做了一些些微的調整，為了之後設計和配合可以方便一點。
@@ -59,10 +48,6 @@ w11進度
 
 [nike]: ./images/w11-1.png
 
-[SAM2]: ./images/入球口修改圖.jpg
-
-
-
 W12進度
 
 本周繪製完(球桌)(球員)，和一些((手把)和串聯球員的(桿件)，以及另外一個分工小組的分球機構還在等我們的尺寸確定，他們的送球軌道尺寸才能配合到我們的球桌上，配合之後我們兩邊再去做一些尺寸的微調，讓分球機構能完美的和球桌合體。
@@ -70,19 +55,19 @@ W12進度
 
 ![球桌][nikeD]
 
-[nikeD]: ./images/w12-1.png
+[nikeD]: ./images/w12-1.png {#fig:駱駝}
 
 ![球員][nikeS]
 
-[nikeS]: ./images/w12-2.png
+[nikeS]: ./images/w12-2.png {#fig:駱駝}
 
-![送球機構零件][nikeA]
+![送球機構零件一][nikeA]
 
-[nikeA]: ./images/w12-3.png
+[nikeA]: ./images/w12-3.png {#fig:駱駝}
 
-![送球機構零件][nikeF]
+![送球機構零件二][nikeF]
 
-[nikeF]: ./images/w12-4.png
+[nikeF]: ./images/w12-4.png {#fig:駱駝}
 
 W13進度
 
@@ -90,11 +75,11 @@ W13進度
 
 ![球桌組合圖][nikeG]
 
-[nikeG]: ./images/w13-1.png
+[nikeG]: ./images/w13-1.png {#fig:駱駝}
 
 ![送球機構組合圖][nikeH]
 
-[nikeH]: ./images/w-13-2.png
+[nikeH]: ./images/w-13-2.png {#fig:駱駝}
 
 W14進度
 
@@ -102,7 +87,7 @@ W14進度
 
 ![球員尺寸更改圖][nikeJ]
 
-[nikeJ]: ./images/w14-1.png
+[nikeJ]: ./images/w14-1.png {#fig:駱駝}
 
 W15進度
 
@@ -114,7 +99,7 @@ W15進度
 
 ![球門3D圖][goals]
 
-[goals]: ./images/球門3D圖.png
+[goals]: ./images/球門3D圖.png {#fig:駱駝}
 
 
 參數設計與繪圖
@@ -138,7 +123,7 @@ W15進度
 
 ![發球機構本體][bsmt]
 
-[bsmt]: ./images/發球機構本體.jpg
+[bsmt]: ./images/發球機構本體.jpg {#fig:駱駝}
 
 2.撥桿:
 
@@ -146,7 +131,7 @@ W15進度
 
 ![撥桿][polet]
 
-[polet]: ./images/撥桿.jpg
+[polet]: ./images/撥桿.jpg {#fig:駱駝}
 
 
 3.球桌:
@@ -155,7 +140,7 @@ W15進度
 
 ![球桌][poletA]
 
-[poletA]: ./images/球桌 bomnew.png
+[poletA]: ./images/球桌 bomnew.png {#fig:駱駝}
 
 4.手把:
 
@@ -163,7 +148,7 @@ W15進度
 
 ![手把][poletS]
 
-[poletS]: ./images/手把 bomnew.png
+[poletS]: ./images/手把 bomnew.png {#fig:駱駝}
 
 5.桿子:
 
@@ -171,7 +156,7 @@ W15進度
 
 ![桿子][poletD]
 
-[poletD]: ./images/桿子.png
+[poletD]: ./images/桿子.png {#fig:駱駝}
 
 6.球門:
 
@@ -179,28 +164,28 @@ W15進度
 
 ![球門三視圖][gole]
 
-[gole]: ./images/球門三視圖.png
+[gole]: ./images/球門三視圖.png {#fig:駱駝}
 
 7.足球員
 工程圖連結網站請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/83f38694788c755ab69cb18c
 
 ![球員工程圖][boa]
 
-[boa]: ./images/足球員工程圖.png
+[boa]: ./images/足球員工程圖.png {#fig:駱駝}
 
 8.塞子
 工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/40911ab194ff8009ffdd6238
 
 ![塞子工程圖][bob]
 
-[bob]: ./images/塞子工程圖.png
+[bob]: ./images/塞子工程圖.png {#fig:駱駝}
 
 9.爆炸圖
 連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/bf399e06fdf1d159d2657944
 
 ![爆炸圖][boc]
 
-[boc]: ./images/爆炸圖.png
+[boc]: ./images/爆炸圖.png {#fig:駱駝}
 
 
 
