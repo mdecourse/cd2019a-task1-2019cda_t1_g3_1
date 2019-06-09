@@ -465,6 +465,8 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20190609163116.3">### 送球機構設計
+
+
 </t>
 <t tx="leo.20190609163116.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -536,6 +538,8 @@ vertical: body pane on the botton</t>
 
 [影像辨識-可辨識多個球員](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E5%9B%9B%E9%80%B1-%E6%9B%B4%E6%94%B9%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%96%B9%E5%BC%8F.html)
 
-[影像辨識多個球員踢球](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%94%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%A4%9A%E5%80%8B%E7%90%83%E5%93%A1%E8%B8%A2%E7%90%83.html)</t>
+[影像辨識多個球員踢球](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%94%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%A4%9A%E5%80%8B%E7%90%83%E5%93%A1%E8%B8%A2%E7%90%83.html)
+
+</t>
 </tnodes>
 </leo_file>
