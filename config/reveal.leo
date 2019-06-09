@@ -56,6 +56,9 @@
 <v t="leo.20190609163118.4"><vh>第二頁</vh>
 <v t="leo.20190609163118.5"><vh>內容</vh></v>
 </v>
+<v t="leo.20190609194606.1"><vh>第三頁</vh>
+<v t="leo.20190609194745.1"><vh>內容</vh></v>
+</v>
 </v>
 <v t="leo.20190609163330.1"><vh>手足球系統功能</vh>
 <v t="leo.20190609163330.2"><vh>第一頁</vh>
@@ -481,8 +484,13 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20190609163116.5">### 送球機構設計
+優點:
 
+1.不干涉、美觀、好收納。
 
+2.構造簡單，方便製造維修。
+
+3.發球成直線，能控制發球方向。
 
 </t>
 <t tx="leo.20190609163118.1">&lt;section&gt;
@@ -502,7 +510,10 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20190609163118.3">### 送球機構模擬
-</t>
+
+軌道
+
+&lt;iframe width="560" height="314" src="https://www.youtube.com/embed/k7KeAABYSK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20190609163118.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -515,7 +526,10 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20190609163118.5">### 送球機構模擬
-</t>
+
+本體
+
+&lt;iframe width="560" height="314" src="https://www.youtube.com/embed/VNxQo9RTClY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20190609163330.1">&lt;section&gt;
 @others
 &lt;/section&gt;
@@ -541,6 +555,19 @@ vertical: body pane on the botton</t>
 [影像辨識-可辨識多個球員](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E5%9B%9B%E9%80%B1-%E6%9B%B4%E6%94%B9%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%96%B9%E5%BC%8F.html)
 
 [影像辨識多個球員踢球](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%94%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%A4%9A%E5%80%8B%E7%90%83%E5%93%A1%E8%B8%A2%E7%90%83.html)
+
+</t>
+<t tx="leo.20190609194606.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190609194745.1">### 送球機構模擬
+
+整體
+
+&lt;iframe width="560" height="314" src="https://www.youtube.com/embed/SfJS8gxvADE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 </t>
 </tnodes>
