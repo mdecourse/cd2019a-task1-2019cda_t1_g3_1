@@ -208,10 +208,8 @@ abstract: |
 <t tx="leo.20190106201047.1">前言
 ===
 
-![Test][test]
-
-[test]: ./images/kmol.png {#fig:駱駝}
-
+由於每個人都有各自擅長的領域，因此需要分工合作完成一個商品，每個人只需要往自己擅長的領域鑽入，可以不用花費大量時間在自己所不擅長的領域。
+因此藉由協同製作手足球系統來更加了解協同時會遇到的問題，並了解協同的重要性跟好處。
 
 @others
 </t>
@@ -235,12 +233,18 @@ abstract: |
 <t tx="leo.20190519180919.1">手足球系統模擬
 ===
 
-
-
 @others
 </t>
 <t tx="leo.20190519181552.1">零組件尺寸分析
 ---
+
+6.送球軌道:
+
+由於尺寸過小的關係，再加上需要配合送球機構以及軌道的關係修改了相當多次，為配合到機構之間的距離將尺寸從120改成135
+
+![送球軌道草圖][pollemod]
+
+[pollemod]: ./images/送球軌道草圖.jpg
 
 7.送球機構:
 
@@ -249,53 +253,102 @@ abstract: |
 
 ![撥桿修改圖][polemod]
 
-[polemod]: ./images/撥桿修改圖.jpg
+[polemod]: ./images/撥桿修改圖.jpg {#fig:駱駝}
 
 搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
 
 ![送球機構本體修改圖][bsmmod]
 
-[bsmmod]: ./images/送球機透本體修改圖.jpg
+[bsmmod]: ./images/送球機透本體修改圖.jpg {#fig:駱駝}
 
 在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
 
 ![入球口修改圖][bmmod]
 
-[bmmod]: ./images/入球口修改圖.jpg
-
-![撥桿修改圖][SAM0]
-
-[SAM0]: ./images/撥桿修改圖.jpg
-
-搭配撥桿的造型後，在外殼的設計上各增加了厚度5mm，而在與撥桿相差2mm的誤差是因為組員反映出在v-rep模擬時兩機件會互相干涉，所以更動了原先的尺寸。
-
-![送球機構本體修改圖][SAM1]
-
-[SAM1]: ./images/送球機透本體修改圖.jpg
-
-在進球口高度的設計上，為了方便負責軌道組員的製作，所以將孔的位置標於圓的底部，而球口的高度也有經過設計，與撥桿的部分切齊在進球時不會造成干涉。
-
-![入球口修改圖][SAM2]
-
-[SAM2]: ./images/入球口修改圖.jpg
+[bmmod]: ./images/入球口修改圖.jpg {#fig:駱駝}
 
 
 繪圖影片
 
 https://youtu.be/l5HXjuSZNig
 
+參數設計與繪圖
+---
+
+w11進度
+
+本周進行人員的工作分配，王柏翔與鍾旻諺分配到參數設計與繪圖的工作，我們先上網搜尋手足球桌的國際規格之後，參考國際比賽桌的尺寸之後再做了一些些微的調整，為了之後設計和配合可以方便一點。
+
+![國際球桌][nike]
+
+
+[nike]: ./images/w11-1.png
+
+W12進度
+
+本周繪製完(球桌)(球員)，和一些((手把)和串聯球員的(桿件)，以及另外一個分工小組的分球機構還在等我們的尺寸確定，他們的送球軌道尺寸才能配合到我們的球桌上，配合之後我們兩邊再去做一些尺寸的微調，讓分球機構能完美的和球桌合體。
+
+
+![球桌][nikeD]
+
+[nikeD]: ./images/w12-1.png {#fig:駱駝}
+
+![球員][nikeS]
+
+[nikeS]: ./images/w12-2.png {#fig:駱駝}
+
+![送球機構零件一][nikeA]
+
+[nikeA]: ./images/w12-3.png {#fig:駱駝}
+
+![送球機構零件二][nikeF]
+
+[nikeF]: ./images/w12-4.png {#fig:駱駝}
+
+W13進度
+
+本周我們進行零組件、送球機構、足球桌的組裝，組裝之後我們發現各組件在配合上有些許的誤差，在設定球員和手把連桿時我們為了設定它的移動範圍花了許多的時間，因為不知道為什麼同樣的參數卻不能套用在同位置的球桿上，所以我們只好每根都自己慢慢的去試，才不會讓它過度移動(例如整根拔出來)，不過在其他組員分工的幫忙下順利的組裝完成了。
+
+![球桌組合圖][nikeG]
+
+[nikeG]: ./images/w13-1.png {#fig:駱駝}
+
+![送球機構組合圖][nikeH]
+
+[nikeH]: ./images/w-13-2.png {#fig:駱駝}
+
+W14進度
+
+我們把所有機構做組裝，發現球員與球員間會互相碰撞所以去做了尺寸上的更改，把球員長度改到以下尺寸並把球桌的洞上下間距做更改。
+
+![球員尺寸更改圖][nikeJ]
+
+[nikeJ]: ./images/w14-1.png {#fig:駱駝}
+
+W15進度
+
+我們前兩個禮拜已經把所有機構做好限制，這禮拜做最後檢查然後就把圖交由操作V-rep組員去做簡化與模擬。
+
+W16進度
+將送球機構整個過程的零件進行修改，讓球可以順利的循環至指定地點，程式部分尚未完成所以無法達到預期經由sensor偵測後把球送給指定方。將所有零件資料與零件bom圖從onshape整理出來。
+
 8.球門:
 
 球門的外型依照球桌的大小與軌道的進球口進行尺寸配合，內部為了讓球可以順利的進入軌道進行了多次的斜度變動，在進球口處也利用圓角讓球可以更順暢的流通，外型用Draft分上下殼修改外型的斜度。
 
 ![球門3D圖][goals]
-s
-[goals]: ./images/球門3D圖.png
+
+[goals]: ./images/球門3D圖.png {#fig:駱駝}
+
 
 @others
 </t>
 <t tx="leo.20190519181710.1">參數設計與繪圖
 ---
+
+
+
+
 
 送球機構繪製:https://youtu.be/l5HXjuSZNig
 
@@ -313,7 +366,7 @@ s
 
 ![發球機構本體][bsmt]
 
-[bsmt]: ./images/發球機構本體.jpg
+[bsmt]: ./images/發球機構本體.jpg {#fig:駱駝}
 
 2.撥桿:
 
@@ -321,17 +374,74 @@ s
 
 ![撥桿][polet]
 
-[polet]: ./images/撥桿.jpg
+[polet]: ./images/撥桿.jpg {#fig:駱駝}
 
 
+3.球桌:
 
-3.球門:
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/af2860e27a45e3d65e4744ae
+
+![球桌][poletA]
+
+[poletA]: ./images/球桌 bomnew.png {#fig:駱駝}
+
+4.手把:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/0ffbf2d9caded49fe7b47679
+
+![手把][poletS]
+
+[poletS]: ./images/手把 bomnew.png {#fig:駱駝}
+
+5.桿子:
+
+工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/558a2fa8dc9cd780958dc74f
+
+![桿子][poletD]
+
+[poletD]: ./images/桿子.png {#fig:駱駝}
+
+6.球門:
 
 工程圖連結網址請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/87427ddbdbb5063db4e9e7e7
 
 ![球門三視圖][gole]
 
-[gole]: ./images/球門三視圖.png
+[gole]: ./images/球門三視圖.png {#fig:駱駝}
+
+7.足球員
+工程圖連結網站請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/83f38694788c755ab69cb18c
+
+![球員工程圖][boa]
+
+[boa]: ./images/足球員工程圖.png {#fig:駱駝}
+
+8.塞子
+工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/40911ab194ff8009ffdd6238
+
+![塞子工程圖][bob]
+
+[bob]: ./images/塞子工程圖.png {#fig:駱駝}
+
+
+9.送球軌道
+
+工程圖連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/09f93ed5107bb380078f0a91
+
+![送球軌道工程圖][bod]
+
+[bod]: ./images/送球軌道工程圖.png {#fig:駱駝}
+
+
+10.爆炸圖
+連結請點這:https://cad.onshape.com/documents/7063242033d0934280d360d8/w/172d28e1bcc6647f37e823d3/e/bf399e06fdf1d159d2657944
+
+![爆炸圖][boc]
+
+[boc]: ./images/爆炸圖.png {#fig:駱駝}
+
+
+
 
 
 @others
@@ -365,13 +475,43 @@ https://youtu.be/VNxQo9RTClY
 <t tx="leo.20190519182839.1">雙人鍵盤控制對打
 ---
 
+程式利用python的keyboard mudule來配和按鍵控制
 
+所使用的是keyboard.is_pressed('熱鍵')，如果按下熱鍵，則返回True
+
+並配合Remote API functions (Python)執行程式
+
+
+
+![玩家對打][player]
+
+[player]: ./images/玩家對打.png {#fig:駱駝}
+
+雙電腦對打
+---
+
+
+一開始發現問題如果球再球員擊出後，跑到桿子後方，會出現Bug球員將無法收回
+
+經過修改後再擊出球後能往旁邊移動收回桿子，進行下段程式。
+
+如果球進入擊球區桿子在收回的情況下，球與球員進入x軸-0.01~0.01範圍內
+
+則球員會將球擊出
+
+未進入x軸-0.01~0.01範圍內時則桿子保持收回
+
+未進入擊球範圍時桿子繼續保持收回
+
+![電腦對打][com]
+
+[com]: ./images/電腦對打.png {#fig:駱駝}
 
 @others
 </t>
-<t tx="leo.20190519182841.1">雙電腦對打
----
+<t tx="leo.20190519182841.1">![玩家電腦][com2]
 
+[com2]: ./images/玩家電腦.png {#fig:駱駝}
 
 
 @others
@@ -379,7 +519,9 @@ https://youtu.be/VNxQo9RTClY
 <t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
 ---
 
+由電腦對打和玩家對打程式合併加以修改
 
+完整程式碼 如圖5.3
 
 @others
 </t>
@@ -407,6 +549,48 @@ https://youtu.be/VNxQo9RTClY
 處理完後運用opencv的
 [canny](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html)
 來尋找物體邊界，並用找到的邊界計算形心位置。
+
+關於opencv-canny
+
+這個函數有五大步驟
+分別是
+
+
+影像辨識-canny
+---
+
+canny函數有四大步驟
+分別為
+1.高斯濾波(Gaussian filter)
+
+矩陣中的值代表對應像素值的加權(越往旁邊加權越小越中間越大)
+
+而分數分母為加權值的總合
+
+![高斯濾波][Gaussianfilter]
+
+[Gaussianfilter]: ./images/Gaussianfilter.png {#fig:駱駝}
+
+2.尋找影像的強度斜率
+
+
+![尋找Gx與Gy][GxGy]
+
+[GxGy]: ./images/GxGy.png {#fig:駱駝}
+
+![找到強度斜率與方向][Gx-Gy]
+
+[Gx-Gy]: ./images/Gx-Gy.png {#fig:駱駝}
+
+3.刪除不是邊緣的像素
+
+4.從定義的數值決定邊線是刪除或留下(上限和下限)(建議2:1~3:1之間)
+
+a.如果高於上限留下
+
+b.介於上限與下限之間時至有當它連接a.時才留下
+
+c.低於下限時則刪除它
 
 
 @others
@@ -452,7 +636,6 @@ https://youtu.be/VNxQo9RTClY
 接下來說明人物簡化步驟，先來進行人物頭部的簡化，先選擇人物將其複製(使用[ Edit --&gt; Copy selected Objects ])到一個新建的場景(使用[ File --&gt; New scene ])，再將人物貼上(使用[ Edit --&gt; Paste buffer ])。再點選[頁面選擇器工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm) ，如圖4.5，使得在簡化的過程中更容易點選，接著選取人物再點選[形狀編輯模式工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/shapeEditModes.htm) 來進行簡化，如圖4.6，在此我框選人物的頭部如圖4.7，再點選簡化的對話框 Operations on selected triangles 中的 Extract cuboid 如圖4.8，之後會出現 Primitive cuboid 的對話框並按下 OK 即會產生一個立方體如圖4.9，頭部的簡化就完成了，再將簡化對話框關閉，此時會出現 Shape edit mode 對話框詢問是否應用這些變化嗎？(點擊否會保
 留提取的對象)，所以在這選擇 No 將新加入的物件保留。 
 
-&lt;div align="center"&gt;
 ![頁面選擇器工具欄按鈕][人物簡化4]
 
 [人物簡化4]: ./images/簡化/人物簡化/人物簡化4.png {#fig:駱駝}
@@ -548,10 +731,82 @@ https://youtu.be/VNxQo9RTClY
 
 其餘的篩子及軸的簡化，可以參考人物簡化的最後一段。
 
+
 @others
 </t>
 <t tx="leo.20190608001130.1">足球桌簡化
 ---
+
+[影片簡易版](https://youtu.be/YmQlG03cHHk)
+
+Toggle shape edit mode(左六)僅對於"一個"物體作簡化形成多個三角形
+
+先開啟另一個New scene，將球桌複製過來做簡化。
+
+球桌長板子有兩種方式，按Toggle shape edit mode後，
+
+1.為選取所想要的平面(可不須全選)，選取四角後按Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)。
+
+![選取三角形後按Extract cuboid][table01]
+
+[table01]: ./images/table/01vrep_bCCda9LjkF.png {#fig:駱駝 }
+
+![OK][table02]
+
+[table02]: ./images/table/02vrep_ppSOMPNriG.png {#fig:駱駝 }
+
+![關閉Shape Edition後按 NO][table03]
+
+[table03]: ./images/table/03vrep_RmP1pLfqp9.png {#fig:駱駝 }
+
+
+Scene objects properties(左二)&gt;Shape&gt;View/modify geometry&gt;Keep proportions取消勾選，在Bounding box size長厚度後，在Object/item shift(上七)座移動，與球桌對齊。
+
+![View/modify geometry][table04]
+
+[table04]: ./images/table/04vrep_6CBLXrMxxk.png {#fig:駱駝 width=50%}
+
+![取消勾選並調整板厚][table05]
+
+[table05]: ./images/table/05.png {#fig:駱駝 width=50%}
+
+![X方向調整][table06]
+
+[table06]: ./images/table/06vrep_Mhr4H2vVfE.png {#fig:駱駝 width=50%}
+
+![調整位置][table07]
+
+[table07]: ./images/table/07OsZIho157g.png {#fig:駱駝 width=50%}
+
+
+
+2.為選取所想要的平面(可不須全選)，選取四角後"再選取平面上方三角形(厚度)"Extract cuboid後(系統會將所選所有三角形自動計算出最大尺寸)，就完成了。
+
+![多選取板厚的三角形][球桌08]
+
+[球桌08]: ./images/table/08vrep_V9xQmjrfqx.png {#fig:駱駝 width=50%}
+
+選取完後一樣按Extract cuboid&gt;OK&gt;關閉Shape Edition&gt;NO
+
+![兩種方式厚度比較][球桌09]
+
+[球桌09]: ./images/table/09vrep_NK3aZ9CqGA.png {#fig:駱駝 width=50%}
+
+其他地方的板子操作也是如此，之後會發現板子相互干涉，但對模擬或是簡化不會有影響。
+
+![簡化後的板子相互干涉][球桌10]
+
+[球桌10]: ./images/table/10vrep_45niDCVb7M.png {#fig:駱駝 width=50%}
+
+**
+
+Extract shape 為類似像皮膚一樣的一層
+
+Extract cuboid 為長平板
+
+Extract cylinder 為長圓柱
+
+Extract sphere 為長球
 
 
 @others
@@ -559,7 +814,7 @@ https://youtu.be/VNxQo9RTClY
 <t tx="leo.20190608001201.1">模擬步驟
 ---
 
-將所有物件都簡化好後，開始進入模擬的步驟，為了在(場景層次結構)[http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm] 中的物件更好找到，將所有的物件都命名能更快的找的所需要使用的物件。首先先加入平移軸[Prismatic joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add--&gt;Joint--&gt;Prismatic])及旋轉軸[Revolute joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add--&gt;Joint--&gt;Revolute])，並分別命名為 Prismatic_joint_1 及 Revolute_joint_1 ，之後將所有我需要用的物件都拉到 Table_dyn 下，如圖4.25及圖4.26。
+將所有物件都簡化好後，開始進入模擬的步驟，為了在[場景層次結構](http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm) 中的物件更好找到，將所有的物件都命名能更快的找的所需要使用的物件。首先先加入平移軸[Prismatic joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add--&gt;Joint--&gt;Prismatic])及旋轉軸[Revolute joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add--&gt;Joint--&gt;Revolute])，並分別命名為 Prismatic_joint_1 及 Revolute_joint_1 ，之後將所有我需要用的物件都拉到 Table_dyn 下，如圖4.35及圖4.36。
 
 ![將所需物件拉入 Table_dyn 下-1][6]
 
@@ -569,7 +824,7 @@ https://youtu.be/VNxQo9RTClY
 
 [6-1]: ./images/排列樹狀圖並模擬/6-1.png {#fig:駱駝 width=50%}
 
-選取 Prismatic_joint_1 (平移軸)及 cylinder_L1_dyn (軸)並點選物件傳送工具欄按鈕如圖4.16，會出現 Object/Item Translation/Position的對話框，切換至 Postion 按下按鈕 Apply to selection ，平移軸及軸會相貼合，如圖4.27，再點選[物件旋轉工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm) 圖4.28，會出現 Object/Item Rotation/Orientation的對話框，切換至 Orientation 按下按鈕Apply to selection ，平移軸及軸方向會相同，如圖4.29，之後的旋轉軸也是一樣的方法，圖4.30可以看出平移軸、旋轉軸及軸位置及方向都相同。
+選取 Prismatic_joint_1 (平移軸)及 cylinder_L1_dyn (軸)並點選物件傳送工具欄按鈕如圖4.16，會出現 Object/Item Translation/Position的對話框，切換至 Postion 按下按鈕 Apply to selection ，平移軸及軸會相貼合，如圖4.37，再點選[物件旋轉工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm) 圖4.38，會出現 Object/Item Rotation/Orientation的對話框，切換至 Orientation 按下按鈕Apply to selection ，平移軸及軸方向會相同，如圖4.39，之後的旋轉軸也是一樣的方法，圖4.40可以看出平移軸、旋轉軸及軸位置及方向都相同。
 
 ![平移軸和軸相貼合][7-3]
 
@@ -587,7 +842,7 @@ https://youtu.be/VNxQo9RTClY
 
 [10-3]: ./images/排列樹狀圖並模擬/10-3.png {#fig:駱駝}
 
-再將拉入 Table_dyn下的物件依照圖4.31 去排序，在選取物件 h_L1、 people_L1_1 、 s_L1_1 及 s_L1_2 (使用[Edit--&gt;Grouping/Merging--&gt;Group selected shapes])將物件合併，命名為 h_L1 ，另一部分的 people_L1_1_dyn 、 s_L1_1_dyn 及 s_L1_2_dyn 也一樣使用相同方法進行合併，命名為 s_L1_2_dyn ，完成後如圖4.32。
+再將拉入 Table-dyn下的物件依照圖4.41 去排序，在選取物件 h-L1、 people-L1-1 、 s-L1-1 及 s-L1-2 (使用[Edit--&gt;Grouping/Merging--&gt;Group selected shapes])將物件合併，命名為 h-L1 ，另一部分的 people-L1-1-dyn 、 s-L1-1-dyn 及 s-L1-2-dyn 也一樣使用相同方法進行合併，命名為 s-L1-2_dyn ，完成後如圖4.42。
 
 ![樹狀圖排列][11]
 
@@ -597,39 +852,41 @@ https://youtu.be/VNxQo9RTClY
 
 [14-1]: ./images/排列樹狀圖並模擬/14-1.png {#fig:駱駝}
 
-之後點擊兩次 Table_dyn 前的圖案，會產生 Scene Object Properties 點選 common ，將 Visibility 下的 Camera visibility layers 中的勾勾關掉，如圖4.33，將 s_L1_2_dyn 及 cylinder_L1_dyn 也使用相同方式關閉圖層。 
+之後點擊兩次 Table-dyn 前的圖案，會產生 Scene Object Properties 點選 common ，將 Visibility 下的 Camera visibility layers 中的勾勾關掉，如圖4.43，將 s-L1-2-dyn 及 cylinder-L1-dyn 也使用相同方式關閉圖層。 
  
  ![Scene Object Properties 對話框][15-2]
 
 [15-2]: ./images/排列樹狀圖並模擬/15-2.png {#fig:駱駝 width=35%}
 
-點擊兩次 Table_dyn 前的圖案，並點及對話框中的 Show dynamic properties dialog，會出現另一個 Rigid Body Dynamic Properties 對話框，將 Body is respondable 打勾，再將 Local respondable mask 從第3個勾開始不打勾到第8個，如圖4.34；再來點擊兩次 cylinder_L1_dyn  前的圖案，依照圖4.35 去進行勾選，其中打開 Body is dynamic 能使物體產生動態；再點擊兩次 s_L1_2_dyn 前的圖案，依照圖4.36 去進行勾選。
+點擊兩次 Table-dyn 前的圖案，並點及對話框中的 Show dynamic properties dialog，會出現另一個 Rigid Body Dynamic Properties 對話框，將 Body is respondable 打勾，再將 Local respondable mask 從第3個勾開始不打勾到第8個，如圖4.44；再來點擊兩次 cylinder-L1-dyn  前的圖案，依照圖4.45 去進行勾選，其中打開 Body is dynamic 能使物體產生動態；再點擊兩次 s-L1-2-dyn 前的圖案，依照圖4.46 去進行勾選。
 
  ![對話框勾選 - Table_dyn][17-4]
 
 [17-4]: ./images/排列樹狀圖並模擬/17-4.png {#fig:駱駝 width=35%}
 
- ![對話框勾選 - cylinder_L1_dyn][18-2]
+ ![對話框勾選 - cylinder-L1-dyn][18-2]
 
 [18-2]: ./images/排列樹狀圖並模擬/18-2.png {#fig:駱駝 width=35%}
 
- ![對話框勾選 - s_L1_2_dyn][19-2]
+ ![對話框勾選 - s-L1-2-dyn][19-2]
 
 [19-2]: ./images/排列樹狀圖並模擬/19-2.png {#fig:駱駝 width=35%}
 
-接下來要讓軸能轉動，所以點擊兩次 Prismatic_joint_1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入0.001，如圖4.37 所展示；再來點擊兩次 Revolute_joint_1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入1，如圖4.38，最後看圖4.39 可以看到模擬。
+接下來要讓軸能轉動，所以點擊兩次 Prismatic-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入0.001，如圖4.47 所展示；再來點擊兩次 Revolute-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入1，如圖4.48，最後看圖4.49 可以看到模擬。
 
- ![對話框勾選 - Prismatic_joint_1][20-2]
+![對話框勾選 - Prismatic-joint-1][20-2]
 
 [20-2]: ./images/排列樹狀圖並模擬/20-2.png {#fig:駱駝 width=35%}
 
- ![對話框勾選 - Revolute_joint_1][21-2]
+![對話框勾選 - Revolute-joint-1][21-2]
 
 [21-2]: ./images/排列樹狀圖並模擬/21-2.png {#fig:駱駝 width=35%}
 
  ![模擬圖][22]
 
 [22]: ./images/排列樹狀圖並模擬/22.png {#fig:駱駝 width=50%}
+
+
 
 
 @others

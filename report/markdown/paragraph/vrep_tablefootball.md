@@ -29,7 +29,6 @@
 接下來說明人物簡化步驟，先來進行人物頭部的簡化，先選擇人物將其複製(使用[ Edit --> Copy selected Objects ])到一個新建的場景(使用[ File --> New scene ])，再將人物貼上(使用[ Edit --> Paste buffer ])。再點選[頁面選擇器工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm) ，如圖4.5，使得在簡化的過程中更容易點選，接著選取人物再點選[形狀編輯模式工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/shapeEditModes.htm) 來進行簡化，如圖4.6，在此我框選人物的頭部如圖4.7，再點選簡化的對話框 Operations on selected triangles 中的 Extract cuboid 如圖4.8，之後會出現 Primitive cuboid 的對話框並按下 OK 即會產生一個立方體如圖4.9，頭部的簡化就完成了，再將簡化對話框關閉，此時會出現 Shape edit mode 對話框詢問是否應用這些變化嗎？(點擊否會保
 留提取的對象)，所以在這選擇 No 將新加入的物件保留。 
 
-<div align="center">
 ![頁面選擇器工具欄按鈕][人物簡化4]
 
 [人物簡化4]: ./images/簡化/人物簡化/人物簡化4.png {#fig:駱駝}
@@ -202,7 +201,7 @@ Extract sphere 為長球
 模擬步驟
 ---
 
-將所有物件都簡化好後，開始進入模擬的步驟，為了在(場景層次結構)[http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm] 中的物件更好找到，將所有的物件都命名能更快的找的所需要使用的物件。首先先加入平移軸[Prismatic joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add-->Joint-->Prismatic])及旋轉軸[Revolute joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add-->Joint-->Revolute])，並分別命名為 Prismatic_joint_1 及 Revolute_joint_1 ，之後將所有我需要用的物件都拉到 Table_dyn 下，如圖4.25及圖4.26。
+將所有物件都簡化好後，開始進入模擬的步驟，為了在[場景層次結構](http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm) 中的物件更好找到，將所有的物件都命名能更快的找的所需要使用的物件。首先先加入平移軸[Prismatic joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add-->Joint-->Prismatic])及旋轉軸[Revolute joints](http://www.coppeliarobotics.com/helpFiles/en/jointDescription.htm) (使用[Add-->Joint-->Revolute])，並分別命名為 Prismatic_joint_1 及 Revolute_joint_1 ，之後將所有我需要用的物件都拉到 Table_dyn 下，如圖4.35及圖4.36。
 
 ![將所需物件拉入 Table_dyn 下-1][6]
 
@@ -212,7 +211,7 @@ Extract sphere 為長球
 
 [6-1]: ./images/排列樹狀圖並模擬/6-1.png {#fig:駱駝 width=50%}
 
-選取 Prismatic_joint_1 (平移軸)及 cylinder_L1_dyn (軸)並點選物件傳送工具欄按鈕如圖4.16，會出現 Object/Item Translation/Position的對話框，切換至 Postion 按下按鈕 Apply to selection ，平移軸及軸會相貼合，如圖4.27，再點選[物件旋轉工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm) 圖4.28，會出現 Object/Item Rotation/Orientation的對話框，切換至 Orientation 按下按鈕Apply to selection ，平移軸及軸方向會相同，如圖4.29，之後的旋轉軸也是一樣的方法，圖4.30可以看出平移軸、旋轉軸及軸位置及方向都相同。
+選取 Prismatic_joint_1 (平移軸)及 cylinder_L1_dyn (軸)並點選物件傳送工具欄按鈕如圖4.16，會出現 Object/Item Translation/Position的對話框，切換至 Postion 按下按鈕 Apply to selection ，平移軸及軸會相貼合，如圖4.37，再點選[物件旋轉工具欄按鈕](http://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm) 圖4.38，會出現 Object/Item Rotation/Orientation的對話框，切換至 Orientation 按下按鈕Apply to selection ，平移軸及軸方向會相同，如圖4.39，之後的旋轉軸也是一樣的方法，圖4.40可以看出平移軸、旋轉軸及軸位置及方向都相同。
 
 ![平移軸和軸相貼合][7-3]
 
@@ -230,7 +229,7 @@ Extract sphere 為長球
 
 [10-3]: ./images/排列樹狀圖並模擬/10-3.png {#fig:駱駝}
 
-再將拉入 Table-dyn下的物件依照圖4.31 去排序，在選取物件 h-L1、 people-L1-1 、 s-L1-1 及 s-L1-2 (使用[Edit-->Grouping/Merging-->Group selected shapes])將物件合併，命名為 h-L1 ，另一部分的 people-L1-1-dyn 、 s-L1-1-dyn 及 s-L1-2-dyn 也一樣使用相同方法進行合併，命名為 s-L1-2_dyn ，完成後如圖4.32。
+再將拉入 Table-dyn下的物件依照圖4.41 去排序，在選取物件 h-L1、 people-L1-1 、 s-L1-1 及 s-L1-2 (使用[Edit-->Grouping/Merging-->Group selected shapes])將物件合併，命名為 h-L1 ，另一部分的 people-L1-1-dyn 、 s-L1-1-dyn 及 s-L1-2-dyn 也一樣使用相同方法進行合併，命名為 s-L1-2_dyn ，完成後如圖4.42。
 
 ![樹狀圖排列][11]
 
@@ -240,13 +239,13 @@ Extract sphere 為長球
 
 [14-1]: ./images/排列樹狀圖並模擬/14-1.png {#fig:駱駝}
 
-之後點擊兩次 Table-dyn 前的圖案，會產生 Scene Object Properties 點選 common ，將 Visibility 下的 Camera visibility layers 中的勾勾關掉，如圖4.33，將 s-L1-2-dyn 及 cylinder-L1-dyn 也使用相同方式關閉圖層。 
+之後點擊兩次 Table-dyn 前的圖案，會產生 Scene Object Properties 點選 common ，將 Visibility 下的 Camera visibility layers 中的勾勾關掉，如圖4.43，將 s-L1-2-dyn 及 cylinder-L1-dyn 也使用相同方式關閉圖層。 
  
  ![Scene Object Properties 對話框][15-2]
 
 [15-2]: ./images/排列樹狀圖並模擬/15-2.png {#fig:駱駝 width=35%}
 
-點擊兩次 Table-dyn 前的圖案，並點及對話框中的 Show dynamic properties dialog，會出現另一個 Rigid Body Dynamic Properties 對話框，將 Body is respondable 打勾，再將 Local respondable mask 從第3個勾開始不打勾到第8個，如圖4.34；再來點擊兩次 cylinder-L1-dyn  前的圖案，依照圖4.35 去進行勾選，其中打開 Body is dynamic 能使物體產生動態；再點擊兩次 s-L1-2-dyn 前的圖案，依照圖4.36 去進行勾選。
+點擊兩次 Table-dyn 前的圖案，並點及對話框中的 Show dynamic properties dialog，會出現另一個 Rigid Body Dynamic Properties 對話框，將 Body is respondable 打勾，再將 Local respondable mask 從第3個勾開始不打勾到第8個，如圖4.44；再來點擊兩次 cylinder-L1-dyn  前的圖案，依照圖4.45 去進行勾選，其中打開 Body is dynamic 能使物體產生動態；再點擊兩次 s-L1-2-dyn 前的圖案，依照圖4.46 去進行勾選。
 
  ![對話框勾選 - Table_dyn][17-4]
 
@@ -260,7 +259,7 @@ Extract sphere 為長球
 
 [19-2]: ./images/排列樹狀圖並模擬/19-2.png {#fig:駱駝 width=35%}
 
-接下來要讓軸能轉動，所以點擊兩次 Prismatic-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入0.001，如圖4.37 所展示；再來點擊兩次 Revolute-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入1，如圖4.38，最後看圖4.39 可以看到模擬。
+接下來要讓軸能轉動，所以點擊兩次 Prismatic-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入0.001，如圖4.47 所展示；再來點擊兩次 Revolute-joint-1 前的圖案，在按下 Show dynamic properties dialog ，會產生 Joint Dynamic Properties 將 Motor properties 下的 Motor enabled 打勾，在 Target velocity 打入1，如圖4.48，最後看圖4.49 可以看到模擬。
 
 ![對話框勾選 - Prismatic-joint-1][20-2]
 
