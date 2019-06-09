@@ -25,6 +25,14 @@
 <v t="leo.20180902120523.11"><vh>大綱</vh>
 <v t="leo.20180902120523.12"><vh>大綱內容</vh></v>
 </v>
+<v t="leo.20190609183153.1"><vh>球桌尺寸設計</vh>
+<v t="leo.20190609183245.1"><vh>第一頁</vh>
+<v t="leo.20190609183308.1"><vh>內容</vh></v>
+</v>
+<v t="leo.20190609183356.1"><vh>第二頁</vh>
+<v t="leo.20190609183406.1"><vh>newHeadline</vh></v>
+</v>
+</v>
 <v t="leo.20190609163032.1"><vh>手足球系統設計</vh>
 <v t="leo.20190609163032.2"><vh>第一頁</vh>
 <v t="leo.20190609163032.3"><vh>內容</vh></v>
@@ -557,12 +565,22 @@ vertical: body pane on the botton</t>
 [影像辨識多個球員踢球](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E7%AC%AC%E5%8D%81%E4%BA%94%E9%80%B1-%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E5%A4%9A%E5%80%8B%E7%90%83%E5%93%A1%E8%B8%A2%E7%90%83.html)
 
 </t>
+<<<<<<< HEAD
 <t tx="leo.20190609194606.1">&lt;section data-markdown&gt;
+=======
+<t tx="leo.20190609183153.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190609183245.1">&lt;section data-markdown&gt;
+>>>>>>> a6f99681a4dd387ec50c1304ca59e4ca1834a76b
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
     &lt;/script&gt;
 &lt;/section&gt;</t>
+<<<<<<< HEAD
 <t tx="leo.20190609194745.1">### 送球機構模擬
 
 整體
@@ -570,5 +588,16 @@ vertical: body pane on the botton</t>
 &lt;iframe width="560" height="314" src="https://www.youtube.com/embed/SfJS8gxvADE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 </t>
+=======
+<t tx="leo.20190609183308.1">### 球桌尺寸設計
+</t>
+<t tx="leo.20190609183356.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20190609183406.1">### 球桌尺寸設計</t>
+>>>>>>> a6f99681a4dd387ec50c1304ca59e4ca1834a76b
 </tnodes>
 </leo_file>
